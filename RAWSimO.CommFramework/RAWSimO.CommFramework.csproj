@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;XPlat;XPlatRelease</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'XPlatRelease' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RAWSimO.Core\RAWSimO.Core.csproj" />
+  </ItemGroup>
+
+</Project>
