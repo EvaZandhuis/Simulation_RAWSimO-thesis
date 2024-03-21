@@ -3,6 +3,7 @@ using RAWSimO.Core.Management;
 using RAWSimO.Core.Randomization;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace RAWSimO.Core.Configurations
     /// </summary>
     public class InventoryConfiguration
     {
+
+        #region default parameters
         /// <summary>
         /// The type of the items to use.
         /// </summary>
@@ -168,6 +171,62 @@ namespace RAWSimO.Core.Configurations
         /// The configuration to use when in simple item mode.
         /// </summary>
         public SimpleItemConfiguration SimpleItemConfiguration = new SimpleItemConfiguration();
+
+        #endregion
+
+        #region scenarios
+        public void TestScenarioConf()
+        {
+            #region test parameters
+            InitialInventory = 1;
+            IgnoreCapacityForBundleGeneration = false;
+            BufferBundlesUntilInventoryLoad = 1.1;
+            WarmupOrderCount = 0;
+            ItemWeightMin = 1;
+            ItemWeightMax = 1;
+            BundleSizeMin = 1;
+            BundleSizeMax = 1;
+            ReturnOrderProbability = 0;
+            PositionCountMean = 1;
+            PositionCountStdDev = 0.3;
+            PositionCountMin = 1;
+            PositionCountMax = 2;
+            OrderPositionCountMean = 1;
+            OrderPositionCountStdDev = 1;
+            OrderPositionCountMin = 1;
+            OrderPositionCountMax = 3;
+            DueTimePriorityMode = false;
+            DueTimePriorityOrderProbability = 0.2;
+            DueTimePriorityOrder = TimeSpan.FromMinutes(30).TotalSeconds;
+            DueTimeOrdinaryOrder = TimeSpan.FromHours(2).TotalSeconds;
+            DueTimeOffsetMean = TimeSpan.FromHours(3).TotalSeconds;
+            DueTimeOffsetStdDev = TimeSpan.FromMinutes(15).TotalSeconds;
+            DueTimeOffsetMin = TimeSpan.FromHours(2).TotalSeconds;
+            DueTimeOffsetMax = TimeSpan.FromHours(4).TotalSeconds;
+
+
+        #endregion
+    }
+
+        public void LargeScenarioConf()
+        {
+            #region Large parameters
+
+            #endregion
+        }
+
+        public InventoryConfiguration()
+        {
+            TestScenarioConf();
+            ///LargeScenarioConf();
+        }
+
+
+
+
+
+
+        #endregion
 
         /// <summary>
         /// Checks whether the inventory configuration is valid.

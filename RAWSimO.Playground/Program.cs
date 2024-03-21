@@ -38,6 +38,7 @@ namespace RAWSimO.Playground
             Console.WriteLine("6: GenerateMuControlConfigs");
             Console.WriteLine("7: GenerateMuSettingConfigs");
             Console.WriteLine("8: ExecuteDirectory");
+            Console.WriteLine("9: TestsEva");
             Console.WriteLine("0: Experimental");
             char optionKey = Console.ReadKey().KeyChar; Console.WriteLine();
             switch (optionKey)
@@ -58,6 +59,7 @@ namespace RAWSimO.Playground
                 case '6': { ConfigGenerators.GenerateRotterdamControllers(); } break;
                 case '7': { SettingGenerator.GenerateRotterdamMark2Set(); } break;
                 case '8': { ExecuteInstances(); } break;
+                case '9': { TestsEva(); } break;
                 case '0': { Experimental(); } break;
                 default:
                     break;
@@ -275,5 +277,22 @@ namespace RAWSimO.Playground
                 default: break;
             }
         }
+
+        public static void TestsEva()
+        {
+            ///using playground.tests zorgt ervoordat je direct functies daaruit kan oproepen
+            ///gebruik functie door: class(/titel van functiefolder).method
+            Console.WriteLine(">>> Choose option: ");
+            Console.WriteLine("1: GeneratorTests");
+            Console.WriteLine("2: RandomizerTests");
+            char optionKey = Console.ReadKey().KeyChar; Console.WriteLine();
+            switch (optionKey)
+            {
+                case '1': { ItemManagerTest.OrderAnalyzer(); } break;
+                case '2': { RandomizerTests.TestGenerateNormalDistribution(); } break;
+                default: break;
+            }
+        }
     }
 }
+

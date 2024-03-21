@@ -48,7 +48,8 @@ namespace RAWSimO.Core.Configurations
         /// <summary>
         /// The resource file containing the config for the generator.
         /// </summary>
-        public string GeneratorConfigFile = "Mu-1000.xgenc";
+        ///public string GeneratorConfigFile = "Mu-1000.xgenc";
+        public string GeneratorConfigFile = "MaTi-10.xgenc";
     }
     /// <summary>
     /// A configuration that is used when simple items are generated randomly.

@@ -1,10 +1,12 @@
-﻿using RAWSimO.Core.Configurations;
+﻿using RAWSimO.Core;
+using RAWSimO.Core.Configurations;
 using RAWSimO.Core.Control;
 using RAWSimO.Core.Elements;
 using RAWSimO.Core.Info;
 using RAWSimO.Core.Interfaces;
 using RAWSimO.Core.IO;
 using RAWSimO.Core.Items;
+using RAWSimO.Core.Management;
 using RAWSimO.Core.Randomization;
 using RAWSimO.Toolbox;
 using System;
@@ -14,12 +16,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RAWSimO.Core.Management
+
+namespace RAWSimO.Playground.Tests
 {
-    /// <summary>
-    /// The manager class that handles all bundle, order and item generation during simulation.
-    /// </summary>
-    public class ItemManager : IItemManagerInfo
+    public class ItemManagerTest : IItemManagerInfo
     {
         #region Constructors
 
@@ -27,7 +27,7 @@ namespace RAWSimO.Core.Management
         /// Constructs a new item manager object for the given instance.
         /// </summary>
         /// <param name="instance">The instance this item manager belongs to.</param>
-        public ItemManager(Instance instance)
+        public ItemManagerTest(Instance instance)
         {
             Instance = instance;
             // Setup color probabilities for fast access (if available)
@@ -48,31 +48,31 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// All possible item description. Hence, this is the complete list of all possible simulated products that can be generated.
         /// </summary>
-        private List<ItemDescription> _itemDescriptions = new List<ItemDescription>();
+        public List<ItemDescription> _itemDescriptions = new List<ItemDescription>();
         /// <summary>
         /// The probabilities for all item-descriptions.
         /// </summary>
-        private VolatileIDDictionary<ItemDescription, double> _itemDescriptionProbabilities;
+        public VolatileIDDictionary<ItemDescription, double> _itemDescriptionProbabilities;
         /// <summary>
         /// The maximal probability of all item-descriptions.
         /// </summary>
-        private double _itemDescriptionProbabilityMax;
+        public double _itemDescriptionProbabilityMax;
         /// <summary>
         /// The poisson generator used to emulate realistic order generation frequencies.
         /// </summary>
-        private PoissonGenerator OrderPoissonGenerator;
+        public PoissonGenerator OrderPoissonGenerator;
         /// <summary>
         /// The poisson generator used to emulate realistic bundle generation frequencies.
         /// </summary>
-        private PoissonGenerator BundlePoissonGenerator;
+        public PoissonGenerator BundlePoissonGenerator;
         /// <summary>
         /// The next timestamp at which an order is generated when in poisson mode.
         /// </summary>
-        private double _nextPoissonOrderGenerationTime;
+        public double _nextPoissonOrderGenerationTime;
         /// <summary>
         /// The next timestamp at which a bundle is generated when in poisson mode.
         /// </summary>
-        private double _nextPoissonBundleGenerationTime;
+        public double _nextPoissonBundleGenerationTime;
         /// <summary>
         /// The instance this manager belongs to.
         /// </summary>
@@ -80,43 +80,43 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// A list containing all future orders that aren't placed yet. (Only available in fixed order mode.)
         /// </summary>
-        private List<Order> _futureOrders = new List<Order>();
+        public List<Order> _futureOrders = new List<Order>();
         /// <summary>
         /// The set of all pending orders.
         /// </summary>
-        private HashSet<Order> _availableOrders = new HashSet<Order>();
+        public HashSet<Order> _availableOrders = new HashSet<Order>();
         /// <summary>
         /// Gets the current number of orders in backlog.
         /// </summary>
-        internal int BacklogOrderCount { get { return _availableOrders.Count; } }
+        public int BacklogOrderCount { get { return _availableOrders.Count; } }
         /// <summary>
         /// The list of all currently assigned orders.
         /// </summary>
-        private List<Order> _openOrders = new List<Order>();
+        public List<Order> _openOrders = new List<Order>();
         /// <summary>
         /// The list of all already completed orders.
         /// </summary>
-        private List<Order> _completedOrders = new List<Order>();
+        public List<Order> _completedOrders = new List<Order>();
         /// <summary>
         /// A list containing all future bundles that aren't placed yet. (Only available in fixed bundle mode.)
         /// </summary>
-        private List<ItemBundle> _futureBundles = new List<ItemBundle>();
+        public List<ItemBundle> _futureBundles = new List<ItemBundle>();
         /// <summary>
         /// The set of all pending bundles.
         /// </summary>
-        private HashSet<ItemBundle> _availableBundles = new HashSet<ItemBundle>();
+        public HashSet<ItemBundle> _availableBundles = new HashSet<ItemBundle>();
         /// <summary>
         /// Gets the current number of bundles in backlog.
         /// </summary>
-        internal int BacklogBundleCount { get { return _availableBundles.Count; } }
+        public int BacklogBundleCount { get { return _availableBundles.Count; } }
         /// <summary>
         /// The list of all currently assigned bundles.
         /// </summary>
-        private List<ItemBundle> _openBundles = new List<ItemBundle>();
+        public List<ItemBundle> _openBundles = new List<ItemBundle>();
         /// <summary>
         /// The list of all already completed bundles.
         /// </summary>
-        private List<ItemBundle> _completedBundles = new List<ItemBundle>();
+        public List<ItemBundle> _completedBundles = new List<ItemBundle>();
 
         #endregion
 
@@ -125,31 +125,31 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// When failing to generate suitable orders the order generation is blocked for this time.
         /// </summary>
-        private const double ORDER_GENERATION_TIMEOUT = 60;
+        public const double ORDER_GENERATION_TIMEOUT = 60;
         /// <summary>
         /// When failing to generate suitable bundles the bundle generation is blocked for this time.
         /// </summary>
-        private const double BUNDLE_GENERATION_TIMEOUT = 60;
+        public const double BUNDLE_GENERATION_TIMEOUT = 60;
         /// <summary>
         /// The timestamp in simulation time up until which the generation of orders is temporarily blocked.
         /// </summary>
-        private double _orderGenerationBlockedUntil = 0;
+        public double _orderGenerationBlockedUntil = 0;
         /// <summary>
         /// The timestamp in simulation time up until which the generation of bundles is temporarily blocked.
         /// </summary>
-        private double _bundleGenerationBlockedUntil = 0;
+        public double _bundleGenerationBlockedUntil = 0;
         /// <summary>
         /// Indicates whether order generation is currently blocked by too much inventory.
         /// </summary>
-        private bool _orderGenerationBlockedByInventoryLevel = false;
+        public bool _orderGenerationBlockedByInventoryLevel = false;
         /// <summary>
         /// Indicates whether bundle generation is currently blocked by too much inventory.
         /// </summary>
-        private bool _bundleGenerationBlockedByInventoryLevel = false;
+        public bool _bundleGenerationBlockedByInventoryLevel = false;
         /// <summary>
         /// Information about the demand for the different items. This is used when generating item-bundles according to the recently submitted orders.
         /// </summary>
-        private Dictionary<ItemDescription, int> _itemDemandInformation = new Dictionary<ItemDescription, int>();
+        public Dictionary<ItemDescription, int> _itemDemandInformation = new Dictionary<ItemDescription, int>();
 
         #endregion
 
@@ -158,19 +158,19 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// The next time the bundle batch timepoints cycle.
         /// </summary>
-        private double _batchNextBundleCycle;
+        public double _batchNextBundleCycle;
         /// <summary>
         /// The next time the order batch timepoints cycle.
         /// </summary>
-        private double _batchNextOrderCycle;
+        public double _batchNextOrderCycle;
         /// <summary>
         /// All times at which bundle batches have to be generated with their respective amount information.
         /// </summary>
-        private List<Tuple<double, double>> _batchTimepointsBundles;
+        public List<Tuple<double, double>> _batchTimepointsBundles;
         /// <summary>
         /// All times at which order batches have to be generated with their respective amount information.
         /// </summary>
-        private List<Tuple<double, int>> _batchTimepointsOrders;
+        public List<Tuple<double, int>> _batchTimepointsOrders;
 
         #endregion
 
@@ -179,31 +179,31 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Indicates whether down periods must be handled.
         /// </summary>
-        private bool _downPeriodHandling = false;
+        public bool _downPeriodHandling = false;
         /// <summary>
         /// The next time the down period timepoints for bundles cycle.
         /// </summary>
-        private double _downPeriodNextBundleCycle;
+        public double _downPeriodNextBundleCycle;
         /// <summary>
         /// The next time the down period timepoints for orders cycle.
         /// </summary>
-        private double _downPeriodNextOrderCycle;
+        public double _downPeriodNextOrderCycle;
         /// <summary>
         /// All times at which the down period for bundle generation changes.
         /// </summary>
-        private List<Tuple<double, bool>> _downPeriodTimepointsBundles;
+        public List<Tuple<double, bool>> _downPeriodTimepointsBundles;
         /// <summary>
         /// All times at which the down period for order generation changes.
         /// </summary>
-        private List<Tuple<double, bool>> _downPeriodTimepointsOrders;
+        public List<Tuple<double, bool>> _downPeriodTimepointsOrders;
         /// <summary>
         /// Indicates whether there is an active down period for bundle generation.
         /// </summary>
-        private bool _downPeriodActiveForBundles = false;
+        public bool _downPeriodActiveForBundles = false;
         /// <summary>
         /// Indicates whether there is an active down period for order generation.
         /// </summary>
-        private bool _downPeriodActiveForOrders = false;
+        public bool _downPeriodActiveForOrders = false;
 
         #endregion
 
@@ -212,17 +212,17 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// The list of possible orders to generate when in random order mode. (The letters have to be colored by the specified probabilities)
         /// </summary>
-        private string[] _baseWords;
+        public string[] _baseWords;
 
         /// <summary>
         /// Contains all item-description objects by their characteristics.
         /// </summary>
-        private MultiKeyDictionary<char, LetterColors, ItemDescription> _itemDescriptionsByValue = new MultiKeyDictionary<char, LetterColors, ItemDescription>();
+        public MultiKeyDictionary<char, LetterColors, ItemDescription> _itemDescriptionsByValue = new MultiKeyDictionary<char, LetterColors, ItemDescription>();
 
         /// <summary>
         /// The probabilities of the different colors for fast access.
         /// </summary>
-        private Dictionary<LetterColors, double> _colorProbabilities;
+        public Dictionary<LetterColors, double> _colorProbabilities;
 
         #endregion
 
@@ -231,22 +231,22 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// The config for the simple item generator.
         /// </summary>
-        private SimpleItemGeneratorConfiguration _simpleItemGeneratorConfig;
+        public SimpleItemGeneratorConfiguration _simpleItemGeneratorConfig;
         /// <summary>
         /// The default conditional probability.
         /// </summary>
-        private Dictionary<ItemDescription, double> _simpleItemCoProbabilityDefault = new Dictionary<ItemDescription, double>();
+        public Dictionary<ItemDescription, double> _simpleItemCoProbabilityDefault = new Dictionary<ItemDescription, double>();
         /// <summary>
         /// Contains the probability that is used to determine additional items for an order based on one item already contained in that order.
         /// </summary>
-        private MultiKeyDictionary<ItemDescription, ItemDescription, double> _simpleItemCoProbabilities = new MultiKeyDictionary<ItemDescription, ItemDescription, double>();
+        public MultiKeyDictionary<ItemDescription, ItemDescription, double> _simpleItemCoProbabilities = new MultiKeyDictionary<ItemDescription, ItemDescription, double>();
         /// <summary>
         /// Gets the conditional probability of selecting the second item in case the first one is already chosen.
         /// </summary>
         /// <param name="item1">The first item (already chosen).</param>
         /// <param name="item2">The second item.</param>
         /// <returns>The conditional probability.</returns>
-        private double GetCombinedProbability(ItemDescription item1, ItemDescription item2)
+        public double GetCombinedProbability(ItemDescription item1, ItemDescription item2)
         {
             if (_simpleItemCoProbabilities.ContainsKey(item1, item2))
                 return _simpleItemCoProbabilities[item1, item2];
@@ -261,7 +261,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Initializes the basic item-descriptions according to the given wordlist-file.
         /// </summary>
-        private void InitializeMode()
+        public void InitializeMode()
         {
             // Prepare probabilities and other information about the items
             if (Instance.SettingConfig.InventoryConfiguration.OrderMode != OrderMode.Fixed)
@@ -449,7 +449,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Initializes the inventory content, the available bundle buffer and the available order buffer.
         /// </summary>
-        private void InitializeInventoryAndBundlesAndOrders()
+        public void InitializeInventoryAndBundlesAndOrders()
         {
             // Initialize with respect to the current mode
             switch (Instance.SettingConfig.InventoryConfiguration.OrderMode)
@@ -501,170 +501,7 @@ namespace RAWSimO.Core.Management
                         #endregion
                     }
                     break;
-                case OrderMode.Poisson:
-                    {
-                        #region Poisson mode initialization
 
-                        // --> Prepare poisson generators
-                        switch (Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.PoissonMode)
-                        {
-                            case PoissonMode.Simple:
-                                {
-                                    // Initiate order poisson generator
-                                    double orderRate = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageOrdersPerHourAndStation * Instance.OutputStations.Count);
-                                    OrderPoissonGenerator = new PoissonGenerator(Instance.Randomizer, orderRate);
-                                    // Initiate bundle poisson generator
-                                    double bundleRate = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageBundlesPerHourAndStation * Instance.InputStations.Count);
-                                    BundlePoissonGenerator = new PoissonGenerator(Instance.Randomizer, bundleRate);
-                                }
-                                break;
-                            case PoissonMode.TimeDependent:
-                                {
-                                    // --> Instantiate poisson generator for orders
-                                    // Calculate instance-specific factor to adapt the rates
-                                    List<KeyValuePair<double, double>> relativeOrderWeights = new List<KeyValuePair<double, double>>();
-                                    for (int i = 0; i < Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights.Count; i++)
-                                    {
-                                        relativeOrderWeights.Add(new KeyValuePair<double, double>(
-                                            i > 0 ?
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights[i].Key -
-                                                Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights[i - 1].Key :
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights[i].Key,
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights[i].Value));
-                                    }
-                                    double unadjustedAverageOrderFrequency =
-                                        relativeOrderWeights.Sum(w => w.Key * w.Value) /
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentOrderRates;
-                                    double aimedAverageOrderFrequency =
-                                        TimeSpan.FromSeconds(Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentOrderRates).TotalHours *
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageOrdersPerHourAndStation *
-                                        Instance.OutputStations.Count /
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentOrderRates;
-                                    double orderSteerFactor = aimedAverageOrderFrequency / unadjustedAverageOrderFrequency;
-                                    // Initiate order poisson generator
-                                    OrderPoissonGenerator = new PoissonGenerator(
-                                        Instance.Randomizer,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentOrderRates,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentOrderWeights.Select(w =>
-                                            new KeyValuePair<double, double>(w.Key, orderSteerFactor * w.Value)));
-                                    // --> Instantiate poisson generator for bundles
-                                    // Calculate instance-specific factor to adapt the rates
-                                    List<KeyValuePair<double, double>> relativeBundleWeights = new List<KeyValuePair<double, double>>();
-                                    for (int i = 0; i < Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights.Count; i++)
-                                    {
-                                        relativeBundleWeights.Add(new KeyValuePair<double, double>(
-                                            i > 0 ?
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights[i].Key -
-                                                Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights[i - 1].Key :
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights[i].Key,
-                                            Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights[i].Value));
-                                    }
-                                    double unadjustedAverageBundleFrequency =
-                                        relativeBundleWeights.Sum(w => w.Key * w.Value) /
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentBundleRates;
-                                    double aimedAverageBundleFrequency =
-                                        TimeSpan.FromSeconds(Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentBundleRates).TotalHours *
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageBundlesPerHourAndStation *
-                                        Instance.InputStations.Count /
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentBundleRates;
-                                    double bundleSteerFactor = aimedAverageBundleFrequency / unadjustedAverageBundleFrequency;
-                                    // Initiate bundle poisson generator
-                                    BundlePoissonGenerator = new PoissonGenerator(
-                                          Instance.Randomizer,
-                                          Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.MaxTimeForTimeDependentBundleRates,
-                                          Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.TimeDependentBundleWeights.Select(w =>
-                                              new KeyValuePair<double, double>(w.Key, bundleSteerFactor * w.Value)));
-                                }
-                                break;
-                            case PoissonMode.HighLow:
-                                {
-                                    // Obtain switch rates
-                                    double rateSwitchLowHigh = PoissonGenerator.TranslateIntoRateParameter(TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.LowToHighSwitchesPerHour);
-                                    double rateSwitchHighLow = PoissonGenerator.TranslateIntoRateParameter(TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.HighToLowSwitchesPerHour);
-                                    // Initiate order poisson generator (calculate low an high rates first)
-                                    double orderRateLow = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageOrdersPerHourAndStation * Instance.OutputStations.Count);
-                                    double orderRateHigh = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageOrdersPerHourAndStationHigh * Instance.OutputStations.Count);
-                                    OrderPoissonGenerator = new PoissonGenerator(Instance.Randomizer,
-                                        // Submit the rates for low and high
-                                        orderRateLow, orderRateHigh,
-                                        // Submit the rates for switching only if order generation shall be affected (otherwise provide 0 to suppress switching)
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.OrderGenAffectedByHighPeriod ? rateSwitchLowHigh : 0,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.OrderGenAffectedByHighPeriod ? rateSwitchHighLow : 0,
-                                        // Add a possibility for logging and affiliation information
-                                        Instance.LogInfo, "Orders");
-                                    // Initiate bundle poisson generator (calculate low an high rates first)
-                                    double bundleRateLow = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageBundlesPerHourAndStation * Instance.InputStations.Count);
-                                    double bundleRateHigh = PoissonGenerator.TranslateIntoRateParameter(
-                                        TimeSpan.FromHours(1),
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.AverageBundlesPerHourAndStationHigh * Instance.InputStations.Count);
-                                    BundlePoissonGenerator = new PoissonGenerator(Instance.Randomizer,
-                                        // Submit the rates for low and high
-                                        bundleRateLow, bundleRateHigh,
-                                        // Submit the rates for switching only if bundle generation shall be affected (otherwise provide 0 to suppress switching)
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.BundleGenAffectedByHighPeriod ? rateSwitchLowHigh : 0,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.BundleGenAffectedByHighPeriod ? rateSwitchHighLow : 0,
-                                        // Add a possibility for logging and affiliation information
-                                        Instance.LogInfo, "Bundles");
-                                }
-                                break;
-                            default: throw new ArgumentException("Unknown poisson-mode: " + Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.PoissonMode.ToString());
-                        }
-
-                        switch (Instance.SettingConfig.InventoryConfiguration.ItemType)
-                        {
-                            case ItemType.Letter:
-                                {
-                                    #region Initialization for colored letters
-
-                                    // Generate initial order and bundle list
-                                    InitializeBundlesAndOrdersRandomly(
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.InitialBundleCount,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.InitialOrderCount);
-
-                                    // Generate random pod content
-                                    InitializePodContentsRandomly(Instance.SettingConfig.InventoryConfiguration.InitialInventory);
-
-                                    #endregion
-                                }
-                                break;
-                            case ItemType.SimpleItem:
-                                {
-                                    #region Initialization for simple items
-
-                                    // Generate random pod content
-                                    InitializePodContentsRandomly(Instance.SettingConfig.InventoryConfiguration.InitialInventory);
-
-                                    // Generate initial order and bundle list
-                                    InitializeBundlesAndOrdersRandomly(
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.InitialBundleCount,
-                                        Instance.SettingConfig.InventoryConfiguration.PoissonInventoryConfiguration.InitialOrderCount);
-
-                                    #endregion
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-
-                        // Calculate first order and bundle generation times
-                        _nextPoissonOrderGenerationTime = OrderPoissonGenerator.Next(0);
-                        _nextPoissonBundleGenerationTime = BundlePoissonGenerator.Next(0);
-
-                        #endregion
-                    }
-                    break;
                 case OrderMode.Fixed:
                     {
                         #region Fixed mode initialization
@@ -723,7 +560,7 @@ namespace RAWSimO.Core.Management
         /// </summary>
         /// <param name="bundles">The number of bundles to generate.</param>
         /// <param name="orders">The number of orders to generate.</param>
-        private void InitializeBundlesAndOrdersRandomly(int bundles, int orders)
+        public void InitializeBundlesAndOrdersRandomly(int bundles, int orders)
         {
             lock (_syncRoot)
             {
@@ -749,7 +586,7 @@ namespace RAWSimO.Core.Management
                     else
                     {
                         // There is no order we can generate right now - quit trying
-                        Instance.LogInfo("Cannot generate further orders - quitting");
+                        Console.WriteLine("Cannot generate further orders - quitting");
                         break;
                     }
                 }
@@ -786,7 +623,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Generates a random orders that are not submitted to the instance. These order can be used to warmup item-frequency based mechanisms.
         /// </summary>
-        private void WarmupItemFrequencies()
+        public void WarmupItemFrequencies()
         {
             if (Instance.SettingConfig.InventoryConfiguration.OrderMode == OrderMode.Fixed)
             {
@@ -944,7 +781,7 @@ namespace RAWSimO.Core.Management
         /// Checks whether order generation is currently suspended.
         /// </summary>
         /// <returns><code>true</code> if order generation is blocked, <code>false</code> otherwise.</returns>
-        private bool CheckForOrderGenerationPause()
+        public bool CheckForOrderGenerationPause()
         {
             // See whether we have to pause order generation for a while
             if (// If we are above the restart threshold, ensure order generation activity
@@ -979,7 +816,7 @@ namespace RAWSimO.Core.Management
         /// Checks whether bundle generation is currently suspended.
         /// </summary>
         /// <returns><code>true</code> if bundle generation is blocked, <code>false</code> otherwise.</returns>
-        private bool CheckForBundleGenerationPause()
+        public bool CheckForBundleGenerationPause()
         {
             // See whether we have to pause bundle generation for a while
             if (// If we are below the restart threshold, ensure bundle generation activity
@@ -1014,7 +851,7 @@ namespace RAWSimO.Core.Management
 
         #region Bundle and order generation
 
-        private ItemBundle GenerateBundle()
+        public ItemBundle GenerateBundle()
         {
             // Generate a bundle depending on the type
             ItemBundle bundle;
@@ -1046,7 +883,7 @@ namespace RAWSimO.Core.Management
         /// Generates a random item.
         /// </summary>
         /// <returns>The generated item.</returns>
-        private ItemBundle GenerateRandomBundle()
+        public ItemBundle GenerateRandomBundle()
         {
             // Get a random value first
             double r = Instance.Randomizer.NextDouble();
@@ -1084,7 +921,7 @@ namespace RAWSimO.Core.Management
         /// Generates a bundle that is needed by the allocated orders. (This feels like cheating - that is why I integrated simple items)
         /// </summary>
         /// <returns>The newly generated bundle or <code>null</code> if no bundle is necessary.</returns>
-        private ItemBundle GenerateRequiredBundle()
+        public ItemBundle GenerateRequiredBundle()
         {
             // Check for needed items
             IEnumerable<ItemDescription> neededItems = _itemDemandInformation
@@ -1145,7 +982,7 @@ namespace RAWSimO.Core.Management
         /// Generates a random order.
         /// </summary>
         /// <returns>The newly generated order.</returns>
-        private Order GenerateRandomOrder()
+        public Order GenerateRandomOrder()
         {
             // Init
             IRandomizer rand = Instance.Randomizer;
@@ -1370,7 +1207,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Contains all bundles personalized per retrieving object.
         /// </summary>
-        private Dictionary<object, List<Order>> _personalizedAvailableOrders = new Dictionary<object, List<Order>>();
+        public Dictionary<object, List<Order>> _personalizedAvailableOrders = new Dictionary<object, List<Order>>();
 
         /// <summary>
         /// Called by the system when a new order has been assigned to an output-station. It is useful as it indicates what new items need to be filled in the system (based on the order).
@@ -1419,7 +1256,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// Contains all bundles personalized per retrieving object.
         /// </summary>
-        private Dictionary<object, List<ItemBundle>> _personalizedAvailableBundles = new Dictionary<object, List<ItemBundle>>();
+        public Dictionary<object, List<ItemBundle>> _personalizedAvailableBundles = new Dictionary<object, List<ItemBundle>>();
 
         /// <summary>
         /// Called by the system when a new bundle has been assigned to an input-station.
@@ -1454,7 +1291,7 @@ namespace RAWSimO.Core.Management
         /// <summary>
         /// The object syncing is done with.
         /// </summary>
-        private object _syncRoot = new object();
+        public object _syncRoot = new object();
         /// <summary>
         /// Gets the number of currently available orders that are not yet allocated.
         /// </summary>
@@ -1906,19 +1743,19 @@ namespace RAWSimO.Core.Management
         /// </summary>
         /// <param name="item">The item to return the frequency for.</param>
         /// <returns>The frequency of the item. This value is equal to the probability for generating the item (when ignoring combined probabilities).</returns>
-        internal double GetItemProbability(ItemDescription item) { return _itemDescriptionProbabilities.ContainsKey(item) ? _itemDescriptionProbabilities[item] : 0; }
+        public double GetItemProbability(ItemDescription item) { return _itemDescriptionProbabilities.ContainsKey(item) ? _itemDescriptionProbabilities[item] : 0; }
         /// <summary>
         /// Returns the current maximal probability over all item descriptions.
         /// </summary>
         /// <returns>The current maximal probability.</returns>
-        internal double GetItemProbabilityMax() { return _itemDescriptionProbabilityMax; }
+        public double GetItemProbabilityMax() { return _itemDescriptionProbabilityMax; }
 
         #endregion
 
         #region Debug stuff
 
         // TODO remove debug again
-        private void OrderAnalyzer()
+        public static void OrderAnalyzer()
         {
             Console.WriteLine("StockInfo:");
             Dictionary<ItemDescription, int> actualStock = Instance.ItemDescriptions.ToDictionary(k => k, v => Instance.Pods.Sum(p => p.CountContained(v)));
@@ -1946,3 +1783,5 @@ namespace RAWSimO.Core.Management
         #endregion
     }
 }
+
+    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using RAWSimO.Core.Control;
 using RAWSimO.Core.IO;
@@ -54,8 +55,16 @@ namespace RAWSimO.Core.Tests
                 //  - except for some algorithm runtime limit related reasons (shouldn't apply here)
                 // Unfortunately, there seems to be no good way to automatically update golden files / fixtures in .Net like in other languages :(
                 //  - feel free to recommend a way, until then the fixtures need to be manually defined
+                Console.WriteLine("TESTTESTTEST " + test);
+
                 var lines = new List<string>();
                 instance.PrintStatistics(s => lines.AddRange(s.Split(Environment.NewLine)));
+
+                foreach (var line in lines)
+                {
+                    Console.WriteLine(line);
+                }
+
                 var stats = string.Join(Environment.NewLine, lines.Where(s => s.StartsWith("StatOverall")));
                 var golden = File.ReadAllText($"Resources/{test}.golden").Trim();
                 Assert.Equal(golden, stats);
@@ -63,3 +72,5 @@ namespace RAWSimO.Core.Tests
         }
     }
 }
+
+

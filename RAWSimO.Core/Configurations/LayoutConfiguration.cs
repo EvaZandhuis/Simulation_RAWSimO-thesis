@@ -234,12 +234,12 @@ namespace RAWSimO.Core.Configurations
             PodTransferTime = 2.2;
             PodAmount = 0.6;
             PodRadius = 0.45;
-            PodCapacity = 100;
+            PodCapacity = 6;
             StationRadius = 0.45;
             ItemTransferTime = 10;
             ItemPickTime = 3;
             ItemBundleTransferTime = 10;
-            IStationCapacity = 1000;
+            IStationCapacity = 0.1; ///deactivate replen station
             OStationCapacity = 12;
             ElevatorTransportationTimePerTier = 10;
             AisleLayoutType = AisleLayoutTypes.Tim;
