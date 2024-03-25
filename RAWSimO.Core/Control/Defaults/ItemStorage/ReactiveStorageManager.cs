@@ -62,6 +62,14 @@ namespace RAWSimO.Core.Control.Defaults.ItemStorage
                 .First();
         }
 
+        public override Pod SelectNextPodForInititalInventory(Instance instance, ItemBundle bundle)
+        {
+            //Add to next pod
+            return instance.Pods
+                .Where(p => p.FitsForReservation(bundle))
+                .First();
+        }
+
         /// <summary>
         /// Retrieves the threshold value above which buffered decisions for that respective pod are submitted to the system.
         /// </summary>

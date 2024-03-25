@@ -480,8 +480,8 @@ namespace RAWSimO.Core.Management
                                     #region Simple item initialization
 
                                     // Generate random pod content
-                                    InitializePodContentsRandomly(Instance.SettingConfig.InventoryConfiguration.InitialInventory);
-
+                                    ///InitializePodContentsRandomly(Instance.SettingConfig.InventoryConfiguration.InitialInventory);
+                                    InitializePodContentsFixed(Instance.SettingConfig.InventoryConfiguration.InitialInventory);
                                     /// HIER AANPASSEN WELKE FUNCTIE AANGEROEPEN WORDT
 
 
@@ -707,23 +707,82 @@ namespace RAWSimO.Core.Management
             // Add stuff to pods
             while (Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity) < initialInventory)
             {
+                //Console.WriteLine(Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity));
+
+
                 // Create bundle
                 ItemBundle bundle = GenerateBundle();
                 // Ask the current item storage manager for the pod to use, then assign it
                 Pod pod = Instance.Controller.StorageManager.SelectPodForInititalInventory(Instance, bundle);
+
                 if (!pod.Add(bundle))
                     throw new InvalidOperationException("Could not assign bundle to the selected pod!");
                 // Notify the instance about the new bundle
                 Instance.NotifyInitialBundleStored(bundle, pod);
+                ///Console.WriteLine("Index:" + Instance.Pods.IndexOf(pod) + "CapacityInUse:" + pod.CapacityInUse);
             }
         }
-
         /// <summary>
-        /// Randomly generates a set of bundles and orders that are ready for allocation.
+        /// Initializes a fixed inventory content.
         /// </summary>
-        /// <param name="bundles">The number of bundles to generate.</param>
-        /// <param name="orders">The number of orders to generate.</param>
-        private void InitializeBundlesAndOrdersRandomly(int bundles, int orders)
+        public void InitializePodContentsFixed(double initialInventory)
+        {
+            // Add stuff to pods
+            while (Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity) < initialInventory)
+            {
+                //Console.WriteLine(Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity));
+
+                // Create bundle
+                ItemBundle bundle = GenerateBundle();
+                // Ask the current item storage manager for the pod to use, then assign it
+                Pod pod = Instance.Controller.StorageManager.SelectNextPodForInititalInventory(Instance, bundle);
+
+                if (!pod.Add(bundle))
+                    throw new InvalidOperationException("Could not assign bundle to the selected pod!");
+                // Notify the instance about the new bundle
+                Instance.NotifyInitialBundleStored(bundle, pod);
+                Console.WriteLine("Pod index:" + Instance.Pods.IndexOf(pod) + "  Stored:" + pod.CapacityInUse);
+                ///kan ook gwn zo: Console.WriteLine("Index:" + IndexOf(pod) + "  Stored:" + pod.CapacityInUse);
+                Console.WriteLine(bundle.GetInfoItemDescription());
+                ///Console.WriteLine(pod.GetInfoContent(bundle ));
+                ///Console.WriteLine(pod.GetIdentfierString()); ///sku nummer dat is toegevoegd
+                ///Console.WriteLine(pod.ToString()); ///percentage vol
+                ///Console.WriteLine(pod.GetActualStock(bundle));
+            }
+
+            /**
+            foreach (Pod pod in Instance.Pods)
+            {
+                foreach (var item in pod.ItemDescriptionsContained)
+                {
+                    Console.WriteLine("pod#"+ pod.ID +"sku" + item.ID + "amount"+item.BundleSize);
+                }
+
+            }
+            **/
+
+            foreach (Pod pod in Instance.Pods)
+            {
+                Console.WriteLine($"pod{pod.ID}");
+
+                var groupedItems = pod.ItemDescriptionsContained
+                    .GroupBy(item => item.ID);
+
+                foreach (var group in groupedItems)
+                {
+                    var skuIndex = VolatileKeyValuePair< K, V >.Key; // Access SKU index
+                    var skuAmount = pod.VolatileKeyValuePair<int, int>.Value; // Access SKU amount
+                    var totalAmount = group.Sum(item => item.BundleSize);
+                    Console.WriteLine($"\t{skuAmount} x sku{skuIndex}");
+                }
+            }
+
+            /// <summary>
+            /// Randomly generates a set of bundles and orders that are ready for allocation.
+            /// </summary>
+            /// <param name="bundles">The number of bundles to generate.</param>
+            /// <param name="orders">The number of orders to generate.</param>
+            private void InitializeBundlesAndOrdersRandomly(int bundles, int orders)
         {
             lock (_syncRoot)
             {

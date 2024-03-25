@@ -33,6 +33,15 @@ namespace RAWSimO.Core.Control.Defaults.ItemStorage
                 .OrderBy(p => instance.Randomizer.NextDouble())
                 .First();
         }
+
+        public override Pod SelectNextPodForInititalInventory(Instance instance, ItemBundle bundle)
+        {
+            //Add to next pod
+            return instance.Pods
+                .Where(p => p.FitsForReservation(bundle))
+                .First();
+        }
+
         /// <summary>
         /// This is called to decide about potentially pending bundles.
         /// This method is being timed for statistical purposes and is also ONLY called when <code>SituationInvestigated</code> is <code>false</code>.

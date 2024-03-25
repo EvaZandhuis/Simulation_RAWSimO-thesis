@@ -7,9 +7,10 @@ using RAWSimO.Core.Tests;
 using RAWSimO.Core;
 using RAWSimO.Core.Configurations;
 using RAWSimO.Core.Management;
+using RAWSimO.Core.Elements;
+using RAWSimO.Core.Items;
 
 Console.WriteLine("Test");
 
-ItemManager.InitializePodContentsRandomly('1');
 
-
+FileTests.TestFiles();

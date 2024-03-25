@@ -64,6 +64,14 @@ namespace RAWSimO.Core.Control.Defaults.ItemStorage
                 return chosenPod;
         }
 
+        public override Pod SelectNextPodForInititalInventory(Instance instance, ItemBundle bundle)
+        {
+            //Add to next pod
+            return instance.Pods
+                .Where(p => p.FitsForReservation(bundle))
+                .First();
+        }
+
         /// <summary>
         /// The config for this manager.
         /// </summary>

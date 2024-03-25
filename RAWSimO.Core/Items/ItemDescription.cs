@@ -64,7 +64,7 @@ namespace RAWSimO.Core.Items
         /// Returns a simple string identifying this object in its instance.
         /// </summary>
         /// <returns>A simple name identifying the instance element.</returns>
-        public override string GetIdentfierString() { return "ItemDescription" + this.ID; }
+        public override string GetIdentfierString() { return "SKU" + this.ID; }
         /// <summary>
         /// Returns a simple string giving information about the object.
         /// </summary>

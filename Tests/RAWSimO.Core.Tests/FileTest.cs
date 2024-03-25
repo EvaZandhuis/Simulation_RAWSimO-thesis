@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +14,7 @@ using Xunit;
 
 namespace RAWSimO.Core.Tests
 {
-    public class GoldenFileTests
+    public class FileTests
     {
         /// <summary>
         /// Read and prepare a simulation instance to run.
@@ -38,12 +38,12 @@ namespace RAWSimO.Core.Tests
         /// Executes full simulation runs for pre-defined instance files.
         /// </summary>
         [Fact]
-        public static void GoldenFiles()
+        public static void TestFiles()
         {
             // Define tests (each test is the base filename of the test files - .xlayo, .xsett, .xconf, .golden)
             var tests = new List<string>
             {
-                "BasicInstance"
+                "TestEva"
             };
 
             // Run all tests
@@ -51,14 +51,10 @@ namespace RAWSimO.Core.Tests
             {
                 // Read instance and run simulation
                 var instance = ReadInstance($"Resources/{test}.xlayo", $"Resources/{test}.xsett", $"Resources/{test}.xconf", 0);
-                SimulationExecutor.Execute(instance);
-                // Analyze the statistics
-                //  - simulation is deterministic, thus, stats should not change
-                //  - except for some algorithm runtime limit related reasons (shouldn't apply here)
-                // Unfortunately, there seems to be no good way to automatically update golden files / fixtures in .Net like in other languages :(
-                //  - feel free to recommend a way, until then the fixtures need to be manually defined
 
-                
+                SimulationExecutor.Execute(instance);
+
+                /**
                 Console.WriteLine("output of " + test);
 
                 var lines = new List<string>();
@@ -72,10 +68,8 @@ namespace RAWSimO.Core.Tests
                 var stats = string.Join(Environment.NewLine, lines.Where(s => s.StartsWith("StatOverall")));
                 var golden = File.ReadAllText($"Resources/{test}.golden").Trim();
                 ///Assert.Equal(golden, stats);
-                
+                **/
             }
         }
     }
 }
-
-
