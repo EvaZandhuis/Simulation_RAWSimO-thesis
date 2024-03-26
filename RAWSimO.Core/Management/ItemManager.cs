@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -731,8 +732,6 @@ namespace RAWSimO.Core.Management
             // Add stuff to pods
             while (Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity) < initialInventory)
             {
-                //Console.WriteLine(Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity));
-
                 // Create bundle
                 ItemBundle bundle = GenerateBundle();
                 // Ask the current item storage manager for the pod to use, then assign it
@@ -742,81 +741,24 @@ namespace RAWSimO.Core.Management
                     throw new InvalidOperationException("Could not assign bundle to the selected pod!");
                 // Notify the instance about the new bundle
                 Instance.NotifyInitialBundleStored(bundle, pod);
-                ///Console.WriteLine("Pod index:" + Instance.Pods.IndexOf(pod) + "  Stored:" + pod.CapacityInUse);
-                ///kan ook gwn zo: Console.WriteLine("Index:" + IndexOf(pod) + "  Stored:" + pod.CapacityInUse);
-                ///Console.WriteLine(bundle.GetInfoItemDescription());
-                ///Console.WriteLine(pod.GetInfoContent(bundle ));
-                ///Console.WriteLine(pod.GetIdentfierString()); ///sku nummer dat is toegevoegd
-                ///Console.WriteLine(pod.ToString()); ///percentage vol
-                ///Console.WriteLine(pod.GetActualStock(bundle));
-
-
             }
-
-            /**
+     
             foreach (Pod pod in Instance.Pods)
             {
-                foreach (var item in pod.ItemDescriptionsContained)
-                {
-                    Console.WriteLine("pod#"+ pod.ID +"sku" + item.ID + "amount"+item.BundleSize);
+                Console.WriteLine($"pod{pod.ID}");
+                VolatileIDDictionary<ItemDescription, int> testDict = (VolatileIDDictionary<ItemDescription, int>) pod._itemDescriptionCountContained;
+                List<ItemDescription> keysDictAsList = testDict.Keys.ToList();
+                List<int> valuesDictAsList = testDict.Values.ToList();
+                for (int i  = 0; i < keysDictAsList.Count; i++) 
+                {   
+                    if (valuesDictAsList[i] != 0)
+                    {
+                        Console.WriteLine(valuesDictAsList[i] + "x " + "sku" + keysDictAsList[i].ID);   
+                    }
                 }
-
-            }
-            **/
-
-            ///Console.WriteLine(List<Pods>.Enumerator.Current.get);
-            
-            
-            ///foreach (Pod pod in Instance.Pods)
-            ///{
-                ///Console.WriteLine($"pod{pod.ID}");
-                ///Console.WriteLine(VolatileKeyValuePair[1]);
-                ///Console.WriteLine(ItemDescription.[]);
-                ///Console.WriteLine(List<_itemDescriptionCountContained>);
-                ///Console.WriteLine(pod.CountContained([2]));
-                ///Console.WriteLine(pod._itemDescriptionCountContained.Value);
-                ///Console.WriteLine(pod._itemDescriptionCountContained[]);
-                ///Console.WriteLine(pod._itemDescriptionCountContained.Key["SimpleItemDescription2"].Value );
-                ///Console.WriteLine(pod._itemDescriptionCountContained);
-                ///Console.WriteLine(pod._itemDescriptionCountContained.ToString());
-                ///Console.WriteLine(pod._itemDescriptionCountContained);
-                /**
-                Console.WriteLine("All Keys:");
-                var keysList = pod._itemDescriptionCountContained.Keys.ToList(); // Convert keys to a list
-                foreach (var key in keysList)
-                {
-                    Console.WriteLine(key.ToString());
-                }
-
-                // Print all values
-                Console.WriteLine("All Values:");
-                var valuesList = pod.Values.ToList(); // Convert values to a list
-                foreach (var value in valuesList)
-                {
-                    Console.WriteLine(value.ToString());
-                }
-                **/
-
-
-                ///foreach (Pod pod in Instance.Pods)
-
-                ///Console.WriteLine($"pod{pod.ID}");
-
-                ///var groupedItems = pod.ItemDescriptionsContained
-                ///    .GroupBy(item => item.ID);
-
-                ///foreach (var group in groupedItems)
-
-                ///var skuIndex = VolatileKeyValuePair<K, V>.Key; // Access SKU index
-                ///var skuAmount = VolatileKeyValuePair<.Key, .Value>.Value; // Access SKU amount
-                ///var totalAmount = group.Sum(item => item.BundleSize);
-                ///Console.WriteLine($"\t{skuAmount} x sku{skuIndex}");
-
-            ///} 
-            
-            
+                Console.WriteLine();
+            }           
         }
-
 
         /// <summary>
         /// Randomly generates a set of bundles and orders that are ready for allocation.
