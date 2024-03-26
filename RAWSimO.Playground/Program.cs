@@ -288,7 +288,7 @@ namespace RAWSimO.Playground
             char optionKey = Console.ReadKey().KeyChar; Console.WriteLine();
             switch (optionKey)
             {
-                case '1': { ItemManagerTest.OrderAnalyzer(); } break;
+                case '1':  break;
                 case '2': { RandomizerTests.TestGenerateNormalDistribution(); } break;
                 default: break;
             }
