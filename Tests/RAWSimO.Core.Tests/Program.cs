@@ -9,6 +9,7 @@ using RAWSimO.Core.Configurations;
 using RAWSimO.Core.Management;
 using RAWSimO.Core.Elements;
 using RAWSimO.Core.Items;
+using System.Runtime.InteropServices;
 
 Console.WriteLine("Test");
 

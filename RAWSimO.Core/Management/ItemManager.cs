@@ -1058,31 +1058,14 @@ namespace RAWSimO.Core.Management
 
         private ItemBundle GenerateFixedBundle()
         {
-            double r = Instance.Randomizer.NextDouble();
+            // not fixed yet, description according to sku int
+            int sku = 1;
+            int bundleSize = 1;
 
-            // Choose item-description based on the probabilities
-            ItemDescription chosenDescription = _itemDescriptions.First();
-            foreach (var description in _itemDescriptions)
-            {
-                r -= _itemDescriptionProbabilities[description];
-                if (r <= 0) { chosenDescription = description; break; }
-            }
-
-            int bundleSize = 0;
-            if (Instance.Randomizer.NextDouble() < Instance.SettingConfig.InventoryConfiguration.ReturnOrderProbability)
-                // Emulate a return order
-                bundleSize = 1;
-            else if (chosenDescription.BundleSize > 0)
-                // Use given bundle size, if possible
-                bundleSize = chosenDescription.BundleSize;
-            else
-                // Generate a random bundle size
-                bundleSize = Instance.Randomizer.NextInt(Instance.SettingConfig.InventoryConfiguration.BundleSizeMin, Instance.SettingConfig.InventoryConfiguration.BundleSizeMax);
-            // If the bundle does not fit the system ignore it (in case of simple items)
-            if (!Instance.SettingConfig.InventoryConfiguration.IgnoreCapacityForBundleGeneration && // Only respect the capacity utilization if desired
-                Instance.SettingConfig.InventoryConfiguration.ItemType == ItemType.SimpleItem && // Only respect the capacity utilization for simple items
-                Instance.StockInfo.CurrentReservedOverallLoad + bundleSize > Instance.StockInfo.OverallLoadCapacity * Instance.SettingConfig.InventoryConfiguration.BufferBundlesUntilInventoryLoad) // See whether there is enough potential capacity for the bundle
-                return null;
+            // orders the list of skus so that the index matches with the sku number
+            _itemDescriptions = _itemDescriptions.OrderBy(description => description.ID).ToList();
+            //the item description of the chosenDescription is the one of the sku int
+            ItemDescription chosenDescription = _itemDescriptions[sku];
 
             ItemBundle bundle = Instance.CreateItemBundle(chosenDescription, bundleSize);
 
