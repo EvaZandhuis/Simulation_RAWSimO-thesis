@@ -133,7 +133,7 @@ namespace RAWSimO.Toolbox
         /// <summary>
         /// The actual storage of this dictionary (simply wrapping an ordinary dictionary).
         /// </summary>
-        private Dictionary<K, int> _storage;
+        public Dictionary<K, int> _storage;
 
         /// <summary>
         /// Creates a new inflexible dictionary from the given list of entries.

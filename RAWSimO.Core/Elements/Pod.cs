@@ -88,15 +88,15 @@ namespace RAWSimO.Core.Elements
         /// <summary>
         /// All items that are physically contained in this pod.
         /// </summary>
-        internal IEnumerable<ItemDescription> ItemDescriptionsContained { get { return _itemDescriptionsContained; } }
+        public IEnumerable<ItemDescription> ItemDescriptionsContained { get { return _itemDescriptionsContained; } }
         /// <summary>
         /// Contains the number of items still left of the different kinds (including already reserved ones).
         /// </summary>
-        private IInflexibleDictionary<ItemDescription, int> _itemDescriptionCountContained;
+        public IInflexibleDictionary<ItemDescription, int> _itemDescriptionCountContained;
         /// <summary>
         /// Contains the number of items still left of the different kinds (exluding already reserved ones).
         /// </summary>
-        private IInflexibleDictionary<ItemDescription, int> _itemDescriptionCountAvailable;
+        public IInflexibleDictionary<ItemDescription, int> _itemDescriptionCountAvailable;
         /// <summary>
         /// All extract requests that shall be completed with this pod.
         /// </summary>
