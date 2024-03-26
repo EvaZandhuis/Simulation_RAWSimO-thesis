@@ -733,7 +733,7 @@ namespace RAWSimO.Core.Management
             while (Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity) < initialInventory)
             {
                 // Create bundle
-                ItemBundle bundle = GenerateBundle();
+                ItemBundle bundle = GenerateFixedBundle();
                 // Ask the current item storage manager for the pod to use, then assign it
                 Pod pod = Instance.Controller.StorageManager.SelectNextPodForInititalInventory(Instance, bundle);
 
@@ -1055,6 +1055,42 @@ namespace RAWSimO.Core.Management
         #endregion
 
         #region Bundle and order generation
+
+        private ItemBundle GenerateFixedBundle()
+        {
+            double r = Instance.Randomizer.NextDouble();
+
+            // Choose item-description based on the probabilities
+            ItemDescription chosenDescription = _itemDescriptions.First();
+            foreach (var description in _itemDescriptions)
+            {
+                r -= _itemDescriptionProbabilities[description];
+                if (r <= 0) { chosenDescription = description; break; }
+            }
+
+            int bundleSize = 0;
+            if (Instance.Randomizer.NextDouble() < Instance.SettingConfig.InventoryConfiguration.ReturnOrderProbability)
+                // Emulate a return order
+                bundleSize = 1;
+            else if (chosenDescription.BundleSize > 0)
+                // Use given bundle size, if possible
+                bundleSize = chosenDescription.BundleSize;
+            else
+                // Generate a random bundle size
+                bundleSize = Instance.Randomizer.NextInt(Instance.SettingConfig.InventoryConfiguration.BundleSizeMin, Instance.SettingConfig.InventoryConfiguration.BundleSizeMax);
+            // If the bundle does not fit the system ignore it (in case of simple items)
+            if (!Instance.SettingConfig.InventoryConfiguration.IgnoreCapacityForBundleGeneration && // Only respect the capacity utilization if desired
+                Instance.SettingConfig.InventoryConfiguration.ItemType == ItemType.SimpleItem && // Only respect the capacity utilization for simple items
+                Instance.StockInfo.CurrentReservedOverallLoad + bundleSize > Instance.StockInfo.OverallLoadCapacity * Instance.SettingConfig.InventoryConfiguration.BufferBundlesUntilInventoryLoad) // See whether there is enough potential capacity for the bundle
+                return null;
+
+            ItemBundle bundle = Instance.CreateItemBundle(chosenDescription, bundleSize);
+
+            if (bundle != null)
+                bundle.TimeStamp = Instance.Controller == null ? 0.0 : Instance.Controller.CurrentTime;
+            // Return it
+            return bundle;
+        }
 
         private ItemBundle GenerateBundle()
         {
