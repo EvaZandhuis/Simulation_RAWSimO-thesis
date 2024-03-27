@@ -15,10 +15,7 @@ using System.IO;
 
 Console.WriteLine("Test");
 
-Console.WriteLine(ReadData.TotalSkuCount);
+Console.WriteLine(ReadData.CapacityUsedPerPod[20]);
 
 
-
-
-
-///FileTests.TestFiles();
+FileTests.TestFiles();

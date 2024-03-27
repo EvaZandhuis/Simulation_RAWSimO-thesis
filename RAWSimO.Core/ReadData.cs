@@ -11,11 +11,13 @@ namespace RAWSimO.Core
     {
         public static List<PodItem> PodContentData { get; }
         public static int TotalSkuCount { get; private set; }
+        public static Dictionary<int, int> CapacityUsedPerPod { get; }
 
         static ReadData()
         {
             PodContentData = new List<PodItem>();
             TotalSkuCount = 0;
+            CapacityUsedPerPod = new Dictionary<int, int>();
 
             string csvFilePath = "C:\\Users\\pnl0j327\\PycharmProjects\\pythonProject1\\TestData.csv";
 
@@ -38,12 +40,28 @@ namespace RAWSimO.Core
 
                             // Increment the total SKU count
                             TotalSkuCount += skuCount;
+
+                            if (CapacityUsedPerPod.ContainsKey(podIndex))
+                                CapacityUsedPerPod[podIndex] += skuCount;
+                            else
+                                CapacityUsedPerPod[podIndex] = skuCount;
+
                         }
                        
                     }
                 }
             }
         }
+
+
+
+        
+        
+        
+           
+
+
+
     }
 
     public class PodItem
@@ -59,6 +77,7 @@ namespace RAWSimO.Core
             SkuCount = skuCount;
         }
     }
+
 }
 
 
