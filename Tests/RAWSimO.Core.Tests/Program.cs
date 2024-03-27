@@ -10,8 +10,17 @@ using RAWSimO.Core.Management;
 using RAWSimO.Core.Elements;
 using RAWSimO.Core.Items;
 using System.Runtime.InteropServices;
+using System.IO;
+
 
 Console.WriteLine("Test");
 
+foreach (var podItem in ReadData.PodContentData)
+{
+    if (podItem.SkuIndex == "0")
+    {
+        Console.WriteLine("Pod"+podItem.PodIndex+"sku"+podItem.SkuIndex + "count"+podItem.SkuCount); 
+    }
+}
 
 FileTests.TestFiles();
