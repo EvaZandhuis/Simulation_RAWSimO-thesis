@@ -78,7 +78,7 @@ namespace RAWSimO.Core.Control
         /// <returns>The selected pod.</returns>
         public abstract Pod SelectPodForInititalInventory(Instance instance, ItemBundle bundle);
 
-        public abstract Pod SelectNextPodForInititalInventory(Instance instance, ItemBundle bundle);
+        public abstract Pod SelectNextPodForInititalInventory(Instance instance);
 
         /// <summary>
         /// Adds the transaction to the ready list.

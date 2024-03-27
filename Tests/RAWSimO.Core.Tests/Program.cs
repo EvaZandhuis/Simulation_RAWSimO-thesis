@@ -13,9 +13,5 @@ using System.Runtime.InteropServices;
 using System.IO;
 
 
-Console.WriteLine("Test");
-
-Console.WriteLine(ReadData.CapacityUsedPerPod[20]);
-
 
 FileTests.TestFiles();

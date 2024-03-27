@@ -38,12 +38,17 @@ namespace RAWSimO.Core.Control.Defaults.ItemStorage
         /// <param name="instance">The active instance.</param>
         /// <param name="bundle">The bundle to assign to a pod.</param>
         /// <returns>The selected pod.</returns>
-        public override Pod SelectNextPodForInititalInventory(Instance instance, ItemBundle bundle)
+        public override Pod SelectNextPodForInititalInventory(Instance instance)
         {
-            //Add to next pod
-            return instance.Pods
-                .Where(p => p.FitsForReservation(bundle))
-                .First();
+            foreach (var pod in instance.Pods)
+            {
+                if (pod.CapacityInUse < ReadData.CapacityUsedPerPod[pod.ID])
+                {
+                    // Return the first pod that satisfies the condition
+                    return pod;
+                }
+            }
+            return null;
         }
 
         /// <summary>

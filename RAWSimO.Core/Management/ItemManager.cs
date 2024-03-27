@@ -730,17 +730,32 @@ namespace RAWSimO.Core.Management
         public void InitializePodContentsFixed(double initialInventory)
         {
             // Add stuff to pods
-            while (Instance.Pods.Sum(b => b.CapacityInUse) / Instance.Pods.Sum(b => b.Capacity) < initialInventory)
+            while (Instance.Pods.Sum(b => b.CapacityInUse) < ReadData.TotalSkuCount)
             {
                 // Create bundle
-                ItemBundle bundle = GenerateFixedBundle();
+                
                 // Ask the current item storage manager for the pod to use, then assign it
-                Pod pod = Instance.Controller.StorageManager.SelectNextPodForInititalInventory(Instance, bundle);
+                Pod pod = Instance.Controller.StorageManager.SelectNextPodForInititalInventory(Instance);
+                while (pod.CapacityInUse < ReadData.CapacityUsedPerPod[pod.ID])
+                {
+                    foreach (var PodItem in ReadData.PodContentData)
+                    {
+                        if (pod.ID == PodItem.PodIndex)
+                        {
+                            ItemBundle bundle = GenerateFixedBundle(PodItem.SkuIndex);
 
-                if (!pod.Add(bundle))
-                    throw new InvalidOperationException("Could not assign bundle to the selected pod!");
-                // Notify the instance about the new bundle
-                Instance.NotifyInitialBundleStored(bundle, pod);
+                            if (!pod.Add(bundle))
+                                throw new InvalidOperationException("Could not assign bundle to the selected pod!");
+                            // Notify the instance about the new bundle
+                            Instance.NotifyInitialBundleStored(bundle, pod);
+                        }
+
+                    }
+
+
+                }
+                
+
             }
      
             foreach (Pod pod in Instance.Pods)
@@ -1056,10 +1071,10 @@ namespace RAWSimO.Core.Management
 
         #region Bundle and order generation
 
-        private ItemBundle GenerateFixedBundle()
+        private ItemBundle GenerateFixedBundle(int SKUINDEX)
         {
             // not fixed yet, description according to sku int
-            int sku = 1;
+            int sku = SKUINDEX;
             int bundleSize = 1;
 
             // orders the list of skus so that the index matches with the sku number
