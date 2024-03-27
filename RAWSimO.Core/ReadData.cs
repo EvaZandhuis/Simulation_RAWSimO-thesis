@@ -46,22 +46,11 @@ namespace RAWSimO.Core
                             else
                                 CapacityUsedPerPod[podIndex] = skuCount;
 
-                        }
-                       
+                        }  
                     }
                 }
             }
         }
-
-
-
-        
-        
-        
-           
-
-
-
     }
 
     public class PodItem
