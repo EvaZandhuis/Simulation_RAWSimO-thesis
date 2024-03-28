@@ -1,0 +1,83 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 03/28/2024 16:39:49
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\Eva\TestEva.xinst
+Setting: ..\..\..\..\Material\Instances\Eva\TestEva.xsett
+ControlConfig: ..\..\..\..\Material\Instances\Eva\TestEva.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\Eva
+Seed: 3
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: TestEva-TestEva-TestEva-3
+Done!
+Executing ... 
+ 16:39:50 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 99%  |    0     |   0    |  50.89MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6428571428571429)
+ 00:00:00 | Pausing bundle generation due to inventory+reserved+backlog level (currently at: 0.8571428571428571)
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | 00:00:00 | 0.00:10:00 | 100.00%  |   27    |    0     | 55%  |   511    |   0    |  54.46MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:00 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00023328510638297886
+StatTimingPathPlanningOverall: 0.021928800000000012
+StatTimingPathPlanningCount: 94
+StatTimingTaskAllocationAverage: 0.0005247242857142854
+StatTimingTaskAllocationOverall: 0.03673069999999998
+StatTimingTaskAllocationCount: 70
+StatTimingItemStorageAverage: 3.40603448275862E-05
+StatTimingItemStorageOverall: 0.0019754999999999994
+StatTimingItemStorageCount: 58
+StatTimingPodStorageAverage: 0.0003406111111111111
+StatTimingPodStorageOverall: 0.0030654999999999996
+StatTimingPodStorageCount: 9
+StatTimingReplenishmentBatchingAverage: 0.0014501333333333333
+StatTimingReplenishmentBatchingOverall: 0.0043504
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.0005499874999999999
+StatTimingOrderBatchingOverall: 0.017599599999999996
+StatTimingOrderBatchingCount: 32
+>>> Overall
+StatOverallBundlesPlaced: 27
+StatOverallItemsOrdered: 8
+StatOverallOrdersPlaced: 7
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 56
+StatOverallLinesHandled: 54
+StatOverallOrdersHandled: 27
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 510.9999999999999
+StatOverallDistanceEstimated: 462
+StatOverallAssignedTasks: 70
+StatMaxMemoryUsed: 54,6796875
+StatRealTimeUsed: 0.2823916
+StatAverageTurnoverTime: 326.3885022153564
+StatMedianTurnoverTime: 282.4377777777777
+StatLowerQuartileTurnoverTime: 170.37231601363501
+StatUpperQuartileTurnoverTime: 505.65676045807965
+StatAverageThroughputTime: 201.02816604973734
+StatMedianThroughputTime: 210.46444444444444
+StatLowerQuartileThroughputTime: 153.79388888888897
+StatUpperQuartileThroughputTime: 264.0856493469686
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
