@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities.Resources;
 using RAWSimO.Core.Control;
 using RAWSimO.Core.Info;
 using RAWSimO.Core.IO;
@@ -40,6 +41,9 @@ namespace RAWSimO.Core.Tests
         [Fact]
         public static void TestFiles()
         {
+            // Define folder path
+            string folderPath = "C:\\Users\\pnl0j327\\RAWSim-O\\RAWSim-O-main\\Material\\Instances\\Eva";
+
             // Define tests (each test is the base filename of the test files - .xlayo, .xsett, .xconf, .golden)
             var tests = new List<string>
             {
@@ -49,11 +53,11 @@ namespace RAWSimO.Core.Tests
             // Run all tests
             foreach (var test in tests)
             {
-                // Read instance and run simulation
-                var instance = ReadInstance($"Resources/{test}.xlayo", $"Resources/{test}.xsett", $"Resources/{test}.xconf", 0);
+                var instance = ReadInstance(Path.Combine(folderPath, $"{test}.xlayo"),
+                                                        Path.Combine(folderPath, $"{test}.xsett"),
+                                                        Path.Combine(folderPath, $"{test}.xconf"), 0);
 
                 SimulationExecutor.Execute(instance);
-
                 /**
                 Console.WriteLine("output of " + test);
 
