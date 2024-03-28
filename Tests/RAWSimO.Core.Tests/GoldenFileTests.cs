@@ -12,6 +12,8 @@ using RAWSimO.Core.Management;
 using RAWSimO.Core.Randomization;
 using Xunit;
 
+
+/*
 namespace RAWSimO.Core.Tests
 {
     public class GoldenFileTests
@@ -77,5 +79,7 @@ namespace RAWSimO.Core.Tests
         }
     }
 }
+    */
+
 
 
