@@ -275,7 +275,7 @@ namespace RAWSimO.Core.Configurations
 
             TierCount = 1;
             TierHeight = 4;
-            BotCount = 36;
+            BotCount = 20;
             BotRadius = 0.35;
             MaxAcceleration = 1.0;
             MaxDeceleration = 1.0;
@@ -283,29 +283,29 @@ namespace RAWSimO.Core.Configurations
             TurnSpeed = 2.5;
             CollisionPenaltyTime = 0.5;
             PodTransferTime = 2.2;
-            PodAmount = 0.6;
+            PodAmount = 0.52;
             PodRadius = 0.45;
-            PodCapacity = 100;
+            PodCapacity = 6;
             StationRadius = 0.45;
             ItemTransferTime = 10;
             ItemPickTime = 3;
             ItemBundleTransferTime = 10;
-            IStationCapacity = 1000;
+            IStationCapacity = 0.1;
             OStationCapacity = 12;
             ElevatorTransportationTimePerTier = 10;
             AisleLayoutType = AisleLayoutTypes.Tim;
             AislesTwoDirectional = false;
             SingleLane = true;
             NameLayout = "tiny";
-            NrHorizontalAisles = 2;
-            NrVerticalAisles = 2;
+            NrHorizontalAisles = 6;
+            NrVerticalAisles = 6;
             HorizontalLengthBlock = 4;
             WidthHall = 6;
             WidthBuffer = 4;
             DistanceEntryExitStation = 3;
             CounterClockwiseRingwayDirection = true;
-            NPickStationWest = 0;
-            NPickStationEast = 1;
+            NPickStationWest = 2;
+            NPickStationEast = 3;
             NPickStationSouth = 0;
             NPickStationNorth = 0;
             NReplenishmentStationWest = 1;
@@ -326,8 +326,8 @@ namespace RAWSimO.Core.Configurations
         /// </summary>
         public LayoutConfiguration()
         {
-            TestScenario();
-            ///LargeScenario();
+            //TestScenario();
+            LargeScenario();
          }
             
 
