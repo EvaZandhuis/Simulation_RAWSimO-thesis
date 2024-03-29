@@ -1,24 +1,24 @@
 <<< Welcome to the RAWSimO CLI >>>
-The time is: 03/29/2024 09:13:40
+The time is: 03/29/2024 09:13:58
 Starting RAWSimO wrapper with the following arguments:
 Instance: ..\..\..\..\Material\Instances\Eva\TestEva.xinst
 Setting: ..\..\..\..\Material\Instances\Eva\TestEva.xsett
 ControlConfig: ..\..\..\..\Material\Instances\Eva\TestEva.xconf
 StatisticsDir: ..\..\..\..\Material\Instances\Eva
-Seed: 1
+Seed: 0
 Adding handler for unhandled exceptions ...
 Initializing ... 
 Instance recognized!
 Parsing setting config ...
 Parsing control config ...
 Parsing instance ...
-StatisticsFolder: TestEva-TestEva-TestEva-1
+StatisticsFolder: TestEva-TestEva-TestEva-0
 Done!
 Executing ... 
- 09:13:41 | >>> Warming up ...
+ 09:13:58 | >>> Warming up ...
  00:00:00 | >>> Warmup finished - starting simulation ...
  Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
- 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 99%  |    0     |   0    |  48.38MB  
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 99%  |    0     |   0    |  49.00MB  
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
@@ -31,53 +31,53 @@ Executing ...
  00:00:00 | Pausing bundle generation due to inventory+reserved+backlog level (currently at: 0.8571428571428571)
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
- 00:00:00 | 00:00:00 | 0.00:10:00 | 100.00%  |   27    |    0     | 55%  |   527    |   0    |  52.53MB  
+ 00:00:00 | 00:00:00 | 0.00:10:00 | 100.00%  |   27    |    0     | 55%  |   517    |   0    |  52.59MB  
  00:00:00 | >>> Simulation finished - writing results ...
  00:00:00 | >>> Results written
 Simulation finished.
 >>> Timings
-StatTimingPathPlanningAverage: 0.0002739539215686276
-StatTimingPathPlanningOverall: 0.027943300000000015
-StatTimingPathPlanningCount: 102
-StatTimingTaskAllocationAverage: 0.0006128457142857141
-StatTimingTaskAllocationOverall: 0.042899199999999985
-StatTimingTaskAllocationCount: 70
-StatTimingItemStorageAverage: 4.185172413793104E-05
-StatTimingItemStorageOverall: 0.0024274
+StatTimingPathPlanningAverage: 0.00028243434343434344
+StatTimingPathPlanningOverall: 0.027961
+StatTimingPathPlanningCount: 99
+StatTimingTaskAllocationAverage: 0.0007899013888888888
+StatTimingTaskAllocationOverall: 0.0568729
+StatTimingTaskAllocationCount: 72
+StatTimingItemStorageAverage: 4.6651724137931026E-05
+StatTimingItemStorageOverall: 0.0027057999999999995
 StatTimingItemStorageCount: 58
-StatTimingPodStorageAverage: 0.0005344888888888889
-StatTimingPodStorageOverall: 0.0048104
+StatTimingPodStorageAverage: 0.000362
+StatTimingPodStorageOverall: 0.003258
 StatTimingPodStorageCount: 9
-StatTimingReplenishmentBatchingAverage: 0.0015038666666666667
-StatTimingReplenishmentBatchingOverall: 0.0045116
+StatTimingReplenishmentBatchingAverage: 0.002247566666666667
+StatTimingReplenishmentBatchingOverall: 0.006742700000000001
 StatTimingReplenishmentBatchingCount: 3
-StatTimingOrderBatchingAverage: 0.0005005366666666666
-StatTimingOrderBatchingOverall: 0.0150161
-StatTimingOrderBatchingCount: 30
+StatTimingOrderBatchingAverage: 0.0005244774193548387
+StatTimingOrderBatchingOverall: 0.0162588
+StatTimingOrderBatchingCount: 31
 >>> Overall
 StatOverallBundlesPlaced: 27
 StatOverallItemsOrdered: 8
-StatOverallOrdersPlaced: 6
+StatOverallOrdersPlaced: 5
 StatOverallBundlesRejected: 0
 StatOverallOrdersRejected: 0
 StatOverallBundlesHandled: 0
 StatOverallItemsHandled: 56
-StatOverallLinesHandled: 54
+StatOverallLinesHandled: 52
 StatOverallOrdersHandled: 27
 StatOverallCollisions: 0
-StatOverallDistanceTraveled: 527.47846300111
-StatOverallDistanceEstimated: 513
-StatOverallAssignedTasks: 70
-StatMaxMemoryUsed: 52,74609375
-StatRealTimeUsed: 0.3812262
-StatAverageTurnoverTime: 317.0592189062094
-StatMedianTurnoverTime: 284.4114790838413
-StatLowerQuartileTurnoverTime: 159.77620490252397
-StatUpperQuartileTurnoverTime: 475.0907431383815
-StatAverageThroughputTime: 204.36026481516944
-StatMedianThroughputTime: 223.89444444444467
-StatLowerQuartileThroughputTime: 159.77620490252397
-StatUpperQuartileThroughputTime: 241.25999999999996
+StatOverallDistanceTraveled: 517.0018956094835
+StatOverallDistanceEstimated: 489
+StatOverallAssignedTasks: 72
+StatMaxMemoryUsed: 52,8359375
+StatRealTimeUsed: 0.3689892
+StatAverageTurnoverTime: 333.12510688722347
+StatMedianTurnoverTime: 341.92352091615896
+StatLowerQuartileTurnoverTime: 169.8433333333333
+StatUpperQuartileTurnoverTime: 465.1222222222222
+StatAverageThroughputTime: 202.3634466352598
+StatMedianThroughputTime: 223.59555555555565
+StatLowerQuartileThroughputTime: 159.60277777777782
+StatUpperQuartileThroughputTime: 234.58759019495153
 
 Marked tag finished after 1 tries!
 .Fin. - SUCCESS

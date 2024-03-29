@@ -1,107 +1,107 @@
 >>> Bots
 Bot0:
-DistanceTraveled: 102
-DistanceEstimated: 96
-NumberOfPickups: 2
+DistanceTraveled: 111,71555195909423
+DistanceEstimated: 112
+NumberOfPickups: 3
 NumberOfSetdowns: 2
 NumCollisions: 0
-TotalTimeMoving: 106.6591702631273
+TotalTimeMoving: 116.22453823585695
 None: 0.42
-ParkPod: 34.08444444444439
+ParkPod: 34.9213852924282
 RepositionPod: 0
 Insert: 0
-Extract: 489.8563924853497
-Rest: 67.07592352828567
-PickupPod: 4.476111111111109
-SetdownPod: 4.488888888888965
+Extract: 489.4922222222225
+Rest: 65.8788888888887
+PickupPod: 6.720555555555634
+SetdownPod: 4.448888888888831
 GetItems: 0
-PutItems: 111.28731601363515
-Rest: 60.698051959095025
-Move: 410.48639248534954
+PutItems: 91.70352091615896
+Rest: 62.95805195909465
+Move: 424.8814790838413
 Evade: 0
 UseElevator: 0
 Bot1:
-DistanceTraveled: 111,99999999999989
-DistanceEstimated: 101
+DistanceTraveled: 109,99999999999994
+DistanceEstimated: 97
 NumberOfPickups: 3
 NumberOfSetdowns: 2
 NumCollisions: 0
-TotalTimeMoving: 121.57537516565164
+TotalTimeMoving: 118.68870849898505
 None: 0.42
-ParkPod: 32.65888888888898
+ParkPod: 32.60953823585734
 RepositionPod: 0
 Insert: 0
-Extract: 533.0050937914126
-Rest: 26.63333333333334
+Extract: 525.1171284308093
+Rest: 36.375649346968416
 PickupPod: 6.733333333333295
 SetdownPod: 4.488888888888866
 GetItems: 0
-PutItems: 108.5955555555555
-Rest: 22.654906208587192
-Move: 450.24463202727014
+PutItems: 109.14333333333332
+Rest: 22.44500000000002
+Move: 451.7117604580796
 Evade: 0
 UseElevator: 0
 Bot2:
-DistanceTraveled: 77
-DistanceEstimated: 63
+DistanceTraveled: 84,99999999999994
+DistanceEstimated: 67
 NumberOfPickups: 2
 NumberOfSetdowns: 1
 NumCollisions: 0
-TotalTimeMoving: 88.48564934696869
+TotalTimeMoving: 95.03323954192074
 None: 0.42
-ParkPod: 17.736666666666622
+ParkPod: 17.77166666666659
 RepositionPod: 0
 Insert: 0
-Extract: 457.3811111111112
-Rest: 113.81731601363511
+Extract: 516.731572875254
+Rest: 58.40009379141286
 PickupPod: 4.488888888888866
 SetdownPod: 2.2444444444444116
 GetItems: 0
-PutItems: 78.87370130606331
-Rest: 102.48111111111118
-Move: 401.2669480409051
+PutItems: 99.83379509747624
+Rest: 47.063888888888926
+Move: 439.692316013635
 Evade: 0
 UseElevator: 0
 Bot3:
-DistanceTraveled: 105
-DistanceEstimated: 95
+DistanceTraveled: 105,754545246296
+DistanceEstimated: 107
 NumberOfPickups: 3
 NumberOfSetdowns: 2
 NumCollisions: 0
-TotalTimeMoving: 113.60842712474572
+TotalTimeMoving: 119.52074313838149
 None: 0.42
-ParkPod: 34.88509379141274
+ParkPod: 35.55212843080935
 RepositionPod: 0
 Insert: 0
-Extract: 497.3860173196983
-Rest: 57.75166666666661
+Extract: 456.2888888888897
+Rest: 94.34833333333296
 PickupPod: 6.733333333333409
-SetdownPod: 4.465555555555483
+SetdownPod: 4.488888888888852
 GetItems: 0
-PutItems: 100.8678715691909
-Rest: 52.91777777777769
-Move: 425.45823954192014
+PutItems: 101.8428715691906
+Rest: 87.88444444444404
+Move: 385.6598124171751
 Evade: 0
 UseElevator: 0
 Bot4:
-DistanceTraveled: 114,99999999999999
-DistanceEstimated: 107
+DistanceTraveled: 115,00836579571983
+DistanceEstimated: 130
 NumberOfPickups: 2
 NumberOfSetdowns: 2
 NumCollisions: 0
-TotalTimeMoving: 120.38657287525385
+TotalTimeMoving: 122.35601731969868
 None: 0.42
-ParkPod: 34.12055555555554
+ParkPod: 34.831572875253926
 RepositionPod: 0
 Insert: 0
-Extract: 521.4140764717147
-Rest: 38.32870130606312
+Extract: 501.96111111111105
+Rest: 56.15722222222228
 PickupPod: 4.456666666666635
 SetdownPod: 4.488888888888937
 GetItems: 0
-PutItems: 112.12611111111107
-Rest: 15.968145750507501
-Move: 457.2435209161593
+PutItems: 110.91138529242801
+Rest: 27.910923528285522
+Move: 445.60204183231815
 Evade: 0
 UseElevator: 0
 >>> Pods
@@ -125,9 +125,9 @@ Pod4(1.00%1.00%):
 SimpleItemDescription2 SimpleItemDescription4 
 StatItemsHandledAtOutputStations: 0
 StatBundlesHandledAtInputStations: 0
-Pod5(0.00%0.00%):
-
-StatItemsHandledAtOutputStations: 6
+Pod5(1.00%1.00%):
+SimpleItemDescription2 SimpleItemDescription3 
+StatItemsHandledAtOutputStations: 0
 StatBundlesHandledAtInputStations: 0
 Pod6(0.00%1.00%):
 
@@ -141,9 +141,9 @@ Pod8(0.17%0.17%):
 SimpleItemDescription6 
 StatItemsHandledAtOutputStations: 5
 StatBundlesHandledAtInputStations: 0
-Pod9(0.50%0.50%):
-SimpleItemDescription1 
-StatItemsHandledAtOutputStations: 3
+Pod9(1.00%1.00%):
+SimpleItemDescription1 SimpleItemDescription5 
+StatItemsHandledAtOutputStations: 0
 StatBundlesHandledAtInputStations: 0
 Pod10(1.00%1.00%):
 SimpleItemDescription0 SimpleItemDescription9 
@@ -161,9 +161,9 @@ Pod13(1.00%1.00%):
 SimpleItemDescription0 SimpleItemDescription5 
 StatItemsHandledAtOutputStations: 0
 StatBundlesHandledAtInputStations: 0
-Pod14(0.67%0.67%):
-SimpleItemDescription4 SimpleItemDescription8 
-StatItemsHandledAtOutputStations: 0
+Pod14(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 4
 StatBundlesHandledAtInputStations: 0
 Pod15(1.00%1.00%):
 SimpleItemDescription0 SimpleItemDescription5 
@@ -181,9 +181,9 @@ Pod18(0.00%0.50%):
 
 StatItemsHandledAtOutputStations: 6
 StatBundlesHandledAtInputStations: 0
-Pod19(1.00%1.00%):
-SimpleItemDescription1 SimpleItemDescription7 
-StatItemsHandledAtOutputStations: 0
+Pod19(0.17%0.17%):
+SimpleItemDescription1 
+StatItemsHandledAtOutputStations: 5
 StatBundlesHandledAtInputStations: 0
 Pod20(0.00%0.00%):
 
@@ -204,42 +204,42 @@ PodHandlingTimeMin: 0
 PodHandlingTimeMax: 0
 >>> OutputStations
 OutputStation0:
-IdleTime: 57.75536797272944
+IdleTime: 59.60238822628383
 UpTime: 600
 DownTime: 0
 NumItemsPicked: 56
-NumInjectedItemsPicked: 31
+NumInjectedItemsPicked: 29
 NumOrdersFinished: 27
 ItemPileOn: 6.222222222222222
 OrderPileOn: 3
 PodsHandled: 9
-PodHandlingTimeAvg: 61.314465286980635
-PodHandlingTimeVar: 11.130474589441205
-PodHandlingTimeMin: 52.744999999999976
-PodHandlingTimeMax: 63.81768398636504
+PodHandlingTimeAvg: 59.30752044292948
+PodHandlingTimeVar: 46.717266548220344
+PodHandlingTimeMin: 43.25935065303173
+PodHandlingTimeMax: 63.293982680301724
 >>> Timings
-StatTimingPathPlanningAverage: 0.00025980106382978704
-StatTimingPathPlanningOverall: 0.024421299999999983
-StatTimingPathPlanningCount: 94
-StatTimingTaskAllocationAverage: 0.0006334671428571428
-StatTimingTaskAllocationOverall: 0.04434269999999999
+StatTimingPathPlanningAverage: 0.00019910490196078435
+StatTimingPathPlanningOverall: 0.020308700000000002
+StatTimingPathPlanningCount: 102
+StatTimingTaskAllocationAverage: 0.0005568871428571426
+StatTimingTaskAllocationOverall: 0.038982099999999985
 StatTimingTaskAllocationCount: 70
-StatTimingItemStorageAverage: 3.0027586206896548E-05
-StatTimingItemStorageOverall: 0.0017415999999999998
+StatTimingItemStorageAverage: 3.305344827586207E-05
+StatTimingItemStorageOverall: 0.0019171000000000004
 StatTimingItemStorageCount: 58
-StatTimingPodStorageAverage: 0.0003959333333333333
-StatTimingPodStorageOverall: 0.0035634
+StatTimingPodStorageAverage: 0.0005629666666666667
+StatTimingPodStorageOverall: 0.0050667
 StatTimingPodStorageCount: 9
-StatTimingReplenishmentBatchingAverage: 0.0022017333333333336
-StatTimingReplenishmentBatchingOverall: 0.0066052
+StatTimingReplenishmentBatchingAverage: 0.0032115000000000004
+StatTimingReplenishmentBatchingOverall: 0.0096345
 StatTimingReplenishmentBatchingCount: 3
-StatTimingOrderBatchingAverage: 0.0005159468749999998
-StatTimingOrderBatchingOverall: 0.016510299999999995
-StatTimingOrderBatchingCount: 32
+StatTimingOrderBatchingAverage: 0.00038624193548387104
+StatTimingOrderBatchingOverall: 0.011973500000000002
+StatTimingOrderBatchingCount: 31
 >>> Overall
 StatOverallBundlesPlaced: 27
 StatOverallItemsOrdered: 8
-StatOverallOrdersPlaced: 7
+StatOverallOrdersPlaced: 8
 StatOverallBundlesRejected: 0
 StatOverallOrdersRejected: 0
 StatOverallBundlesHandled: 0
@@ -247,17 +247,17 @@ StatOverallItemsHandled: 56
 StatOverallLinesHandled: 54
 StatOverallOrdersHandled: 27
 StatOverallCollisions: 0
-StatOverallDistanceTraveled: 510.9999999999999
-StatOverallDistanceEstimated: 462
+StatOverallDistanceTraveled: 527.47846300111
+StatOverallDistanceEstimated: 513
 StatOverallAssignedTasks: 70
-StatMaxMemoryUsed: 52,6875
-StatRealTimeUsed: 0.3886957
-StatAverageTurnoverTime: 326.3885022153564
-StatMedianTurnoverTime: 282.4377777777777
-StatLowerQuartileTurnoverTime: 170.37231601363501
-StatUpperQuartileTurnoverTime: 505.65676045807965
-StatAverageThroughputTime: 201.02816604973734
-StatMedianThroughputTime: 210.46444444444444
-StatLowerQuartileThroughputTime: 153.79388888888897
-StatUpperQuartileThroughputTime: 264.0856493469686
+StatMaxMemoryUsed: 52,6484375
+StatRealTimeUsed: 0.3170705
+StatAverageTurnoverTime: 321.5211739051242
+StatMedianTurnoverTime: 342.5644444444445
+StatLowerQuartileTurnoverTime: 159.77620490252397
+StatUpperQuartileTurnoverTime: 475.0907431383815
+StatAverageThroughputTime: 204.36026481516944
+StatMedianThroughputTime: 223.89444444444467
+StatLowerQuartileThroughputTime: 159.77620490252397
+StatUpperQuartileThroughputTime: 241.25999999999996
 

@@ -1,24 +1,24 @@
 <<< Welcome to the RAWSimO CLI >>>
-The time is: 03/29/2024 09:13:40
+The time is: 03/29/2024 09:14:33
 Starting RAWSimO wrapper with the following arguments:
 Instance: ..\..\..\..\Material\Instances\Eva\TestEva.xinst
 Setting: ..\..\..\..\Material\Instances\Eva\TestEva.xsett
 ControlConfig: ..\..\..\..\Material\Instances\Eva\TestEva.xconf
 StatisticsDir: ..\..\..\..\Material\Instances\Eva
-Seed: 1
+Seed: 2
 Adding handler for unhandled exceptions ...
 Initializing ... 
 Instance recognized!
 Parsing setting config ...
 Parsing control config ...
 Parsing instance ...
-StatisticsFolder: TestEva-TestEva-TestEva-1
+StatisticsFolder: TestEva-TestEva-TestEva-2
 Done!
 Executing ... 
- 09:13:41 | >>> Warming up ...
+ 09:14:34 | >>> Warming up ...
  00:00:00 | >>> Warmup finished - starting simulation ...
  Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
- 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 99%  |    0     |   0    |  48.38MB  
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 99%  |    0     |   0    |  48.92MB  
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
@@ -31,33 +31,33 @@ Executing ...
  00:00:00 | Pausing bundle generation due to inventory+reserved+backlog level (currently at: 0.8571428571428571)
  00:00:00 | Cannot generate further orders - suspending generation for now
  00:00:00 | Cannot generate further orders - suspending generation for now
- 00:00:00 | 00:00:00 | 0.00:10:00 | 100.00%  |   27    |    0     | 55%  |   527    |   0    |  52.53MB  
+ 00:00:00 | 00:00:00 | 0.00:10:00 | 100.00%  |   27    |    0     | 55%  |   527    |   0    |  52.40MB  
  00:00:00 | >>> Simulation finished - writing results ...
  00:00:00 | >>> Results written
 Simulation finished.
 >>> Timings
-StatTimingPathPlanningAverage: 0.0002739539215686276
-StatTimingPathPlanningOverall: 0.027943300000000015
+StatTimingPathPlanningAverage: 0.00019910490196078435
+StatTimingPathPlanningOverall: 0.020308700000000002
 StatTimingPathPlanningCount: 102
-StatTimingTaskAllocationAverage: 0.0006128457142857141
-StatTimingTaskAllocationOverall: 0.042899199999999985
+StatTimingTaskAllocationAverage: 0.0005568871428571426
+StatTimingTaskAllocationOverall: 0.038982099999999985
 StatTimingTaskAllocationCount: 70
-StatTimingItemStorageAverage: 4.185172413793104E-05
-StatTimingItemStorageOverall: 0.0024274
+StatTimingItemStorageAverage: 3.305344827586207E-05
+StatTimingItemStorageOverall: 0.0019171000000000004
 StatTimingItemStorageCount: 58
-StatTimingPodStorageAverage: 0.0005344888888888889
-StatTimingPodStorageOverall: 0.0048104
+StatTimingPodStorageAverage: 0.0005629666666666667
+StatTimingPodStorageOverall: 0.0050667
 StatTimingPodStorageCount: 9
-StatTimingReplenishmentBatchingAverage: 0.0015038666666666667
-StatTimingReplenishmentBatchingOverall: 0.0045116
+StatTimingReplenishmentBatchingAverage: 0.0032115000000000004
+StatTimingReplenishmentBatchingOverall: 0.0096345
 StatTimingReplenishmentBatchingCount: 3
-StatTimingOrderBatchingAverage: 0.0005005366666666666
-StatTimingOrderBatchingOverall: 0.0150161
-StatTimingOrderBatchingCount: 30
+StatTimingOrderBatchingAverage: 0.00038624193548387104
+StatTimingOrderBatchingOverall: 0.011973500000000002
+StatTimingOrderBatchingCount: 31
 >>> Overall
 StatOverallBundlesPlaced: 27
 StatOverallItemsOrdered: 8
-StatOverallOrdersPlaced: 6
+StatOverallOrdersPlaced: 8
 StatOverallBundlesRejected: 0
 StatOverallOrdersRejected: 0
 StatOverallBundlesHandled: 0
@@ -68,10 +68,10 @@ StatOverallCollisions: 0
 StatOverallDistanceTraveled: 527.47846300111
 StatOverallDistanceEstimated: 513
 StatOverallAssignedTasks: 70
-StatMaxMemoryUsed: 52,74609375
-StatRealTimeUsed: 0.3812262
-StatAverageTurnoverTime: 317.0592189062094
-StatMedianTurnoverTime: 284.4114790838413
+StatMaxMemoryUsed: 52,6484375
+StatRealTimeUsed: 0.3170705
+StatAverageTurnoverTime: 321.5211739051242
+StatMedianTurnoverTime: 342.5644444444445
 StatLowerQuartileTurnoverTime: 159.77620490252397
 StatUpperQuartileTurnoverTime: 475.0907431383815
 StatAverageThroughputTime: 204.36026481516944
