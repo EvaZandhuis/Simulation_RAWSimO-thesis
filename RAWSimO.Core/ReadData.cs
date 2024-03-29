@@ -19,7 +19,7 @@ namespace RAWSimO.Core
             TotalSkuCount = 0;
             CapacityUsedPerPod = new Dictionary<int, int>();
 
-            string csvFilePath = "C:\\Users\\pnl0j327\\PycharmProjects\\pythonProject1\\TestData.csv";
+            string csvFilePath = "C:\\Users\\pnl0j327\\PycharmProjects\\pythonProject1\\large base scenario.csv";
 
             using (StreamReader reader = new StreamReader(csvFilePath))
             {
