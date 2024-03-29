@@ -758,6 +758,7 @@ namespace RAWSimO.Core.Management
 
             }
      
+            /**
             foreach (Pod pod in Instance.Pods)
             {
                 Console.WriteLine($"pod{pod.ID}");
@@ -772,7 +773,8 @@ namespace RAWSimO.Core.Management
                     }
                 }
                 Console.WriteLine();
-            }           
+            }  
+            **/
         }
 
         /// <summary>
