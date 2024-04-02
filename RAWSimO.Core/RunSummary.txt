@@ -1,0 +1,16 @@
+﻿to run visualization:
+
+Pod content Data file -> Uncomment topline in Core.ReadData
+Configuration -> Core.Configurations.InventoryConfiguration (line 178)
+Layout -> Core.Configurations.LayoutConfiguration
+(Setting -> Core.Configurations.SettingConfiguration) //hoeft wss niet alleen runtime lijkt daar interessant
+
+
+
+
+
+
+to run playground:
+
+Pod content Data file -> Comment topline in Core.ReadData
+Configuration, setting, instance, layout files -> in folder main-material-instances-Eva (FileExplorer)
