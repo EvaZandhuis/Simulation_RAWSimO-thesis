@@ -160,7 +160,7 @@ namespace RAWSimO.Playground
             }
             // Parse the instance
             Console.WriteLine("Calling wrapped RAWSimO.CLI ...");
-            string[] cliArgs = { instances[instanceID], settings[settingID], configurations[configID], directories[directoryID], seed.ToString() };
+            string[] cliArgs = { instances[instanceID], settings[settingID], configurations[configID], directories[directoryID] + "/Results", seed.ToString() };
             RAWSimO.CLI.Program.Main(cliArgs);
             Console.WriteLine("Returned from RAWSimO.CLI !");
         }
