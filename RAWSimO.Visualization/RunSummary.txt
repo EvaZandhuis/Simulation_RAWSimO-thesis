@@ -1,0 +1,8 @@
+﻿to run visualization:
+manually add necessary files to correct locations.
+
+Pod content Data file -> Core.ReadData
+Configuration -> Core.Configurations.InventoryConfiguration (line 178)
+Layout -> Core.Configurations.LayoutConfiguration
+
+(Setting -> Core.Configurations.SettingConfiguration) //hoeft wss niet alleen runtime lijkt daar interessant
