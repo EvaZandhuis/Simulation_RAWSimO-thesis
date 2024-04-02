@@ -1,5 +1,5 @@
 <<< Welcome to the RAWSimO CLI >>>
-The time is: 04/02/2024 09:51:02
+The time is: 04/02/2024 16:36:57
 Starting RAWSimO wrapper with the following arguments:
 Instance: ..\..\..\..\Material\Instances\Eva\LargeBaseScenario.xinst
 Setting: ..\..\..\..\Material\Instances\Eva\LargeBaseScenario.xsett
@@ -15,73 +15,19 @@ Parsing instance ...
 StatisticsFolder: LargeBaseScenario-LargeBaseScenario-LargeBaseScenario-0
 Done!
 Executing ... 
- 09:51:03 | >>> Warming up ...
+ 16:37:00 | >>> Warming up ...
  00:00:00 | >>> Warmup finished - starting simulation ...
  Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
- 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 70%  |    0     |   0    |  79.84MB  
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 70%  |    0     |   0    |  79.73MB  
+ 00:00:03 | Cannot generate further orders - suspending generation for now
+ 00:00:03 | Cannot generate further orders - suspending generation for now
+ 00:00:03 | Cannot generate further orders - suspending generation for now
+ 00:00:03 | Cannot generate further orders - suspending generation for now
+ 00:00:03 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | 00:08:18 | 0.00:28:37 |  0.99%   |   483   |    0     | 20%  |  13586   |   0    |  89.09MB  
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Cannot generate further orders - suspending generation for now
- 00:00:05 | Pausing order generation due to inventory level (currently at: 0.09803921568627451)
- 00:00:10 | 00:00:54 | 0.07:29:59 |  15.62%  |   695   |    0     |  0%  |  25258   |   0    |  90.23MB  
- 00:00:15 | 00:00:26 | 0.17:30:42 |  36.48%  |   695   |    0     |  0%  |  25258   |   0    |  91.30MB  
- 00:00:20 | 00:00:14 | 1.03:31:59 |  57.36%  |   695   |    0     |  0%  |  25258   |   0    |  91.67MB  
- 00:00:25 | 00:00:06 | 1.13:44:59 |  78.65%  |   695   |    0     |  0%  |  25258   |   0    |  94.12MB  
- 00:00:30 | 00:00:00 | 1.23:46:59 |  99.55%  |   695   |    0     |  0%  |  25258   |   0    |  99.41MB  
- 00:00:30 | 00:00:00 | 2.00:00:00 | 100.00%  |   695   |    0     |  0%  |  25258   |   0    |  99.48MB  
- 00:00:30 | >>> Simulation finished - writing results ...
- 00:00:30 | >>> Results written
-Simulation finished.
->>> Timings
-StatTimingPathPlanningAverage: 0.0003392222222222216
-StatTimingPathPlanningOverall: 0.7663029999999986
-StatTimingPathPlanningCount: 2259
-StatTimingTaskAllocationAverage: 5.9969405630441575E-06
-StatTimingTaskAllocationOverall: 3.772495399994188
-StatTimingTaskAllocationCount: 629070
-StatTimingItemStorageAverage: 4.207175295186196E-06
-StatTimingItemStorageOverall: 0.004632100000000001
-StatTimingItemStorageCount: 1101
-StatTimingPodStorageAverage: 0.0035923421487603327
-StatTimingPodStorageOverall: 1.3040202000000007
-StatTimingPodStorageCount: 363
-StatTimingReplenishmentBatchingAverage: 0.0017163000000000002
-StatTimingReplenishmentBatchingOverall: 0.0051489000000000005
-StatTimingReplenishmentBatchingCount: 3
-StatTimingOrderBatchingAverage: 0.00026978520309477725
-StatTimingOrderBatchingOverall: 0.27895789999999965
-StatTimingOrderBatchingCount: 1034
->>> Overall
-StatOverallBundlesPlaced: 0
-StatOverallItemsOrdered: 807
-StatOverallOrdersPlaced: 495
-StatOverallBundlesRejected: 0
-StatOverallOrdersRejected: 0
-StatOverallBundlesHandled: 0
-StatOverallItemsHandled: 1140
-StatOverallLinesHandled: 1093
-StatOverallOrdersHandled: 695
-StatOverallCollisions: 0
-StatOverallDistanceTraveled: 25258.000000000007
-StatOverallDistanceEstimated: 23486
-StatOverallAssignedTasks: 629070
-StatMaxMemoryUsed: 99,453125
-StatRealTimeUsed: 30.1260202
-StatAverageTurnoverTime: 744.1417800743382
-StatMedianTurnoverTime: 573.3133405262568
-StatLowerQuartileTurnoverTime: 254.36352091616118
-StatUpperQuartileTurnoverTime: 1040.211204902518
-StatAverageThroughputTime: 196.57548233989633
-StatMedianThroughputTime: 100.76777777777909
-StatLowerQuartileThroughputTime: 50.538888888889005
-StatUpperQuartileThroughputTime: 181.59009379141315
-
-Marked tag finished after 1 tries!
-.Fin. - SUCCESS
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Pausing order generation due to inventory level (currently at: 0.09803921568627451)
+ 00:00:05 | 00:05:33 | 0.00:42:40 |  1.48%   |   686   |    0     |  1%  |  24050   |   0    |  89.80MB  
+ 00:00:10 | 00:00:34 | 0.10:48:05 |  22.50%  |   695   |    0     |  0%  |  25258   |   0    |  89.24MB  
