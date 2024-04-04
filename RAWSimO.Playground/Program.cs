@@ -201,7 +201,8 @@ namespace RAWSimO.Playground
                     Console.WriteLine("---> Executing combination " + (++counter).ToString() + " / " + combinations.Count());
                     Console.WriteLine("######################################");
                     Console.WriteLine("--> Calling wrapped RAWSimO.CLI ...");
-                    string[] cliArgs = { combination[0], combination[1], combination[2], directory, combination[3] };
+                    string[] cliArgs = { combination[0], combination[1], combination[2], directory + "/Results", combination[3] };
+                    //string[] cliArgs = { combination[0], combination[1], combination[2], directory, combination[3] };
                     RAWSimO.CLI.Program.Main(cliArgs);
                     Console.WriteLine("--> Returned from RAWSimO.CLI !");
                     Console.WriteLine("######################################");

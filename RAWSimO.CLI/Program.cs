@@ -176,7 +176,8 @@ namespace RAWSimO.CLI
             instance.Randomizer = new RandomizerSimple(seed);
             LogLine("Done!");
             // Setup log to disk
-
+            if (!Directory.Exists(instance.SettingConfig.StatisticsDirectory))
+                Directory.CreateDirectory(instance.SettingConfig.StatisticsDirectory);
             try
             {
                 using (File.Open(Path.Combine(instance.SettingConfig.StatisticsDirectory, IOConstants.LOG_FILE), FileMode.Open, FileAccess.ReadWrite, FileShare.None))
@@ -195,7 +196,6 @@ namespace RAWSimO.CLI
                     Console.WriteLine("Error closing the file: " + ex.Message);
                 }
             }
-
             _logWriter = new StreamWriter(Path.Combine(instance.SettingConfig.StatisticsDirectory, IOConstants.LOG_FILE), false) { AutoFlush = true };
             // Deus ex machina
             LogLine("Executing ... ");
