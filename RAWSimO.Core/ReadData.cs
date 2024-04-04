@@ -14,6 +14,7 @@ namespace RAWSimO.Core
         public static List<PodItem> PodContentData { get; }
         public static int TotalSkuCount { get; private set; }
         public static Dictionary<int, int> CapacityUsedPerPod { get; } 
+        public static string csvFileName { get; private set; }
 
         static ReadData()
         {
@@ -22,6 +23,7 @@ namespace RAWSimO.Core
             CapacityUsedPerPod = new Dictionary<int, int>();
             
             string csvFilePath = GetCsvFilePath();
+            csvFileName = Path.GetFileName(csvFilePath);
 
             using (StreamReader reader = new StreamReader(csvFilePath))
             {

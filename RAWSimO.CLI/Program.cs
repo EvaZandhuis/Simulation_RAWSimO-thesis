@@ -168,7 +168,9 @@ namespace RAWSimO.CLI
             instance.SettingConfig.Seed = seed;
             if (args.Length == CliArgs.Length + 1)
                 instance.Tag = args[CliArgs.Length];
-            string statisticsFolder = instance.Name + "-" + instance.SettingConfig.Name + "-" + instance.ControllerConfig.Name + "-" + instance.SettingConfig.Seed.ToString();
+            //change name of the results folder
+            //string statisticsFolder = instance.Name + "-" + instance.SettingConfig.Name + "-" + instance.ControllerConfig.Name + "-" + instance.SettingConfig.Seed.ToString();
+            string statisticsFolder = instance.Name + "-" + ReadData.csvFileName.ToString() + "-" + instance.SettingConfig.Seed.ToString();
             instance.SettingConfig.StatisticsDirectory = Path.Combine(args[3], statisticsFolder);
             LogLine("StatisticsFolder: " + statisticsFolder);
             instance.Randomizer = new RandomizerSimple(seed);
