@@ -1,0 +1,280 @@
+Executing ... 
+ 15:31:13 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    | 152.94MB  
+ 00:00:03 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   510   |    0     | 26%  |  12316   |   0    |  80.47MB  
+ 00:00:04 | >>> Simulation finished - writing results ...
+ 00:00:04 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.0002048514348785872
+StatTimingPathPlanningOverall: 0.2783931
+StatTimingPathPlanningCount: 1359
+StatTimingTaskAllocationAverage: 0.007383941509433961
+StatTimingTaskAllocationOverall: 3.1307911999999996
+StatTimingTaskAllocationCount: 424
+StatTimingItemStorageAverage: 1.5526570048309203E-06
+StatTimingItemStorageOverall: 0.001285600000000002
+StatTimingItemStorageCount: 828
+StatTimingPodStorageAverage: 0.007039417098445591
+StatTimingPodStorageOverall: 1.358607499999999
+StatTimingPodStorageCount: 193
+StatTimingReplenishmentBatchingAverage: 5.4E-06
+StatTimingReplenishmentBatchingOverall: 1.62E-05
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.00026527147688838797
+StatTimingOrderBatchingOverall: 0.23529580000000014
+StatTimingOrderBatchingCount: 887
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 838
+StatOverallOrdersPlaced: 520
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 865
+StatOverallLinesHandled: 816
+StatOverallOrdersHandled: 510
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 12316.014583959874
+StatOverallDistanceEstimated: 12099
+StatOverallAssignedTasks: 424
+StatMaxMemoryUsed: 152,35546875
+StatRealTimeUsed: 4.8064613
+StatAverageTurnoverTime: 504.8018290274493
+StatMedianTurnoverTime: 365.4936147075716
+StatLowerQuartileTurnoverTime: 206.64222222222182
+StatUpperQuartileTurnoverTime: 708.5047258186853
+StatAverageThroughputTime: 159.475400346842
+StatMedianThroughputTime: 130.41564934696999
+StatLowerQuartileThroughputTime: 50.953333333333376
+StatUpperQuartileThroughputTime: 181.24120490252403
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/04/2024 15:31:18
+Starting RAWSimO wrapper with the following arguments:
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+StatisticsDir: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva
+Seed: 1
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 1
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 2
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 3
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 4
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xconf
+Seed: 1
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xconf
+Seed: 2
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xconf
+Seed: 3
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xconf
+Seed: 4
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index') timestamp: 04/04/2024 15:31:18
+-----------------------------------------------------------
+Time: 4-4-2024 15:31:18
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\TestEva.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 1
+Tag: <null>
+Stacktrace:
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at RAWSimO.Core.Management.ItemManager.GenerateFixedBundle(Int32 SKUINDEX) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 1085
+   at RAWSimO.Core.Management.ItemManager.InitializePodContentsFixed(Double initialInventory) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 745
+   at RAWSimO.Core.Management.ItemManager.InitializeInventoryAndBundlesAndOrders() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 486
+   at RAWSimO.Core.Management.ItemManager..ctor(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\Management\ItemManager.cs:line 43
+   at RAWSimO.Core.IO.DTOInstance.Submit(Instance instance) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\DTOInstance.cs:line 232
+   at RAWSimO.Core.IO.InstanceIO.ReadInstance(String instancePath, String settingConfigPath, String controlConfigPath, Boolean overrideVisualizationAttached, Boolean visualizationOnly, Action`1 logAction) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Core\IO\InstanceIO.cs:line 143
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 166
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------

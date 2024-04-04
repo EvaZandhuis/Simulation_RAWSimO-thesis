@@ -1,0 +1,92 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/04/2024 15:45:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+StatisticsDir: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva
+Seed: 1
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-1
+Done!
+Executing ... 
+ 15:45:11 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  81.95MB  
+ 00:00:03 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   516   |    0     | 26%  |  12257   |   0    |  89.33MB  
+ 00:00:04 | >>> Simulation finished - writing results ...
+ 00:00:04 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00020025396002960785
+StatTimingPathPlanningOverall: 0.2705431000000002
+StatTimingPathPlanningCount: 1351
+StatTimingTaskAllocationAverage: 0.006775055348837203
+StatTimingTaskAllocationOverall: 2.9132737999999976
+StatTimingTaskAllocationCount: 430
+StatTimingItemStorageAverage: 3.23126491646777E-06
+StatTimingItemStorageOverall: 0.002707799999999991
+StatTimingItemStorageCount: 838
+StatTimingPodStorageAverage: 0.006357271282051284
+StatTimingPodStorageOverall: 1.2396679000000004
+StatTimingPodStorageCount: 195
+StatTimingReplenishmentBatchingAverage: 0.0014203333333333333
+StatTimingReplenishmentBatchingOverall: 0.004261
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.00022948158803222097
+StatTimingOrderBatchingOverall: 0.19941950000000003
+StatTimingOrderBatchingCount: 869
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 834
+StatOverallOrdersPlaced: 526
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 865
+StatOverallLinesHandled: 819
+StatOverallOrdersHandled: 516
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 12257.203275799133
+StatOverallDistanceEstimated: 11953
+StatOverallAssignedTasks: 430
+StatMaxMemoryUsed: 89,3359375
+StatRealTimeUsed: 4.5912942
+StatAverageTurnoverTime: 501.42620952833187
+StatMedianTurnoverTime: 373.1334343176683
+StatLowerQuartileTurnoverTime: 190.5240764717143
+StatUpperQuartileTurnoverTime: 726.3273303994813
+StatAverageThroughputTime: 154.35464991226445
+StatMedianThroughputTime: 121.27870849898574
+StatLowerQuartileThroughputTime: 60.24778497070042
+StatUpperQuartileThroughputTime: 181.58564934696938
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/04/2024 15:45:16
+Starting RAWSimO wrapper with the following arguments:
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+StatisticsDir: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva
+Seed: 2
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-2
+Done!

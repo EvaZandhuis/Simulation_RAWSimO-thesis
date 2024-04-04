@@ -1,0 +1,76 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/04/2024 13:25:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\Eva\LargeScenario.xinst
+Setting: ..\..\..\..\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\Eva\LargeScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\Eva/Results
+Seed: 0
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large prio V=3,time=30 scenario.csv-0
+Done!
+Executing ... 
+ 13:25:12 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  81.70MB  
+ 00:00:03 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   505   |    0     | 26%  |  13615   |   0    |  89.67MB  
+ 00:00:04 | >>> Simulation finished - writing results ...
+ 00:00:05 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00021188870383779838
+StatTimingPathPlanningOverall: 0.29261829999999955
+StatTimingPathPlanningCount: 1381
+StatTimingTaskAllocationAverage: 0.006823230000000002
+StatTimingTaskAllocationOverall: 3.070453500000001
+StatTimingTaskAllocationCount: 450
+StatTimingItemStorageAverage: 6.202439024390233E-06
+StatTimingItemStorageOverall: 0.005085999999999992
+StatTimingItemStorageCount: 820
+StatTimingPodStorageAverage: 0.006127816019417479
+StatTimingPodStorageOverall: 1.2623301000000007
+StatTimingPodStorageCount: 206
+StatTimingReplenishmentBatchingAverage: 0.0019670666666666663
+StatTimingReplenishmentBatchingOverall: 0.005901199999999999
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.0002453476689976691
+StatTimingOrderBatchingOverall: 0.2105083000000001
+StatTimingOrderBatchingCount: 858
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 839
+StatOverallOrdersPlaced: 512
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 863
+StatOverallLinesHandled: 819
+StatOverallOrdersHandled: 505
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 13614.796783170957
+StatOverallDistanceEstimated: 13318
+StatOverallAssignedTasks: 450
+StatMaxMemoryUsed: 90,40234375
+StatRealTimeUsed: 4.8451914
+StatAverageTurnoverTime: 536.0712665321223
+StatMedianTurnoverTime: 395.7522150293007
+StatLowerQuartileTurnoverTime: 197.71444444444444
+StatUpperQuartileTurnoverTime: 774.8917604580798
+StatAverageThroughputTime: 153.99631227007652
+StatMedianThroughputTime: 120.52768398636465
+StatLowerQuartileThroughputTime: 59.263427124747295
+StatUpperQuartileThroughputTime: 171.4136075146502
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS

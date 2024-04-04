@@ -1,0 +1,196 @@
+Executing ... 
+ 15:45:16 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    | 126.30MB  
+ 00:00:02 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   515   |    0     | 27%  |  12467   |   0    | 129.24MB  
+ 00:00:04 | >>> Simulation finished - writing results ...
+ 00:00:04 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00022500286576168933
+StatTimingPathPlanningOverall: 0.29835380000000006
+StatTimingPathPlanningCount: 1326
+StatTimingTaskAllocationAverage: 0.0066381129411764665
+StatTimingTaskAllocationOverall: 2.821197999999998
+StatTimingTaskAllocationCount: 425
+StatTimingItemStorageAverage: 1.4464060529634305E-06
+StatTimingItemStorageOverall: 0.0011470000000000004
+StatTimingItemStorageCount: 793
+StatTimingPodStorageAverage: 0.0066358307291666625
+StatTimingPodStorageOverall: 1.2740794999999991
+StatTimingPodStorageCount: 192
+StatTimingReplenishmentBatchingAverage: 1.4466666666666667E-05
+StatTimingReplenishmentBatchingOverall: 4.34E-05
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.00023193391812865525
+StatTimingOrderBatchingOverall: 0.19830350000000024
+StatTimingOrderBatchingCount: 855
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 841
+StatOverallOrdersPlaced: 519
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 857
+StatOverallLinesHandled: 810
+StatOverallOrdersHandled: 515
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 12467.174578828532
+StatOverallDistanceEstimated: 12077
+StatOverallAssignedTasks: 425
+StatMaxMemoryUsed: 129,23828125
+StatRealTimeUsed: 4.413877
+StatAverageTurnoverTime: 528.7286764151039
+StatMedianTurnoverTime: 390.17259019495276
+StatLowerQuartileTurnoverTime: 192.2645382358579
+StatUpperQuartileTurnoverTime: 757.1797114328349
+StatAverageThroughputTime: 161.48699670898702
+StatMedianThroughputTime: 127.03388888888827
+StatLowerQuartileThroughputTime: 60.17417026312694
+StatUpperQuartileThroughputTime: 181.67444444444538
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/04/2024 15:45:21
+Starting RAWSimO wrapper with the following arguments:
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xlayo
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+StatisticsDir: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva
+Seed: 1
+Adding handler for unhandled exceptions ...
+Initializing ... 
+LayoutConfiguration recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing layout config ...
+Generating instance...
+Info about all directions within the generated instance:
+# # # # e p e e e e e p p p p p p p p p e p p p p p p p p p e p p p p p p p p p e p p p p p e e e e e s # # # # 
+# # # # n q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q # # # # 
+# # # # b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b s # # # # 
+s w w w d q w w w w d < < < < q < < < < d < < < < q < < < < d < < < < q < < < < d < < < < q w w w w d q w w w w 
+p e e s b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b p e e e n 
+s w w w d q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q n w w d 
+e e e e b p e e e e b > > > > p > > > > b > > > > p > > > > b > > > > p > > > > b > > > > p e e e e b p e e e n 
+# # # # n q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q # # # # 
+# # # # b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b s # # # # 
+s w w w d q w w w w d < < < < q < < < < d < < < < q < < < < d < < < < q < < < < d < < < < q w w w w d q w w w w 
+p e e s b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b p e e e n 
+s w w w d q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q n w w d 
+e e e e b p e e e e b > > > > p > > > > b > > > > p > > > > b > > > > p > > > > b > > > > p e e e e b p e e e n 
+# # # # n q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q # # # # 
+# # # # b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b s # # # # 
+s w w w d q w w w w d < < < < q < < < < d < < < < q < < < < d < < < < q < < < < d < < < < q w w w w d q w w w w 
+p e e s b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b p e e e n 
+s w w w d q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q n w w d 
+e e e e b p e e e e b > > > > p > > > > b > > > > p > > > > b > > > > p > > > > b > > > > p e e e e b p e e e n 
+# # # # n q w w w w ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + q w w w w d q # # # # 
+# # # # b p e e e e b + + + + v + + + + ^ + + + + v + + + + ^ + + + + v + + + + ^ + + + + v e e e e b s # # # # 
+# # # # n w w w w w d d d d d w d d d d d d d d d w d d d d d d d d d w d d d d d d d d d w w w w w d w # # # # 
+
+
+Info about all types within the generated instance:
+# # # # r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r # # # # 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+b b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b o 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+o b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b b 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+b b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b o 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+o b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b b 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+b b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b o 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+b b b b r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r b b b b 
+i b b b r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r b b b b 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+# # # # r r r r r r r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r s s s s r r r r r r r # # # # 
+# # # # r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r r # # # # 
+
+
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-1
+Done!
+-----------------------------------------------------------
+!!! Caught an unhandled exception: The process cannot access the file 'C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario-large base V=3,time=30 scenario.csv-1\output.log' because it is being used by another process. timestamp: 04/04/2024 15:45:21
+-----------------------------------------------------------
+Time: 4-4-2024 15:45:21
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 1
+Tag: <null>
+Stacktrace:
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 181
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: The process cannot access the file 'C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario-large base V=3,time=30 scenario.csv-1\output.log' because it is being used by another process. timestamp: 04/04/2024 15:45:21
+-----------------------------------------------------------
+Time: 4-4-2024 15:45:21
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xinst
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 2
+Tag: <null>
+Stacktrace:
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 181
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
+-----------------------------------------------------------
+!!! Caught an unhandled exception: The process cannot access the file 'C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario-large base V=3,time=30 scenario.csv-1\output.log' because it is being used by another process. timestamp: 04/04/2024 15:45:21
+-----------------------------------------------------------
+Time: 4-4-2024 15:45:21
+Instance: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xlayo
+Setting: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xsett
+ControlConfig: C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\Material\Instances\Eva\LargeScenario.xconf
+Seed: 1
+Tag: <null>
+Stacktrace:
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamWriter..ctor(String path, Boolean append)
+   at RAWSimO.CLI.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.CLI\Program.cs:line 181
+   at RAWSimO.Playground.Program.ExecuteInstances() in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 205
+   at RAWSimO.Playground.Program.Main(String[] args) in C:\Users\pnl0j327\RAWSim-O\RAWSim-O-main\RAWSimO.Playground\Program.cs:line 61
+InnerException: 
+None
+-----------------------------------------------------------
