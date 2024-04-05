@@ -171,7 +171,6 @@ namespace RAWSimO.Playground
         static void ExecuteInstances()
         {
             // Ask for the directory to execute
-
             Console.WriteLine("Choose directory:");
             string[] directories = Directory.EnumerateDirectories(Path.Combine("..", "..", "..", "..", "Material", "Instances")).ToArray();
             for (int i = 0; i < directories.Length; i++)
