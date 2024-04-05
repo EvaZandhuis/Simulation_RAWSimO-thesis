@@ -200,8 +200,9 @@ namespace RAWSimO.Playground
             Console.WriteLine("Degree of parallelism [1]:");
             try { paraDeg = uint.Parse(Console.ReadLine()); }
             catch (FormatException) { }
-            // Get all files
-            List<string> instances = Directory.EnumerateFiles(directory, "*.xinst").Concat(Directory.EnumerateFiles(directory, "*.xlayo")).ToList();
+            // Get all files (except for layout, only use instance)
+            //List<string> instances = Directory.EnumerateFiles(directory, "*.xinst").Concat(Directory.EnumerateFiles(directory, "*.xlayo")).ToList();
+            List<string> instances = Directory.EnumerateFiles(directory, "*.xinst").ToList();
             List<string> settings = Directory.EnumerateFiles(directory, "*.xsett").ToList();
             List<string> configs = Directory.EnumerateFiles(directory, "*.xconf").ToList();
             List<string> seeds = Enumerable.Range(1, (int)seedCount).Select(s => s.ToString()).ToList();
