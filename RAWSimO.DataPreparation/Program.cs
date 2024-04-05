@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace RAWSimO.DataPreparation
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Say hello
             Console.WriteLine("<<< Welcome to the RAWSimO DataPreparator >>>");

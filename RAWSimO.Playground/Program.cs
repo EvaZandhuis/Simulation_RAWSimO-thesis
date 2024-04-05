@@ -6,6 +6,7 @@ using RAWSimO.Core.Randomization;
 using RAWSimO.Playground.Generators;
 using RAWSimO.Playground.Tests;
 using RAWSimO.Toolbox;
+using RAWSimO.DataPreparation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,21 +32,23 @@ namespace RAWSimO.Playground
             // Choose option
             Console.WriteLine(">>> Choose option: ");
             Console.WriteLine("1: ExecuteInstance");
-            Console.WriteLine("2: SendResourcesToCluster");
-            Console.WriteLine("3: FetchResultsFromCluster");
-            Console.WriteLine("4: FetchOutputFilesFromCluster");
-            Console.WriteLine("5: GenerateMaTiInstances");
-            Console.WriteLine("6: GenerateMuControlConfigs");
-            Console.WriteLine("7: GenerateMuSettingConfigs");
-            Console.WriteLine("8: ExecuteDirectory");
-            Console.WriteLine("9: TestsEva");
+            Console.WriteLine("2: ExecuteDirectory");
+            Console.WriteLine("3: DataPreparation");
+            Console.WriteLine("4: SendResourcesToCluster");
+            Console.WriteLine("5: FetchResultsFromCluster");
+            Console.WriteLine("6: FetchOutputFilesFromCluster");
+            Console.WriteLine("7: GenerateMaTiInstances");
+            Console.WriteLine("8: GenerateMuControlConfigs");
+            Console.WriteLine("9: GenerateMuSettingConfigs");
             Console.WriteLine("0: Experimental");
             char optionKey = Console.ReadKey().KeyChar; Console.WriteLine();
             switch (optionKey)
             {
 
                 case '1': { ExecuteInstance(); } break;
-                case '2':
+                case '2': { ExecuteInstances(); } break;
+                case '3': { DataPreparation(); }break;
+                case '4':
                     {
                         /* ClusterHelper.SendBinDirToCluster(); TODO skip bin dir for now - use hg clone repo instead */
                         ClusterHelper.SendScriptDirToCluster();
@@ -53,13 +56,11 @@ namespace RAWSimO.Playground
                         ClusterHelper.SendResourceDirToCluster();
                     }
                     break;
-                case '3': { ClusterHelper.FetchResultsFromCluster(); } break;
-                case '4': { ClusterHelper.FetchOutputFilesFromCluster(); } break;
-                case '5': { InstanceGenerators.GenerateMaTiInstances(); } break;
-                case '6': { ConfigGenerators.GenerateRotterdamControllers(); } break;
-                case '7': { SettingGenerator.GenerateRotterdamMark2Set(); } break;
-                case '8': { ExecuteInstances(); } break;
-                case '9': { TestsEva(); } break;
+                case '5': { ClusterHelper.FetchResultsFromCluster(); } break;
+                case '6': { ClusterHelper.FetchOutputFilesFromCluster(); } break;
+                case '7': { InstanceGenerators.GenerateMaTiInstances(); } break;
+                case '8': { ConfigGenerators.GenerateRotterdamControllers(); } break;
+                case '9': { SettingGenerator.GenerateRotterdamMark2Set(); } break;
                 case '0': { Experimental(); } break;
                 default:
                     break;
@@ -295,20 +296,11 @@ namespace RAWSimO.Playground
             }
         }
 
-        public static void TestsEva()
+        public static void DataPreparation()
         {
-            ///using playground.tests zorgt ervoordat je direct functies daaruit kan oproepen
-            ///gebruik functie door: class(/titel van functiefolder).method
-            Console.WriteLine(">>> Choose option: ");
-            Console.WriteLine("1: GeneratorTests");
-            Console.WriteLine("2: RandomizerTests");
-            char optionKey = Console.ReadKey().KeyChar; Console.WriteLine();
-            switch (optionKey)
-            {
-                case '1':  break;
-                case '2': { RandomizerTests.TestGenerateNormalDistribution(); } break;
-                default: break;
-            }
+            //without arguments it goes to the options menu of DataPreparation
+            //optional to add a way to pass arguments to directly create a scatterplot (lateron)
+            RAWSimO.DataPreparation.Program.Main(new string[0]);    
         }
     }
 }
