@@ -1,0 +1,59 @@
+Executing ... 
+ 10:09:55 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    | 166.91MB  
+ 00:00:02 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   510   |    0     | 26%  |  12316   |   0    | 161.45MB  
+ 00:00:04 | >>> Simulation finished - writing results ...
+ 00:00:04 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00018944157468726993
+StatTimingPathPlanningOverall: 0.2574510999999998
+StatTimingPathPlanningCount: 1359
+StatTimingTaskAllocationAverage: 0.006947671933962265
+StatTimingTaskAllocationOverall: 2.9458129000000004
+StatTimingTaskAllocationCount: 424
+StatTimingItemStorageAverage: 1.856038647342995E-06
+StatTimingItemStorageOverall: 0.0015367999999999998
+StatTimingItemStorageCount: 828
+StatTimingPodStorageAverage: 0.006981839896373066
+StatTimingPodStorageOverall: 1.3474951000000017
+StatTimingPodStorageCount: 193
+StatTimingReplenishmentBatchingAverage: 1.1566666666666667E-05
+StatTimingReplenishmentBatchingOverall: 3.47E-05
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.00021271950394588507
+StatTimingOrderBatchingOverall: 0.18868220000000005
+StatTimingOrderBatchingCount: 887
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 838
+StatOverallOrdersPlaced: 520
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 865
+StatOverallLinesHandled: 816
+StatOverallOrdersHandled: 510
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 12316.014583959874
+StatOverallDistanceEstimated: 12099
+StatOverallAssignedTasks: 424
+StatMaxMemoryUsed: 166,75
+StatRealTimeUsed: 4.4479569
+StatAverageTurnoverTime: 504.8018290274493
+StatMedianTurnoverTime: 365.4936147075716
+StatLowerQuartileTurnoverTime: 206.64222222222182
+StatUpperQuartileTurnoverTime: 708.5047258186853
+StatAverageThroughputTime: 159.475400346842
+StatMedianThroughputTime: 130.41564934696999
+StatLowerQuartileThroughputTime: 50.953333333333376
+StatUpperQuartileThroughputTime: 181.24120490252403
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS

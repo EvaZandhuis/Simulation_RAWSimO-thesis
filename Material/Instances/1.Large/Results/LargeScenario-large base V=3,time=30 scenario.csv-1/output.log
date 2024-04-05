@@ -1,7 +1,7 @@
 <<< Welcome to the RAWSimO CLI >>>
-The time is: 04/04/2024 16:09:14
+The time is: 04/05/2024 10:21:11
 Starting RAWSimO wrapper with the following arguments:
-Instance: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xinst
+Instance: ..\..\..\..\Material\Instances\1.Large\LargeScenarioinst.xinst
 Setting: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xsett
 ControlConfig: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xconf
 StatisticsDir: ..\..\..\..\Material\Instances\1.Large/Results
@@ -15,37 +15,37 @@ Parsing instance ...
 StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-1
 Done!
 Executing ... 
- 16:11:00 | >>> Warming up ...
+ 10:21:13 | >>> Warming up ...
  00:00:00 | >>> Warmup finished - starting simulation ...
  Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
- 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  79.41MB  
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  82.15MB  
  00:00:02 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
  00:00:04 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
  00:00:04 | Cannot generate further orders - suspending generation for now
- 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   516   |    0     | 26%  |  12257   |   0    |  89.47MB  
+ 00:00:04 | 00:00:00 | 0.00:30:00 | 100.00%  |   516   |    0     | 26%  |  12257   |   0    |  89.27MB  
  00:00:04 | >>> Simulation finished - writing results ...
  00:00:04 | >>> Results written
 Simulation finished.
 >>> Timings
-StatTimingPathPlanningAverage: 0.000204470466321244
-StatTimingPathPlanningOverall: 0.27623960000000064
+StatTimingPathPlanningAverage: 0.00019775544041450785
+StatTimingPathPlanningOverall: 0.2671676000000001
 StatTimingPathPlanningCount: 1351
-StatTimingTaskAllocationAverage: 0.006524729534883717
-StatTimingTaskAllocationOverall: 2.8056336999999982
+StatTimingTaskAllocationAverage: 0.006798883023255819
+StatTimingTaskAllocationOverall: 2.923519700000002
 StatTimingTaskAllocationCount: 430
-StatTimingItemStorageAverage: 3.016109785202858E-06
-StatTimingItemStorageOverall: 0.002527499999999995
+StatTimingItemStorageAverage: 3.915035799522678E-06
+StatTimingItemStorageOverall: 0.0032808000000000047
 StatTimingItemStorageCount: 838
-StatTimingPodStorageAverage: 0.006127704615384611
-StatTimingPodStorageOverall: 1.194902399999999
+StatTimingPodStorageAverage: 0.006400787692307695
+StatTimingPodStorageOverall: 1.2481536000000006
 StatTimingPodStorageCount: 195
-StatTimingReplenishmentBatchingAverage: 0.0020578
-StatTimingReplenishmentBatchingOverall: 0.0061734
+StatTimingReplenishmentBatchingAverage: 0.0017614333333333336
+StatTimingReplenishmentBatchingOverall: 0.0052843000000000005
 StatTimingReplenishmentBatchingCount: 3
-StatTimingOrderBatchingAverage: 0.00022732968929804374
-StatTimingOrderBatchingOverall: 0.19754950000000002
+StatTimingOrderBatchingAverage: 0.00023330747986191025
+StatTimingOrderBatchingOverall: 0.2027442
 StatTimingOrderBatchingCount: 869
 >>> Overall
 StatOverallBundlesPlaced: 200
@@ -61,8 +61,8 @@ StatOverallCollisions: 0
 StatOverallDistanceTraveled: 12257.203275799133
 StatOverallDistanceEstimated: 11953
 StatOverallAssignedTasks: 430
-StatMaxMemoryUsed: 89,52734375
-StatRealTimeUsed: 4.4964805
+StatMaxMemoryUsed: 89,24609375
+StatRealTimeUsed: 4.5517676
 StatAverageTurnoverTime: 501.42620952833187
 StatMedianTurnoverTime: 373.1334343176683
 StatLowerQuartileTurnoverTime: 190.5240764717143
@@ -74,3 +74,19 @@ StatUpperQuartileThroughputTime: 181.58564934696938
 
 Marked tag finished after 1 tries!
 .Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/05/2024 10:21:17
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\1.Large\LargeScenarioinst.xinst
+Setting: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\1.Large/Results
+Seed: 2
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-2
+Done!
