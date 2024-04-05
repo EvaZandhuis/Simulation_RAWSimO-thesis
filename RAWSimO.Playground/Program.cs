@@ -171,10 +171,26 @@ namespace RAWSimO.Playground
         static void ExecuteInstances()
         {
             // Ask for the directory to execute
-            Console.WriteLine("Directory to execute [current]:");
-            string directory = Console.ReadLine().Trim();
-            if (!Directory.Exists(directory))
-                directory = Directory.GetCurrentDirectory();
+
+            Console.WriteLine("Choose directory:");
+            string[] directories = Directory.EnumerateDirectories(Path.Combine("..", "..", "..", "..", "Material", "Instances")).ToArray();
+            for (int i = 0; i < directories.Length; i++)
+            {
+                Console.WriteLine(i + ": " + Path.GetFileName(directories[i]));
+            }
+            int directoryID = 0;
+            string directory = "";
+            try
+            {
+                // Get the ID of the instance
+                directoryID = int.Parse(Console.ReadLine());
+                directory = directories[directoryID];
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error: Could not find a directory with that ID!");
+                return;
+            }
             // Ask for seed count
             uint seedCount = 1;
             Console.WriteLine("Number of seeds to execute [1]:");
