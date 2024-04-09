@@ -1,0 +1,88 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/08/2024 16:11:21
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xinst
+Setting: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xsett
+ControlConfig: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\1.LargeBase20min
+Seed: 1
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenarioBase20min-large base V=3,time=30 scenario.csv-1
+Done!
+Executing ... 
+ 16:11:23 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  82.09MB  
+ 00:00:03 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:03 | 00:00:00 | 0.00:20:00 | 100.00%  |   341   |    0     | 50%  |   7854   |   0    |  87.62MB  
+ 00:00:03 | >>> Simulation finished - writing results ...
+ 00:00:03 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00020604753363228693
+StatTimingPathPlanningOverall: 0.18379439999999994
+StatTimingPathPlanningCount: 892
+StatTimingTaskAllocationAverage: 0.008676722680412377
+StatTimingTaskAllocationOverall: 2.5249263000000015
+StatTimingTaskAllocationCount: 291
+StatTimingItemStorageAverage: 5.605860805860806E-06
+StatTimingItemStorageOverall: 0.0030608
+StatTimingItemStorageCount: 546
+StatTimingPodStorageAverage: 0.008760892857142856
+StatTimingPodStorageOverall: 1.1038724999999998
+StatTimingPodStorageCount: 126
+StatTimingReplenishmentBatchingAverage: 0.0023926333333333335
+StatTimingReplenishmentBatchingOverall: 0.007177900000000001
+StatTimingReplenishmentBatchingCount: 3
+StatTimingOrderBatchingAverage: 0.0002625868333333331
+StatTimingOrderBatchingOverall: 0.15755209999999986
+StatTimingOrderBatchingCount: 600
+>>> Overall
+StatOverallBundlesPlaced: 200
+StatOverallItemsOrdered: 629
+StatOverallOrdersPlaced: 397
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 569
+StatOverallLinesHandled: 537
+StatOverallOrdersHandled: 341
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 7854.0773209038
+StatOverallDistanceEstimated: 7714
+StatOverallAssignedTasks: 291
+StatMaxMemoryUsed: 87,62109375
+StatRealTimeUsed: 3.7224003
+StatAverageTurnoverTime: 395.3363476011748
+StatMedianTurnoverTime: 302.20917026312736
+StatLowerQuartileTurnoverTime: 161.3677777777782
+StatUpperQuartileTurnoverTime: 587.5158441227164
+StatAverageThroughputTime: 153.9798940948332
+StatMedianThroughputTime: 121.0050937914128
+StatLowerQuartileThroughputTime: 50.94065653989105
+StatUpperQuartileThroughputTime: 181.51323234899826
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/08/2024 16:11:27
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xinst
+Setting: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xsett
+ControlConfig: ..\..\..\..\Material\Instances\1.LargeBase20min\LargeScenarioBase.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\1.LargeBase20min
+Seed: 2
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenarioBase20min-large base V=3,time=30 scenario.csv-2
+Done!

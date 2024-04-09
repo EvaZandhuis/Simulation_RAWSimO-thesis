@@ -1,0 +1,170 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/05/2024 15:26:53
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xinst
+Setting: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\1.Large
+Seed: 1
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-1
+Done!
+Executing ... 
+ 15:26:55 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 97%  |    0     |   0    |  81.91MB  
+ 00:00:03 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6494252873563219)
+ 00:00:03 | Pausing bundle generation due to inventory+reserved+backlog level (currently at: 0.8505747126436781)
+ 00:00:04 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6486042692939245)
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:04 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | 00:01:09 | 0.00:32:24 |  6.75%   |   548   |    97    | 32%  |  13623   |   0    |  87.55MB  
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:05 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Cannot generate further orders - suspending generation for now
+ 00:00:06 | Pausing order generation due to inventory level (currently at: 0.09359605911330049)
+ 00:00:10 | 00:00:17 | 0.02:52:27 |  35.93%  |   860   |   871    | 56%  |  41835   |   0    |  88.74MB  
+ 00:00:10 | Reactivating order generation paused by inventory level (currently at: 0.6001642036124795)
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:12 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Cannot generate further orders - suspending generation for now
+ 00:00:13 | Pausing order generation due to inventory level (currently at: 0.09688013136288999)
+ 00:00:15 | 00:00:13 | 0.04:10:03 |  52.10%  |  1482   |   1299   | 11%  |  78180   |   0    |  93.46MB  
+ 00:00:17 | Reactivating order generation paused by inventory level (currently at: 0.6001642036124795)
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:19 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | 00:00:04 | 0.06:29:54 |  81.23%  |  1882   |   2071   | 23%  |  106113  |   0    | 103.79MB  
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:20 | Cannot generate further orders - suspending generation for now
+ 00:00:21 | Cannot generate further orders - suspending generation for now
+ 00:00:21 | Cannot generate further orders - suspending generation for now
+ 00:00:21 | Pausing order generation due to inventory level (currently at: 0.0993431855500821)
+ 00:00:23 | 00:00:00 | 0.08:00:00 | 100.00%  |  2109   |   2569   | 35%  |  130035  |   0    | 104.47MB  
+ 00:00:23 | >>> Simulation finished - writing results ...
+ 00:00:23 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00025376482379566815
+StatTimingPathPlanningOverall: 3.1395784000000067
+StatTimingPathPlanningCount: 12372
+StatTimingTaskAllocationAverage: 0.00017882443346604627
+StatTimingTaskAllocationOverall: 7.275650899999558
+StatTimingTaskAllocationCount: 40686
+StatTimingItemStorageAverage: 4.0432843936921745E-06
+StatTimingItemStorageOverall: 0.014871199999999817
+StatTimingItemStorageCount: 3678
+StatTimingPodStorageAverage: 0.0012219117396593672
+StatTimingPodStorageOverall: 2.0088228999999997
+StatTimingPodStorageCount: 1644
+StatTimingReplenishmentBatchingAverage: 1.3829227618490331E-05
+StatTimingReplenishmentBatchingOverall: 0.04726829999999995
+StatTimingReplenishmentBatchingCount: 3418
+StatTimingOrderBatchingAverage: 0.0001327847503132273
+StatTimingOrderBatchingOverall: 0.7418684000000009
+StatTimingOrderBatchingCount: 5587
+>>> Overall
+StatOverallBundlesPlaced: 2865
+StatOverallItemsOrdered: 2993
+StatOverallOrdersPlaced: 1909
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 2569
+StatOverallItemsHandled: 3326
+StatOverallLinesHandled: 3187
+StatOverallOrdersHandled: 2109
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 130034.68069444284
+StatOverallDistanceEstimated: 120982
+StatOverallAssignedTasks: 40686
+StatMaxMemoryUsed: 105,72265625
+StatRealTimeUsed: 23.4247449
+StatAverageTurnoverTime: 878.3620231726753
+StatMedianTurnoverTime: 684.1514862767667
+StatLowerQuartileTurnoverTime: 316.7565800681755
+StatUpperQuartileTurnoverTime: 1266.6590836646315
+StatAverageThroughputTime: 256.13794626635746
+StatMedianThroughputTime: 93.30259738765744
+StatLowerQuartileThroughputTime: 47.28555555553976
+StatUpperQuartileThroughputTime: 220.32990620852615
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 04/05/2024 15:27:19
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xinst
+Setting: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\1.Large\LargeScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\1.Large
+Seed: 2
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: LargeScenario-large base V=3,time=30 scenario.csv-2
+Done!
