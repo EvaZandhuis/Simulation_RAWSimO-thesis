@@ -55,7 +55,7 @@ namespace RAWSimO.DataPreparation
 
                     case '1':
                         {
-                            // Read path
+                            // Read path (parentdir)
                             Console.WriteLine("Enter the path to the root result folder:");
                             string path = Console.ReadLine();
                             // Determine all results / only footprint condensation
