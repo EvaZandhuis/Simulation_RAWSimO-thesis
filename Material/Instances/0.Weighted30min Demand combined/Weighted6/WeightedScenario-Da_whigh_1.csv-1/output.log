@@ -1,0 +1,99 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/03/2024 16:21:02
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min\Weighted6.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min\WeightedScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min\WeightedScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min
+Seed: 1
+Additionally the following tag was passed: Dawhigh
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: WeightedScenario-Da_whigh_1.csv-1
+Done!
+Executing ... 
+ 16:21:03 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 83%  |    0     |   0    |  60.59MB  
+ 00:00:00 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6491666666666667)
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   445   |    0     | 25%  |   5152   |   0    |  66.52MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00010050474452554735
+StatTimingPathPlanningOverall: 0.08261489999999992
+StatTimingPathPlanningCount: 822
+StatTimingTaskAllocationAverage: 0.001442358653846155
+StatTimingTaskAllocationOverall: 0.30001060000000024
+StatTimingTaskAllocationCount: 208
+StatTimingItemStorageAverage: 3.5837209302325495E-06
+StatTimingItemStorageOverall: 0.002465599999999994
+StatTimingItemStorageCount: 688
+StatTimingPodStorageAverage: 0.0011647836734693879
+StatTimingPodStorageOverall: 0.11414880000000001
+StatTimingPodStorageCount: 98
+StatTimingReplenishmentBatchingAverage: 0.001131625
+StatTimingReplenishmentBatchingOverall: 0.0045265
+StatTimingReplenishmentBatchingCount: 4
+StatTimingOrderBatchingAverage: 0.00010899821428571435
+StatTimingOrderBatchingOverall: 0.07935070000000005
+StatTimingOrderBatchingCount: 728
+>>> Overall
+StatOverallBundlesPlaced: 180
+StatOverallItemsOrdered: 632
+StatOverallOrdersPlaced: 400
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 705
+StatOverallLinesHandled: 663
+StatOverallOrdersHandled: 445
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5152.313390578545
+StatOverallDistanceEstimated: 5007
+StatOverallAssignedTasks: 208
+StatMaxMemoryUsed: 68,20703125
+StatRealTimeUsed: 1.0771476
+StatAverageTurnoverTime: 482.80576154233376
+StatMedianTurnoverTime: 317.0879653606026
+StatLowerQuartileTurnoverTime: 101.35055555555527
+StatUpperQuartileTurnoverTime: 710.0291702631267
+StatAverageThroughputTime: 99.62892387624768
+StatMedianThroughputTime: 29.556760458079452
+StatLowerQuartileThroughputTime: 15.759444444444398
+StatUpperQuartileThroughputTime: 81.32176045808
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/03/2024 16:21:04
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min\Weighted6.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min\WeightedScenario.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min\WeightedScenario.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min
+Seed: 2
+Additionally the following tag was passed: Dawhigh
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: WeightedScenario-Da_whigh_1.csv-2
+Done!

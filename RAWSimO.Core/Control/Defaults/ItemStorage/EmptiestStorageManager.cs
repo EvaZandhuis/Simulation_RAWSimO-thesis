@@ -42,7 +42,7 @@ namespace RAWSimO.Core.Control.Defaults.ItemStorage
         {
             foreach (var pod in instance.Pods)
             {
-                if (pod.CapacityInUse < ReadData.CapacityUsedPerPod[pod.ID])
+                if (ReadData.CapacityUsedPerPod.ContainsKey(pod.ID) && pod.CapacityInUse < ReadData.CapacityUsedPerPod[pod.ID])
                 {
                     // Return the first pod that satisfies the condition
                     return pod;

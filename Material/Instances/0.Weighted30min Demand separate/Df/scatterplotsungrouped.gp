@@ -23,22 +23,38 @@ set style line 11 linetype 1 linecolor rgb "#29732e" linewidth 1 pt 11
 set style line 12 linetype 1 linecolor rgb "#737373" linewidth 1 pt 12
 set style line 13 linetype 1 linecolor rgb "#8cb4fa" linewidth 1 pt 13
 set style line 14 linetype 1 linecolor rgb "#5afa65" linewidth 1 pt 14
+<<<<<<< HEAD
 set title "ItemThroughputRateScore"
+=======
+set title "LastMileTripOStationTimeAvg / ItemPileOneAvg"
+>>>>>>> 1bbb1cb (Plot per demand)
 set xlabel "LastMileTripOStationTimeAvg"
 set ylabel "ItemPileOneAvg"
 plot \
 "scatterplotsungrouped.dat" u 1:5:6 w points linestyle 1 palette t "Overall"
+<<<<<<< HEAD
 set title "ItemThroughputRateScore"
+=======
+set title "DistanceTraveledPerBot / ItemPileOneAvg"
+>>>>>>> 1bbb1cb (Plot per demand)
 set xlabel "DistanceTraveledPerBot"
 set ylabel "ItemPileOneAvg"
 plot \
 "scatterplotsungrouped.dat" u 2:5:6 w points linestyle 1 palette t "Overall"
+<<<<<<< HEAD
 set title "ItemThroughputRateScore"
+=======
+set title "TripTime / ItemPileOneAvg"
+>>>>>>> 1bbb1cb (Plot per demand)
 set xlabel "TripTime"
 set ylabel "ItemPileOneAvg"
 plot \
 "scatterplotsungrouped.dat" u 3:5:6 w points linestyle 1 palette t "Overall"
+<<<<<<< HEAD
 set title "ItemThroughputRateScore"
+=======
+set title "TripTimeWithoutQueueing / ItemPileOneAvg"
+>>>>>>> 1bbb1cb (Plot per demand)
 set xlabel "TripTimeWithoutQueueing"
 set ylabel "ItemPileOneAvg"
 plot \

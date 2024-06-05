@@ -23,6 +23,7 @@ set style line 11 linetype 1 linecolor rgb "#29732e" linewidth 1 pt 11
 set style line 12 linetype 1 linecolor rgb "#737373" linewidth 1 pt 12
 set style line 13 linetype 1 linecolor rgb "#8cb4fa" linewidth 1 pt 13
 set style line 14 linetype 1 linecolor rgb "#5afa65" linewidth 1 pt 14
+<<<<<<< HEAD
 set title ""
 set xlabel "OrderThroughputTimeAvg"
 set ylabel "ItemPileOneAvg"
@@ -802,5 +803,121 @@ plot \
 "TagsTag1, 10.0, 0.71, 0.224, 0.1, 0.312.dat" u 14:3 w points linestyle 10 t "1, 10.0, 0.71, 0.224, 0.1, 0.312", \
 "TagsTag1, 10.0, 0.38099999999999995, 0.162, 0.1, 0.425.dat" u 14:3 w points linestyle 11 t "1, 10.0, 0.38099999999999995, 0.162, 0.1, 0.425", \
 "TagsTag1, 10.0, 1.039, 0.259, 0.1, 0.25.dat" u 14:3 w points linestyle 12 t "1, 10.0, 1.039, 0.259, 0.1, 0.25"
+=======
+set title "OrderThroughputTimeAvg / ItemPileOneAvg"
+set xlabel "OrderThroughputTimeAvg"
+set ylabel "ItemPileOneAvg"
+plot \
+"TagsTagwhigh.dat" u 1:15 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 1:15 w points linestyle 3 t "wlow"
+set title "ItemThroughputRate / ItemPileOneAvg"
+set xlabel "ItemThroughputRate"
+set ylabel "ItemPileOneAvg"
+plot \
+"TagsTagwhigh.dat" u 2:15 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 2:15 w points linestyle 3 t "wlow"
+set title "ItemThroughputRateScore / ItemPileOneAvg"
+set xlabel "ItemThroughputRateScore"
+set ylabel "ItemPileOneAvg"
+plot \
+"TagsTagwhigh.dat" u 3:15 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 3:15 w points linestyle 3 t "wlow"
+set title "OrderThroughputTimeAvg / OrderThroughputRate"
+set xlabel "OrderThroughputTimeAvg"
+set ylabel "OrderThroughputRate"
+plot \
+"TagsTagwhigh.dat" u 1:16 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 1:16 w points linestyle 3 t "wlow"
+set title "OrderTurnoverTimeAvg / OrderThroughputRate"
+set xlabel "OrderTurnoverTimeAvg"
+set ylabel "OrderThroughputRate"
+plot \
+"TagsTagwhigh.dat" u 4:16 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 4:16 w points linestyle 3 t "wlow"
+set title "OrdersHandled / BundlesHandled"
+set xlabel "OrdersHandled"
+set ylabel "BundlesHandled"
+plot \
+"TagsTagwhigh.dat" u 5:17 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 5:17 w points linestyle 3 t "wlow"
+set title "TripDistance / ItemPileOneAvg"
+set xlabel "TripDistance"
+set ylabel "ItemPileOneAvg"
+plot \
+"TagsTagwhigh.dat" u 6:15 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 6:15 w points linestyle 3 t "wlow"
+set title "LateOrdersFractional / ItemThroughputRateScore"
+set xlabel "LateOrdersFractional"
+set ylabel "ItemThroughputRateScore"
+plot \
+"TagsTagwhigh.dat" u 7:3 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 7:3 w points linestyle 3 t "wlow"
+set title "OrderLatenessAvg / ItemThroughputRateScore"
+set xlabel "OrderLatenessAvg"
+set ylabel "ItemThroughputRateScore"
+plot \
+"TagsTagwhigh.dat" u 8:3 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 8:3 w points linestyle 3 t "wlow"
+set title "LateOrdersFractional / OrderLatenessAvg"
+set xlabel "LateOrdersFractional"
+set ylabel "OrderLatenessAvg"
+plot \
+"TagsTagwhigh.dat" u 7:8 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 7:8 w points linestyle 3 t "wlow"
+set title "ItemThroughputRateScore / OrderOffsetAvg"
+set xlabel "ItemThroughputRateScore"
+set ylabel "OrderOffsetAvg"
+plot \
+"TagsTagwhigh.dat" u 3:18 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 3:18 w points linestyle 3 t "wlow"
+set title "ISIdleTimeAvg / OSIdleTimeAvg"
+set xlabel "ISIdleTimeAvg"
+set ylabel "OSIdleTimeAvg"
+plot \
+"TagsTagwhigh.dat" u 9:19 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 9:19 w points linestyle 3 t "wlow"
+set title "TimingDecisionsOverall / ItemThroughputRate"
+set xlabel "TimingDecisionsOverall"
+set ylabel "ItemThroughputRate"
+plot \
+"TagsTagwhigh.dat" u 10:2 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 10:2 w points linestyle 3 t "wlow"
+set title "InvCombinedAvgRank / ItemThroughputRateScore"
+set xlabel "InvCombinedAvgRank"
+set ylabel "ItemThroughputRateScore"
+plot \
+"TagsTagwhigh.dat" u 11:3 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 11:3 w points linestyle 3 t "wlow"
+set title "TripDistance / TripTime"
+set xlabel "TripDistance"
+set ylabel "TripTime"
+plot \
+"TagsTagwhigh.dat" u 6:20 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 6:20 w points linestyle 3 t "wlow"
+set title "TripDistance / TripTimeWithoutQueueing"
+set xlabel "TripDistance"
+set ylabel "TripTimeWithoutQueueing"
+plot \
+"TagsTagwhigh.dat" u 6:21 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 6:21 w points linestyle 3 t "wlow"
+set title "TimeMoving / TimeQueueing"
+set xlabel "TimeMoving"
+set ylabel "TimeQueueing"
+plot \
+"TagsTagwhigh.dat" u 12:13 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 12:13 w points linestyle 3 t "wlow"
+set title "TimeQueueing / ItemThroughputRateScore"
+set xlabel "TimeQueueing"
+set ylabel "ItemThroughputRateScore"
+plot \
+"TagsTagwhigh.dat" u 13:3 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 13:3 w points linestyle 3 t "wlow"
+set title "DistanceTraveledPerBot / ItemThroughputRateScore"
+set xlabel "DistanceTraveledPerBot"
+set ylabel "ItemThroughputRateScore"
+plot \
+"TagsTagwhigh.dat" u 14:3 w points linestyle 2 t "whigh", \
+"TagsTagwlow.dat" u 14:3 w points linestyle 3 t "wlow"
+>>>>>>> 1bbb1cb (Plot per demand)
 reset
 exit

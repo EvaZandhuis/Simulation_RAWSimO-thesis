@@ -171,6 +171,7 @@ namespace RAWSimO.CLI
             //change name of the results folder
             //string statisticsFolder = instance.Name + "-" + instance.SettingConfig.Name + "-" + instance.ControllerConfig.Name + "-" + instance.SettingConfig.Seed.ToString();
             //string statisticsFolder = args[0] + "-" + instance.SettingConfig.Name + "-" + instance.ControllerConfig.Name + "-" + ReadData.csvFileName.ToString() + "-" + instance.SettingConfig.Seed.ToString();
+            ReadData.UpdateData();
             string statisticsFolder = instance.SettingConfig.Name + "-" + ReadData.csvFileName.ToString() + "-" + instance.SettingConfig.Seed.ToString();
             instance.SettingConfig.StatisticsDirectory = Path.Combine(args[3], statisticsFolder);
             LogLine("StatisticsFolder: " + statisticsFolder);

@@ -1,0 +1,56 @@
+Executing ... 
+ 15:39:48 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 83%  |    0     |   0    |  76.45MB  
+ 00:00:00 | Reactivating bundle generation paused by inventory+reserved+backlog level (currently at: 0.6483333333333333)
+ 00:00:00 | 00:00:00 | 0.00:30:00 | 100.00%  |   339   |    0     | 40%  |   2926   |   0    |  73.75MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:00 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 9.423403508771924E-05
+StatTimingPathPlanningOverall: 0.05371339999999997
+StatTimingPathPlanningCount: 570
+StatTimingTaskAllocationAverage: 0.0014121434482758616
+StatTimingTaskAllocationOverall: 0.20476079999999994
+StatTimingTaskAllocationCount: 145
+StatTimingItemStorageAverage: 1.0983505154639205E-06
+StatTimingItemStorageOverall: 0.0005327000000000014
+StatTimingItemStorageCount: 485
+StatTimingPodStorageAverage: 0.0012479312500000004
+StatTimingPodStorageOverall: 0.07986760000000002
+StatTimingPodStorageCount: 64
+StatTimingReplenishmentBatchingAverage: 8.8E-06
+StatTimingReplenishmentBatchingOverall: 3.52E-05
+StatTimingReplenishmentBatchingCount: 4
+StatTimingOrderBatchingAverage: 0.00010319585406301824
+StatTimingOrderBatchingOverall: 0.0622271
+StatTimingOrderBatchingCount: 603
+>>> Overall
+StatOverallBundlesPlaced: 180
+StatOverallItemsOrdered: 583
+StatOverallOrdersPlaced: 373
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 521
+StatOverallLinesHandled: 488
+StatOverallOrdersHandled: 339
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 2925.652943742552
+StatOverallDistanceEstimated: 2842
+StatOverallAssignedTasks: 145
+StatMaxMemoryUsed: 76,80859375
+StatRealTimeUsed: 0.8041396
+StatAverageTurnoverTime: 572.554674980757
+StatMedianTurnoverTime: 448.9541702631279
+StatLowerQuartileTurnoverTime: 180
+StatUpperQuartileTurnoverTime: 843.74139248535
+StatAverageThroughputTime: 149.327708564289
+StatMedianThroughputTime: 61.30444444444436
+StatLowerQuartileThroughputTime: 40.771760458079825
+StatUpperQuartileThroughputTime: 153.812590194952
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
