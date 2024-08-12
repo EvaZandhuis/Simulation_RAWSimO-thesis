@@ -1,0 +1,1 @@
+gnuplot avg_heatedscatterplots.gp

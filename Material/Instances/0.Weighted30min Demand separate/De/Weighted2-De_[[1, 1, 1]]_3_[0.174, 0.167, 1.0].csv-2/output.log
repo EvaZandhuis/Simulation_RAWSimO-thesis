@@ -1,0 +1,87 @@
+Executing ... 
+ 10:00:37 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 107.85MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Pausing order generation due to inventory level (currently at: 0.09642857142857143)
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   538   |    0     |  9%  |   4537   |   0    | 105.75MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00010820435356200524
+StatTimingPathPlanningOverall: 0.08201889999999998
+StatTimingPathPlanningCount: 758
+StatTimingTaskAllocationAverage: 0.002125882258064518
+StatTimingTaskAllocationOverall: 0.3954141000000003
+StatTimingTaskAllocationCount: 186
+StatTimingItemStorageAverage: 1.0398058252427154E-06
+StatTimingItemStorageOverall: 0.0008567999999999975
+StatTimingItemStorageCount: 824
+StatTimingPodStorageAverage: 0.002050332584269662
+StatTimingPodStorageOverall: 0.1824795999999999
+StatTimingPodStorageCount: 89
+StatTimingReplenishmentBatchingAverage: 1.025E-05
+StatTimingReplenishmentBatchingOverall: 2.05E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.102945368171034E-05
+StatTimingOrderBatchingOverall: 0.0682268000000001
+StatTimingOrderBatchingCount: 842
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 612
+StatOverallOrdersPlaced: 397
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 848
+StatOverallLinesHandled: 809
+StatOverallOrdersHandled: 538
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4537.256825967452
+StatOverallDistanceEstimated: 4442
+StatOverallAssignedTasks: 186
+StatMaxMemoryUsed: 107,84765625
+StatRealTimeUsed: 1.0294035
+StatAverageTurnoverTime: 450.5835418876341
+StatMedianTurnoverTime: 293.8662986939368
+StatLowerQuartileTurnoverTime: 120.91185424949185
+StatUpperQuartileTurnoverTime: 711.3811183040375
+StatAverageThroughputTime: 77.25604606195478
+StatMedianThroughputTime: 28.348888888888894
+StatLowerQuartileThroughputTime: 17.330743138381763
+StatUpperQuartileThroughputTime: 77.07944444444428
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/13/2024 10:00:38
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\De\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\De\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\De\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\De
+Seed: 3
+Additionally the following tag was passed: 1, 1, 1, 0.174, 0.167, 1.0
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-De_[[1, 1, 1]]_3_[0.174, 0.167, 1.0].csv-3
+Done!

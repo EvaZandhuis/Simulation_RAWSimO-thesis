@@ -1,0 +1,564 @@
+>>> Bots
+Bot0:
+DistanceTraveled: 844,9999999999991
+DistanceEstimated: 821
+NumberOfPickups: 17
+NumberOfSetdowns: 16
+NumCollisions: 0
+TotalTimeMoving: 795.8512245415152
+None: 0.42
+ParkPod: 370.81566373281464
+RepositionPod: 0
+Insert: 0
+Extract: 1356.642423504077
+Rest: 30.20620490252397
+PickupPod: 119.71176045807891
+SetdownPod: 112.60907647171612
+GetItems: 0
+PutItems: 430.6121231776544
+Rest: 20.37584412271415
+Move: 1074.775487909252
+Evade: 0
+UseElevator: 0
+Bot1:
+DistanceTraveled: 909,9999999999973
+DistanceEstimated: 841
+NumberOfPickups: 18
+NumberOfSetdowns: 17
+NumCollisions: 0
+TotalTimeMoving: 864.9466235673231
+None: 0.42
+ParkPod: 484.66112812353055
+RepositionPod: 0
+Insert: 0
+Extract: 1234.8283117545643
+Rest: 30.691204902523975
+PickupPod: 126.78333333333373
+SetdownPod: 119.61787419576387
+GetItems: 0
+PutItems: 388.19408366463756
+Rest: 25.753509156891013
+Move: 1090.2518444299926
+Evade: 0
+UseElevator: 0
+Bot2:
+DistanceTraveled: 936,9999999999989
+DistanceEstimated: 881
+NumberOfPickups: 18
+NumberOfSetdowns: 17
+NumCollisions: 0
+TotalTimeMoving: 866.5062120954409
+None: 0.42
+ParkPod: 390.34129869393894
+RepositionPod: 0
+Insert: 0
+Extract: 1372.504446384213
+Rest: 0
+PickupPod: 126.67638529242797
+SetdownPod: 119.670187582827
+GetItems: 0
+PutItems: 474.3197088062609
+Rest: 10.436009439971725
+Move: 1032.1634539566642
+Evade: 0
+UseElevator: 0
+Bot3:
+DistanceTraveled: 864,0000000000001
+DistanceEstimated: 802
+NumberOfPickups: 17
+NumberOfSetdowns: 16
+NumCollisions: 0
+TotalTimeMoving: 834.1806611062392
+None: 0.42
+ParkPod: 374.6392594881954
+RepositionPod: 0
+Insert: 0
+Extract: 1381.9603299010546
+Rest: 0
+PickupPod: 119.6490836646366
+SetdownPod: 112.56120490252414
+GetItems: 0
+PutItems: 397.31552415728936
+Rest: 9.09147908384004
+Move: 1118.4022975809598
+Evade: 0
+UseElevator: 0
+Bot4:
+DistanceTraveled: 811,542564488892
+DistanceEstimated: 779
+NumberOfPickups: 18
+NumberOfSetdowns: 17
+NumCollisions: 0
+TotalTimeMoving: 811.9810820559862
+None: 0.42
+ParkPod: 421.00505520023313
+RepositionPod: 0
+Insert: 0
+Extract: 1334.89781636896
+Rest: 0
+PickupPod: 126.73268398636463
+SetdownPod: 119.67611111111162
+GetItems: 0
+PutItems: 390.80730425436764
+Rest: 10.38128624786509
+Move: 1108.7254859694842
+Evade: 0
+UseElevator: 0
+Bot5:
+DistanceTraveled: 823,3369333116542
+DistanceEstimated: 812
+NumberOfPickups: 18
+NumberOfSetdowns: 18
+NumCollisions: 0
+TotalTimeMoving: 801.4342633677265
+None: 0.42
+ParkPod: 409.8445552482795
+RepositionPod: 0
+Insert: 0
+Extract: 1348.2736967397122
+Rest: 0
+PickupPod: 126.78000000000102
+SetdownPod: 126.68074313838231
+GetItems: 0
+PutItems: 486.19666929324416
+Rest: 9.481777470498256
+Move: 1009.3990620858659
+Evade: 0
+UseElevator: 0
+>>> Pods
+Pod0(0.05%0.05%):
+SimpleItemDescription17 
+StatItemsHandledAtOutputStations: 5
+StatBundlesHandledAtInputStations: 0
+Pod1(0.65%0.65%):
+SimpleItemDescription14 SimpleItemDescription33 SimpleItemDescription42 SimpleItemDescription84 
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod2(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod3(0.40%0.40%):
+SimpleItemDescription71 SimpleItemDescription99 
+StatItemsHandledAtOutputStations: 12
+StatBundlesHandledAtInputStations: 0
+Pod4(0.50%0.50%):
+SimpleItemDescription4 SimpleItemDescription35 
+StatItemsHandledAtOutputStations: 7
+StatBundlesHandledAtInputStations: 0
+Pod5(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 7
+StatBundlesHandledAtInputStations: 0
+Pod6(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod7(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod8(0.25%0.25%):
+SimpleItemDescription11 SimpleItemDescription20 
+StatItemsHandledAtOutputStations: 15
+StatBundlesHandledAtInputStations: 0
+Pod9(0.40%0.40%):
+SimpleItemDescription44 
+StatItemsHandledAtOutputStations: 6
+StatBundlesHandledAtInputStations: 0
+Pod10(0.45%0.45%):
+SimpleItemDescription37 SimpleItemDescription61 
+StatItemsHandledAtOutputStations: 6
+StatBundlesHandledAtInputStations: 0
+Pod11(0.05%0.05%):
+SimpleItemDescription94 
+StatItemsHandledAtOutputStations: 10
+StatBundlesHandledAtInputStations: 0
+Pod12(0.20%0.20%):
+SimpleItemDescription3 SimpleItemDescription30 SimpleItemDescription36 SimpleItemDescription55 
+StatItemsHandledAtOutputStations: 9
+StatBundlesHandledAtInputStations: 0
+Pod13(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 10
+StatBundlesHandledAtInputStations: 0
+Pod14(0.65%0.65%):
+SimpleItemDescription31 SimpleItemDescription54 SimpleItemDescription71 
+StatItemsHandledAtOutputStations: 7
+StatBundlesHandledAtInputStations: 0
+Pod15(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 8
+StatBundlesHandledAtInputStations: 0
+Pod16(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod17(0.50%0.50%):
+SimpleItemDescription45 SimpleItemDescription50 SimpleItemDescription57 SimpleItemDescription72 
+StatItemsHandledAtOutputStations: 10
+StatBundlesHandledAtInputStations: 0
+Pod18(0.20%0.20%):
+SimpleItemDescription4 SimpleItemDescription77 
+StatItemsHandledAtOutputStations: 16
+StatBundlesHandledAtInputStations: 0
+Pod19(0.30%0.30%):
+SimpleItemDescription23 SimpleItemDescription26 SimpleItemDescription54 
+StatItemsHandledAtOutputStations: 4
+StatBundlesHandledAtInputStations: 0
+Pod20(0.10%0.10%):
+SimpleItemDescription7 SimpleItemDescription29 
+StatItemsHandledAtOutputStations: 4
+StatBundlesHandledAtInputStations: 0
+Pod21(0.75%0.75%):
+SimpleItemDescription37 
+StatItemsHandledAtOutputStations: 5
+StatBundlesHandledAtInputStations: 0
+Pod22(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 19
+StatBundlesHandledAtInputStations: 0
+Pod23(0.20%0.20%):
+SimpleItemDescription44 SimpleItemDescription70 
+StatItemsHandledAtOutputStations: 11
+StatBundlesHandledAtInputStations: 0
+Pod24(0.10%0.10%):
+SimpleItemDescription58 
+StatItemsHandledAtOutputStations: 14
+StatBundlesHandledAtInputStations: 0
+Pod25(0.10%0.10%):
+SimpleItemDescription52 
+StatItemsHandledAtOutputStations: 4
+StatBundlesHandledAtInputStations: 0
+Pod26(0.10%0.10%):
+SimpleItemDescription5 
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod27(1.00%1.00%):
+SimpleItemDescription12 SimpleItemDescription16 SimpleItemDescription37 SimpleItemDescription90 
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod28(0.85%0.85%):
+SimpleItemDescription13 SimpleItemDescription34 SimpleItemDescription43 SimpleItemDescription52 
+StatItemsHandledAtOutputStations: 3
+StatBundlesHandledAtInputStations: 0
+Pod29(0.35%0.35%):
+SimpleItemDescription49 SimpleItemDescription83 
+StatItemsHandledAtOutputStations: 13
+StatBundlesHandledAtInputStations: 0
+Pod30(0.20%0.20%):
+SimpleItemDescription10 SimpleItemDescription44 SimpleItemDescription84 
+StatItemsHandledAtOutputStations: 11
+StatBundlesHandledAtInputStations: 0
+Pod31(0.05%0.05%):
+SimpleItemDescription37 
+StatItemsHandledAtOutputStations: 19
+StatBundlesHandledAtInputStations: 0
+Pod32(0.85%0.85%):
+SimpleItemDescription8 
+StatItemsHandledAtOutputStations: 3
+StatBundlesHandledAtInputStations: 0
+Pod33(1.00%1.00%):
+SimpleItemDescription37 SimpleItemDescription48 SimpleItemDescription74 SimpleItemDescription76 
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod34(0.05%0.05%):
+SimpleItemDescription75 
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod35(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod36(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 16
+StatBundlesHandledAtInputStations: 0
+Pod37(0.45%0.45%):
+SimpleItemDescription9 SimpleItemDescription90 
+StatItemsHandledAtOutputStations: 11
+StatBundlesHandledAtInputStations: 0
+Pod38(0.35%0.35%):
+SimpleItemDescription25 SimpleItemDescription97 
+StatItemsHandledAtOutputStations: 13
+StatBundlesHandledAtInputStations: 0
+Pod39(0.15%0.15%):
+SimpleItemDescription69 SimpleItemDescription77 
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod40(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod41(0.50%0.50%):
+SimpleItemDescription37 SimpleItemDescription59 
+StatItemsHandledAtOutputStations: 6
+StatBundlesHandledAtInputStations: 0
+Pod42(0.10%0.10%):
+SimpleItemDescription67 SimpleItemDescription89 
+StatItemsHandledAtOutputStations: 18
+StatBundlesHandledAtInputStations: 0
+Pod43(0.95%0.95%):
+SimpleItemDescription8 SimpleItemDescription32 SimpleItemDescription40 SimpleItemDescription47 
+StatItemsHandledAtOutputStations: 1
+StatBundlesHandledAtInputStations: 0
+Pod44(0.85%0.85%):
+SimpleItemDescription15 SimpleItemDescription77 SimpleItemDescription81 SimpleItemDescription86 
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod45(0.10%0.10%):
+SimpleItemDescription2 
+StatItemsHandledAtOutputStations: 18
+StatBundlesHandledAtInputStations: 0
+Pod46(0.35%0.35%):
+SimpleItemDescription27 SimpleItemDescription35 
+StatItemsHandledAtOutputStations: 9
+StatBundlesHandledAtInputStations: 0
+Pod47(0.60%0.60%):
+SimpleItemDescription8 
+StatItemsHandledAtOutputStations: 8
+StatBundlesHandledAtInputStations: 0
+Pod48(0.05%0.05%):
+SimpleItemDescription0 
+StatItemsHandledAtOutputStations: 4
+StatBundlesHandledAtInputStations: 0
+Pod49(0.20%0.20%):
+SimpleItemDescription12 SimpleItemDescription13 
+StatItemsHandledAtOutputStations: 16
+StatBundlesHandledAtInputStations: 0
+Pod50(0.10%0.10%):
+SimpleItemDescription62 
+StatItemsHandledAtOutputStations: 18
+StatBundlesHandledAtInputStations: 0
+Pod51(0.15%0.15%):
+SimpleItemDescription24 
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod52(0.10%0.10%):
+SimpleItemDescription78 
+StatItemsHandledAtOutputStations: 12
+StatBundlesHandledAtInputStations: 0
+Pod53(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 20
+StatBundlesHandledAtInputStations: 0
+Pod54(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 18
+StatBundlesHandledAtInputStations: 0
+Pod55(0.60%0.60%):
+SimpleItemDescription24 SimpleItemDescription57 SimpleItemDescription73 
+StatItemsHandledAtOutputStations: 7
+StatBundlesHandledAtInputStations: 0
+Pod56(0.10%0.10%):
+SimpleItemDescription96 
+StatItemsHandledAtOutputStations: 16
+StatBundlesHandledAtInputStations: 0
+Pod57(0.25%0.25%):
+SimpleItemDescription32 SimpleItemDescription88 SimpleItemDescription89 
+StatItemsHandledAtOutputStations: 3
+StatBundlesHandledAtInputStations: 0
+Pod58(0.15%0.15%):
+SimpleItemDescription1 SimpleItemDescription41 
+StatItemsHandledAtOutputStations: 17
+StatBundlesHandledAtInputStations: 0
+Pod59(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 18
+StatBundlesHandledAtInputStations: 0
+Pod60(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod61(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod62(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod63(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod64(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod65(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod66(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod67(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod68(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod69(0.00%1.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod70(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod71(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod72(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod73(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod74(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod75(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod76(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod77(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod78(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod79(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod80(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod81(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod82(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+Pod83(0.00%0.00%):
+
+StatItemsHandledAtOutputStations: 0
+StatBundlesHandledAtInputStations: 0
+>>> InputStations
+InputStation0:
+IdleTime: 1800
+UpTime: 1800
+DownTime: 0
+NumBundlesPut: 0
+NumInjectedBundlesPut: 0
+BundlePileOn: 0
+PodsHandled: 0
+PodHandlingTimeAvg: 0
+PodHandlingTimeVar: 0
+PodHandlingTimeMin: 0
+PodHandlingTimeMax: 0
+>>> OutputStations
+OutputStation0:
+IdleTime: 936.3229024012994
+UpTime: 1800
+DownTime: 0
+NumItemsPicked: 226
+NumInjectedItemsPicked: 165
+NumOrdersFinished: 154
+ItemPileOn: 6.647058823529412
+OrderPileOn: 4.529411764705882
+PodsHandled: 34
+PodHandlingTimeAvg: 27.55432504858275
+PodHandlingTimeVar: 394.8469006342081
+PodHandlingTimeMin: 4.04444444444448
+PodHandlingTimeMax: 77.93111830403268
+OutputStation1:
+IdleTime: 888.1702149815958
+UpTime: 1800
+DownTime: 0
+NumItemsPicked: 239
+NumInjectedItemsPicked: 173
+NumOrdersFinished: 162
+ItemPileOn: 7.029411764705882
+OrderPileOn: 4.764705882352941
+PodsHandled: 34
+PodHandlingTimeAvg: 28.855381622944307
+PodHandlingTimeVar: 407.4046535126386
+PodHandlingTimeMin: 4.064076471715225
+PodHandlingTimeMax: 75.66287876211237
+OutputStation2:
+IdleTime: 1009.3173744065921
+UpTime: 1800
+DownTime: 0
+NumItemsPicked: 207
+NumInjectedItemsPicked: 144
+NumOrdersFinished: 128
+ItemPileOn: 6.2727272727272725
+OrderPileOn: 3.878787878787879
+PodsHandled: 33
+PodHandlingTimeAvg: 25.663512457036553
+PodHandlingTimeVar: 308.6298501986555
+PodHandlingTimeMin: 4.04444444444448
+PodHandlingTimeMax: 72.87203463939682
+>>> Timings
+StatTimingPathPlanningAverage: 0.00010702228202368139
+StatTimingPathPlanningOverall: 0.09942370000000002
+StatTimingPathPlanningCount: 929
+StatTimingTaskAllocationAverage: 0.0019637760563380275
+StatTimingTaskAllocationOverall: 0.4182842999999999
+StatTimingTaskAllocationCount: 213
+StatTimingItemStorageAverage: 9.709726443769025E-07
+StatTimingItemStorageOverall: 0.0006389000000000019
+StatTimingItemStorageCount: 658
+StatTimingPodStorageAverage: 0.001622270297029703
+StatTimingPodStorageOverall: 0.1638493
+StatTimingPodStorageCount: 101
+StatTimingReplenishmentBatchingAverage: 1.015E-05
+StatTimingReplenishmentBatchingOverall: 2.03E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.783211875843448E-05
+StatTimingOrderBatchingOverall: 0.06508359999999995
+StatTimingOrderBatchingCount: 741
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 639
+StatOverallOrdersPlaced: 416
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 672
+StatOverallLinesHandled: 635
+StatOverallOrdersHandled: 444
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5190.879497800542
+StatOverallDistanceEstimated: 4936
+StatOverallAssignedTasks: 213
+StatMaxMemoryUsed: 76,078125
+StatRealTimeUsed: 1.0652057
+StatAverageTurnoverTime: 472.6534231866698
+StatMedianTurnoverTime: 330.8189853068775
+StatLowerQuartileTurnoverTime: 166.29444444444482
+StatUpperQuartileTurnoverTime: 694.1236147075722
+StatAverageThroughputTime: 101.29132575448327
+StatMedianThroughputTime: 24.18564934696883
+StatLowerQuartileThroughputTime: 16.50555555555553
+StatUpperQuartileThroughputTime: 86.52287156919192
+

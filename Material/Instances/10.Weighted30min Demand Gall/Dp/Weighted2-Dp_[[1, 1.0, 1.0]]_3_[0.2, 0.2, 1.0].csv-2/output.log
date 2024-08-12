@@ -1,0 +1,81 @@
+Executing ... 
+ 19:24:05 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 109.78MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | 00:00:00 | 0.00:30:00 | 100.00%  |   499   |    0     | 14%  |   4879   |   0    | 108.91MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 8.392824519230784E-05
+StatTimingPathPlanningOverall: 0.06982830000000012
+StatTimingPathPlanningCount: 832
+StatTimingTaskAllocationAverage: 0.0019217064039408862
+StatTimingTaskAllocationOverall: 0.3901063999999999
+StatTimingTaskAllocationCount: 203
+StatTimingItemStorageAverage: 8.599728629579434E-07
+StatTimingItemStorageOverall: 0.0006338000000000042
+StatTimingItemStorageCount: 737
+StatTimingPodStorageAverage: 0.0018309659793814424
+StatTimingPodStorageOverall: 0.17760369999999992
+StatTimingPodStorageCount: 97
+StatTimingReplenishmentBatchingAverage: 7.6E-06
+StatTimingReplenishmentBatchingOverall: 1.52E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.109305724725945E-05
+StatTimingOrderBatchingOverall: 0.06657740000000001
+StatTimingOrderBatchingCount: 821
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 667
+StatOverallOrdersPlaced: 427
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 758
+StatOverallLinesHandled: 718
+StatOverallOrdersHandled: 499
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4879.243755701262
+StatOverallDistanceEstimated: 4809
+StatOverallAssignedTasks: 203
+StatMaxMemoryUsed: 109,78125
+StatRealTimeUsed: 0.9504219
+StatAverageTurnoverTime: 446.5101557474298
+StatMedianTurnoverTime: 319.9612986939376
+StatLowerQuartileTurnoverTime: 135.79064934696896
+StatUpperQuartileTurnoverTime: 638.1923160136378
+StatAverageThroughputTime: 93.17562679362365
+StatMedianThroughputTime: 23.499444444444634
+StatLowerQuartileThroughputTime: 16.633427124746504
+StatUpperQuartileThroughputTime: 81.78981961009589
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/25/2024 19:24:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\10.Weighted30min Demand Gall\Dp\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\10.Weighted30min Demand Gall\Dp\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\10.Weighted30min Demand Gall\Dp\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\10.Weighted30min Demand Gall\Dp
+Seed: 3
+Additionally the following tag was passed: 1, 1.0, 1.0, 0.2, 0.2, 1.0
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dp_[[1, 1.0, 1.0]]_3_[0.2, 0.2, 1.0].csv-3
+Done!

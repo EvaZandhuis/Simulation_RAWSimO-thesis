@@ -11,10 +11,49 @@ namespace RAWSimO.Core
     
     public class ReadData
     {
-        public static List<PodItem> PodContentData { get; }
+        public static List<PodItem> PodContentData { get; private set; }
         public static int TotalSkuCount { get; private set; }
-        public static Dictionary<int, int> CapacityUsedPerPod { get; } 
+        public static Dictionary<int, int> CapacityUsedPerPod { get; private set; } 
         public static string csvFileName { get; private set; }
+
+        public static void UpdateData()
+        {
+            PodContentData = new List<PodItem>();
+            TotalSkuCount = 0;
+            CapacityUsedPerPod = new Dictionary<int, int>();
+
+            string csvFilePath = GetCsvFilePath();
+            csvFileName = Path.GetFileName(csvFilePath);
+
+            using (StreamReader reader = new StreamReader(csvFilePath))
+            {
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    string[] values = line.Split(',');
+
+                    // Assuming the CSV file has three columns: podIndex, skuIndex, skuCount
+                    if (values.Length >= 3)
+                    {
+                        if (int.TryParse(values[0], out int podIndex) &&
+                            int.TryParse(values[1], out int skuIndex) &&
+                            int.TryParse(values[2], out int skuCount))
+                        {
+                            // Create a PodItem object and add it to the list
+                            PodContentData.Add(new PodItem(podIndex, skuIndex, skuCount));
+
+                            // Increment the total SKU count
+                            TotalSkuCount += skuCount;
+
+                            if (CapacityUsedPerPod.ContainsKey(podIndex))
+                                CapacityUsedPerPod[podIndex] += skuCount;
+                            else
+                                CapacityUsedPerPod[podIndex] = skuCount;
+                        }
+                    }
+                }
+            }
+        }
 
         static ReadData()
         {
@@ -59,36 +98,75 @@ namespace RAWSimO.Core
         {
             // comment or uncomment line below 
             // for visualization: uncomment                       for playground: comment
-            //return "C:\\Users\\pnl0j327\\PycharmProjects\\pythonProject1\\large base V=3,time=30 scenario.csv";
-            
-            
-            string folderPath = @"C:\Users\pnl0j327\PycharmProjects\pythonProject1\";
-            string[] csvFiles = Directory.GetFiles(folderPath, "*.csv");
+            return "C:\\Users\\pnl0j327\\PycharmProjects\\pythonProject1\\Gall_step12_S100_d1000_T120\\Dpp.csv";
 
-            if (csvFiles.Length == 0)
+            string folderPath = @"C:\Users\pnl0j327\PycharmProjects\pythonProject1\Gall_step12_S100_d1000_T120";
+
+            //this part should be used with the playground => LoopExecuteDirectory
+            string csvFilePath = Path.Combine(folderPath, "filelist.csv");
+            if (File.Exists(csvFilePath))
             {
-                Console.WriteLine("No CSV files found in the specified folder.");
-                return null;
+                string[] lines = File.ReadAllLines(csvFilePath);
+                if (lines.Length > 0)
+                {
+                    string filePathName = lines[0].Trim();
+                    Console.WriteLine($"using file {filePathName} for demand");
+                    if (File.Exists(filePathName))
+                    {
+                        Console.WriteLine("File found.");
+                        // Return the path of the specified file
+                        Console.WriteLine($"Selected file: {filePathName}");
+                        return filePathName;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Specified file not found.");
+                        return null;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("filelist.csv is empty.");
+                    return null;
+                }
             }
-
-            Console.WriteLine("Choose a CSV file:");
-
-            for (int i = 0; i < csvFiles.Length; i++)
-            {
-                Console.WriteLine($"{i}. {Path.GetFileName(csvFiles[i])}");
-            }
-
-
-            if (int.TryParse(Console.ReadLine(), out int selectedIndex) && selectedIndex >= 0 && selectedIndex < csvFiles.Length)
-            {
-                return csvFiles[selectedIndex];
-            }
+            //this part should be used with the playground => ExecuteDirectory or ExecuteDirectories
             else
             {
-                Console.WriteLine("Invalid selection. Please enter a valid index.");
-                return null;
+                string[] csvFiles = Directory.GetFiles(folderPath, "*.csv");
+
+                if (csvFiles.Length == 0)
+                {
+                    Console.WriteLine("No CSV files found in the specified folder.");
+                    return null;
+                }
+
+                Console.WriteLine("Choose a CSV file:");
+
+                for (int i = 0; i < csvFiles.Length; i++)
+                {
+                    Console.WriteLine($"{i}. {Path.GetFileName(csvFiles[i])}");
+                }
+
+
+                if (int.TryParse(Console.ReadLine(), out int selectedIndex) && selectedIndex >= 0 && selectedIndex < csvFiles.Length)
+                {
+                    return csvFiles[selectedIndex];
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Please enter a valid index.");
+                    return null;
+
+                }
             }
+
         }
+
+
+
+
+            
 
     }
 

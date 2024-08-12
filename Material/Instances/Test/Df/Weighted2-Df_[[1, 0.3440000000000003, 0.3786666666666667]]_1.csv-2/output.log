@@ -1,0 +1,84 @@
+Executing ... 
+ 19:50:27 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  69.86MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   503   |    0     | 14%  |   5097   |   0    |  72.49MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00010865317365269465
+StatTimingPathPlanningOverall: 0.09072540000000003
+StatTimingPathPlanningCount: 835
+StatTimingTaskAllocationAverage: 0.0023421165048543675
+StatTimingTaskAllocationOverall: 0.48247599999999974
+StatTimingTaskAllocationCount: 206
+StatTimingItemStorageAverage: 1.602109479305736E-05
+StatTimingItemStorageOverall: 0.011999799999999963
+StatTimingItemStorageCount: 749
+StatTimingPodStorageAverage: 0.0018016948979591829
+StatTimingPodStorageOverall: 0.17656609999999992
+StatTimingPodStorageCount: 98
+StatTimingReplenishmentBatchingAverage: 9.05E-06
+StatTimingReplenishmentBatchingOverall: 1.81E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.00012912518610421828
+StatTimingOrderBatchingOverall: 0.10407489999999993
+StatTimingOrderBatchingCount: 806
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 636
+StatOverallOrdersPlaced: 413
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 769
+StatOverallLinesHandled: 729
+StatOverallOrdersHandled: 503
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5096.697499999991
+StatOverallDistanceEstimated: 4953
+StatOverallAssignedTasks: 206
+StatMaxMemoryUsed: 74,14453125
+StatRealTimeUsed: 1.298733
+StatAverageTurnoverTime: 434.085839417226
+StatMedianTurnoverTime: 294.8428787621167
+StatLowerQuartileTurnoverTime: 140.66944444444445
+StatUpperQuartileTurnoverTime: 588.1146320272723
+StatAverageThroughputTime: 92.8758691284063
+StatMedianThroughputTime: 24.756204902524246
+StatLowerQuartileThroughputTime: 16.520555555555802
+StatUpperQuartileThroughputTime: 93.05453823585765
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/11/2024 19:50:29
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df
+Seed: 1
+Additionally the following tag was passed: [[1, 0.3440000000000003, 0.3786666666666667]]
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Df_[[1, 0.3440000000000003, 0.3786666666666667]]_2.csv-1
+Done!

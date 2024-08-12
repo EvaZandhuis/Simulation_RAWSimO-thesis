@@ -1,0 +1,84 @@
+Executing ... 
+ 09:52:07 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 144.21MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   486   |    0     | 15%  |   4983   |   0    | 139.20MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 8.590947109471096E-05
+StatTimingPathPlanningOverall: 0.06984440000000001
+StatTimingPathPlanningCount: 813
+StatTimingTaskAllocationAverage: 0.0018803298578199052
+StatTimingTaskAllocationOverall: 0.3967496
+StatTimingTaskAllocationCount: 211
+StatTimingItemStorageAverage: 8.748611111111171E-07
+StatTimingItemStorageOverall: 0.0006299000000000043
+StatTimingItemStorageCount: 720
+StatTimingPodStorageAverage: 0.0014576653465346538
+StatTimingPodStorageOverall: 0.14722420000000003
+StatTimingPodStorageCount: 101
+StatTimingReplenishmentBatchingAverage: 7.5E-06
+StatTimingReplenishmentBatchingOverall: 1.5E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.926105263157886E-05
+StatTimingOrderBatchingOverall: 0.06783839999999994
+StatTimingOrderBatchingCount: 760
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 636
+StatOverallOrdersPlaced: 408
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 745
+StatOverallLinesHandled: 704
+StatOverallOrdersHandled: 486
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4982.826916630088
+StatOverallDistanceEstimated: 4834
+StatOverallAssignedTasks: 211
+StatMaxMemoryUsed: 144,2109375
+StatRealTimeUsed: 1.0032338
+StatAverageTurnoverTime: 453.654065108118
+StatMedianTurnoverTime: 276.66398268030184
+StatLowerQuartileTurnoverTime: 134.7005555555553
+StatUpperQuartileTurnoverTime: 631.0239898732235
+StatAverageThroughputTime: 88.75131409370081
+StatMedianThroughputTime: 23.639444444444507
+StatLowerQuartileThroughputTime: 12.910916335363254
+StatUpperQuartileThroughputTime: 77.03907647171536
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/13/2024 09:52:08
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc
+Seed: 2
+Additionally the following tag was passed: 1, 4.8812, 0.27199999999999996, 0.146, 0.143, 0.538
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dc_[[1, 4.8812, 0.27199999999999996]]_3_[0.146, 0.143, 0.538].csv-2
+Done!

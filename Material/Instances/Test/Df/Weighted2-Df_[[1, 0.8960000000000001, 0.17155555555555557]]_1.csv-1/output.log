@@ -1,0 +1,84 @@
+Executing ... 
+ 21:59:08 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  77.99MB  
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   497   |    0     | 13%  |   4858   |   0    |  74.78MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00015315909677419352
+StatTimingPathPlanningOverall: 0.11869829999999998
+StatTimingPathPlanningCount: 775
+StatTimingTaskAllocationAverage: 0.0027748653658536634
+StatTimingTaskAllocationOverall: 0.568847400000001
+StatTimingTaskAllocationCount: 205
+StatTimingItemStorageAverage: 1.5206806282722518E-06
+StatTimingItemStorageOverall: 0.0011618000000000004
+StatTimingItemStorageCount: 764
+StatTimingPodStorageAverage: 0.0024794867346938773
+StatTimingPodStorageOverall: 0.24298969999999998
+StatTimingPodStorageCount: 98
+StatTimingReplenishmentBatchingAverage: 8.7E-06
+StatTimingReplenishmentBatchingOverall: 1.74E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.00014091631644004942
+StatTimingOrderBatchingOverall: 0.11400129999999997
+StatTimingOrderBatchingCount: 809
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 648
+StatOverallOrdersPlaced: 412
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 780
+StatOverallLinesHandled: 737
+StatOverallOrdersHandled: 497
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4858.285814515215
+StatOverallDistanceEstimated: 4689
+StatOverallAssignedTasks: 205
+StatMaxMemoryUsed: 77,9921875
+StatRealTimeUsed: 1.5521633
+StatAverageTurnoverTime: 455.43117315040536
+StatMedianTurnoverTime: 314.0227777777777
+StatLowerQuartileTurnoverTime: 143.72833333333358
+StatUpperQuartileTurnoverTime: 672.4312986939397
+StatAverageThroughputTime: 88.81389722015913
+StatMedianThroughputTime: 27.61944444444441
+StatLowerQuartileThroughputTime: 16.65055555555523
+StatUpperQuartileThroughputTime: 83.20287156919068
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/07/2024 21:59:10
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df
+Seed: 2
+Additionally the following tag was passed: [[1, 0.8960000000000001, 0.17155555555555557]]
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Df_[[1, 0.8960000000000001, 0.17155555555555557]]_1.csv-2
+Done!

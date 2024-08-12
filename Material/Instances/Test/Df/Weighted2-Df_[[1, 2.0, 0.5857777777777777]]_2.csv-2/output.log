@@ -1,0 +1,85 @@
+Executing ... 
+ 22:04:05 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  76.84MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   494   |    0     | 15%  |   4854   |   0    |  72.93MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00012146358381502878
+StatTimingPathPlanningOverall: 0.1050659999999999
+StatTimingPathPlanningCount: 865
+StatTimingTaskAllocationAverage: 0.0022286199004975136
+StatTimingTaskAllocationOverall: 0.44795260000000026
+StatTimingTaskAllocationCount: 201
+StatTimingItemStorageAverage: 1.1036935704514348E-06
+StatTimingItemStorageOverall: 0.0008067999999999988
+StatTimingItemStorageCount: 731
+StatTimingPodStorageAverage: 0.0018788052083333342
+StatTimingPodStorageOverall: 0.1803653000000001
+StatTimingPodStorageCount: 96
+StatTimingReplenishmentBatchingAverage: 8.45E-06
+StatTimingReplenishmentBatchingOverall: 1.69E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.808968944099372E-05
+StatTimingOrderBatchingOverall: 0.07091219999999994
+StatTimingOrderBatchingCount: 805
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 648
+StatOverallOrdersPlaced: 422
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 749
+StatOverallLinesHandled: 708
+StatOverallOrdersHandled: 494
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4853.556164044547
+StatOverallDistanceEstimated: 4662
+StatOverallAssignedTasks: 201
+StatMaxMemoryUsed: 76,69921875
+StatRealTimeUsed: 1.1680495
+StatAverageTurnoverTime: 438.08846760598755
+StatMedianTurnoverTime: 291.94463202727115
+StatLowerQuartileTurnoverTime: 146.69898987322304
+StatUpperQuartileTurnoverTime: 573.1115800681753
+StatAverageThroughputTime: 94.88138878467034
+StatMedianThroughputTime: 24.66777777777793
+StatLowerQuartileThroughputTime: 16.33555555555563
+StatUpperQuartileThroughputTime: 86.56491340150876
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/07/2024 22:04:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df
+Seed: 1
+Additionally the following tag was passed: [[1, 2.0, 0.6893333333333334]]
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Df_[[1, 2.0, 0.6893333333333334]]_1.csv-1
+Done!

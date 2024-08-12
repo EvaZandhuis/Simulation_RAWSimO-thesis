@@ -121,7 +121,15 @@ namespace RAWSimO.DataPreparation
                             // Plot
                             FootprintScatterProcessor scatterplotProcessor = new FootprintScatterProcessor(path);
                             scatterplotProcessor.ReadFootprintData();
-                            scatterplotProcessor.PlotFootprintsScattered("scatterplotsungrouped", FootprintScatterProcessor.DEFAULT_UNGROUPED_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            scatterplotProcessor.PlotFootprintsScattered("heatedscatterplots", FootprintScatterProcessor.DEFAULT_TAG_BASED_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            scatterplotProcessor.PlotFootprintsScatteredMoved("moved_heatedscatterplots_weight", FootprintScatterProcessor.DEFAULT_TAG_BASED_W_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            scatterplotProcessor.PlotFootprintsScatteredMoved("moved_heatedscatterplots_distr", FootprintScatterProcessor.DEFAULT_TAG_BASED_DISTR_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            scatterplotProcessor.PlotFootprintsScatteredAvg("avg_heatedscatterplots_weight", FootprintScatterProcessor.DEFAULT_TAG_BASED_W_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            scatterplotProcessor.PlotFootprintsScatteredAvg("avg_heatedscatterplots_distr", FootprintScatterProcessor.DEFAULT_TAG_BASED_DISTR_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            //scatterplotProcessor.PlotFootprintsScatteredMoved("moved_heatedscatterplots_weight", FootprintScatterProcessor.DEFAULT_TAG_BASED_W_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+                            //scatterplotProcessor.PlotFootprintsScatteredMoved("moved_heatedscatterplots_distr", FootprintScatterProcessor.DEFAULT_TAG_BASED_DISTR_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
+
+                            //scatterplotProcessor.PlotFootprintsScattered("avgheatedscatterplots", FootprintScatterProcessor.DEFAULT_TAG_BASED_SCATTERPLOT_DATA, new List<FootprintDatapoint.FootPrintEntry>());
                             foreach (var grouping in FootprintScatterProcessor.DEFAULT_GROUPINGS)
                             {
                                 Console.WriteLine("Generating scatterplots for grouping by " + string.Join("/", grouping.Item1) + " ...");
@@ -137,14 +145,21 @@ namespace RAWSimO.DataPreparation
                             // Calculate and write correlation matrix
                             CorrelationProcessor.WriteCorrelationMatrix(path, Path.Combine(Path.GetDirectoryName(path), "correlations.csv"), new List<FootprintDatapoint.FootPrintEntry>
                             {
-                                FootprintDatapoint.FootPrintEntry.ItemThroughputRateScore,
-                                FootprintDatapoint.FootPrintEntry.OrderThroughputRate,
-                                FootprintDatapoint.FootPrintEntry.OrderTurnoverTimeAvg,
-                                FootprintDatapoint.FootPrintEntry.DistanceTraveledPerBot,
-                                FootprintDatapoint.FootPrintEntry.OrderLatenessAvg,
-                                FootprintDatapoint.FootPrintEntry.LateOrdersFractional,
+                                //FootprintDatapoint.FootPrintEntry.ItemThroughputRateScore,
                                 FootprintDatapoint.FootPrintEntry.ItemPileOneAvg,
-                                FootprintDatapoint.FootPrintEntry.OSIdleTimeAvg,
+                                //FootprintDatapoint.FootPrintEntry.OrderThroughputRate,
+                                FootprintDatapoint.FootPrintEntry.OrderTurnoverTimeAvg,
+                                FootprintDatapoint.FootPrintEntry.DistanceTraveled,
+                                FootprintDatapoint.FootPrintEntry.Za,
+                                FootprintDatapoint.FootPrintEntry.Zb,
+                                FootprintDatapoint.FootPrintEntry.Zc,
+                                FootprintDatapoint.FootPrintEntry.W2,
+                                FootprintDatapoint.FootPrintEntry.W3,
+                                //FootprintDatapoint.FootPrintEntry.OrdersHandled,
+                                //FootprintDatapoint.FootPrintEntry.OrderLatenessAvg,
+                                //FootprintDatapoint.FootPrintEntry.LateOrdersFractional,
+                                
+                                //FootprintDatapoint.FootPrintEntry.OSIdleTimeAvg,
                             });
                         }
                         break;

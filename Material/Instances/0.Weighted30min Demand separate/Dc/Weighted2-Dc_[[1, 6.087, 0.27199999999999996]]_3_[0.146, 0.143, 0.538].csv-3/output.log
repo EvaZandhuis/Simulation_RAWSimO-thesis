@@ -1,0 +1,84 @@
+Executing ... 
+ 09:53:05 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  95.12MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | 00:00:00 | 0.00:30:00 | 100.00%  |   492   |    0     | 14%  |   5105   |   0    |  90.72MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 8.302655298416565E-05
+StatTimingPathPlanningOverall: 0.0681648
+StatTimingPathPlanningCount: 821
+StatTimingTaskAllocationAverage: 0.001653219230769231
+StatTimingTaskAllocationOverall: 0.34386960000000005
+StatTimingTaskAllocationCount: 208
+StatTimingItemStorageAverage: 8.836680053547567E-07
+StatTimingItemStorageOverall: 0.0006601000000000032
+StatTimingItemStorageCount: 747
+StatTimingPodStorageAverage: 0.0014818712871287139
+StatTimingPodStorageOverall: 0.1496690000000001
+StatTimingPodStorageCount: 101
+StatTimingReplenishmentBatchingAverage: 7E-06
+StatTimingReplenishmentBatchingOverall: 1.4E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.00011024544303797474
+StatTimingOrderBatchingOverall: 0.08709390000000004
+StatTimingOrderBatchingCount: 790
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 650
+StatOverallOrdersPlaced: 408
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 764
+StatOverallLinesHandled: 724
+StatOverallOrdersHandled: 492
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5105.3230108276575
+StatOverallDistanceEstimated: 4942
+StatOverallAssignedTasks: 208
+StatMaxMemoryUsed: 94,34375
+StatRealTimeUsed: 0.9879553
+StatAverageTurnoverTime: 435.79597717522313
+StatMedianTurnoverTime: 283.02991340150885
+StatLowerQuartileTurnoverTime: 137.10917026312762
+StatUpperQuartileTurnoverTime: 644.9116666666672
+StatAverageThroughputTime: 87.68169860586039
+StatMedianThroughputTime: 24.195000000000164
+StatLowerQuartileThroughputTime: 12.880461764142865
+StatUpperQuartileThroughputTime: 77.95277777777738
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/13/2024 09:53:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc
+Seed: 1
+Additionally the following tag was passed: 1, 6.087, 0.48599999999999993, 0.194, 0.143, 0.4
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dc_[[1, 6.087, 0.48599999999999993]]_1_[0.194, 0.143, 0.4].csv-1
+Done!

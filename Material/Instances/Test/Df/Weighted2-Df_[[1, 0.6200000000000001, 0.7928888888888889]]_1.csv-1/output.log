@@ -1,0 +1,84 @@
+Executing ... 
+ 21:58:42 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  79.20MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   513   |    0     | 12%  |   4867   |   0    |  75.04MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 9.44883832335328E-05
+StatTimingPathPlanningOverall: 0.07889779999999989
+StatTimingPathPlanningCount: 835
+StatTimingTaskAllocationAverage: 0.0020501464646464664
+StatTimingTaskAllocationOverall: 0.4059290000000004
+StatTimingTaskAllocationCount: 198
+StatTimingItemStorageAverage: 9.088082901554415E-07
+StatTimingItemStorageOverall: 0.0007016000000000009
+StatTimingItemStorageCount: 772
+StatTimingPodStorageAverage: 0.001756062105263157
+StatTimingPodStorageOverall: 0.16682589999999992
+StatTimingPodStorageCount: 95
+StatTimingReplenishmentBatchingAverage: 1.345E-05
+StatTimingReplenishmentBatchingOverall: 2.69E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 9.018304878048779E-05
+StatTimingOrderBatchingOverall: 0.07395009999999999
+StatTimingOrderBatchingCount: 820
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 655
+StatOverallOrdersPlaced: 416
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 795
+StatOverallLinesHandled: 753
+StatOverallOrdersHandled: 513
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4866.900953496113
+StatOverallDistanceEstimated: 4754
+StatOverallAssignedTasks: 198
+StatMaxMemoryUsed: 79,37109375
+StatRealTimeUsed: 1.113365
+StatAverageTurnoverTime: 457.6938897122791
+StatMedianTurnoverTime: 320.74898268030137
+StatLowerQuartileTurnoverTime: 156.24176045807928
+StatUpperQuartileTurnoverTime: 633.5797258186877
+StatAverageThroughputTime: 98.87944172894342
+StatMedianThroughputTime: 27.01944444444473
+StatLowerQuartileThroughputTime: 16.550000000000182
+StatUpperQuartileThroughputTime: 86.0533333333342
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/07/2024 21:58:43
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df
+Seed: 2
+Additionally the following tag was passed: [[1, 0.6200000000000001, 0.7928888888888889]]
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Df_[[1, 0.6200000000000001, 0.7928888888888889]]_1.csv-2
+Done!

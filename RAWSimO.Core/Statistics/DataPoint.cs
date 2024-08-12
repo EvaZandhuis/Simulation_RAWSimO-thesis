@@ -5,6 +5,7 @@ using RAWSimO.Core.Items;
 using RAWSimO.Toolbox;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -41,6 +42,38 @@ namespace RAWSimO.Core.Statistics
             /// The tag that was passed to the execution. This field can be used to identify a run, otherwise it contains not any useful information.
             /// </summary>
             Tag,
+            /// <summary>
+            /// First part extracted from the Tag.
+            /// </summary>
+            W1,
+            /// <summary>
+            /// Second part extracted from the Tag.
+            /// </summary>
+            W2,
+            /// <summary>
+            /// Third part extracted from the Tag.
+            /// </summary>
+            W3,
+            /// <summary>
+            /// Fourth part extracted from the Tag.
+            /// </summary>
+            Za,
+            /// <summary>
+            /// Fifth part extracted from the Tag.
+            /// </summary>
+            Zb,
+            /// <summary>
+            /// Sixth part extracted from the Tag.
+            /// </summary>
+            Zc,
+            /// <summary>
+            /// Zc over Za, extracted from the Tag.
+            /// </summary>
+            Zc_Over_Za,
+            /// <summary>
+            /// Zb over Za, extracted from the Tag.
+            /// </summary>
+            Zb_Over_Za,
             /// <summary>
             /// Name of the path planner in use.
             /// </summary>
@@ -1174,6 +1207,14 @@ namespace RAWSimO.Core.Statistics
             { FootPrintEntry.Setting, typeof(string) },
             { FootPrintEntry.Controller, typeof(string) },
             { FootPrintEntry.Tag, typeof(string) },
+            { FootPrintEntry.W1, typeof(double) },
+            { FootPrintEntry.W2, typeof(double) },
+            { FootPrintEntry.W3, typeof(double) },
+            { FootPrintEntry.Za, typeof(double) },
+            { FootPrintEntry.Zb, typeof(double) },
+            { FootPrintEntry.Zc, typeof(double) },
+            { FootPrintEntry.Zb_Over_Za, typeof(double) },
+            { FootPrintEntry.Zc_Over_Za, typeof(double) },
             { FootPrintEntry.PP, typeof(string) },
             { FootPrintEntry.TA, typeof(string) },
             { FootPrintEntry.SA, typeof(string) },
@@ -1488,6 +1529,11 @@ namespace RAWSimO.Core.Statistics
         /// Creates a new datapoint by extracting all necessary information from the instance object that just completed a simulation run.
         /// </summary>
         /// <param name="instance">The instance object that just completed the simulation run.</param>
+        private List<String> ParseTag(string tag)
+        {
+            var trimmed = tag.Trim(new char[] { '[', ']' });
+            return trimmed.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+        }
         public FootprintDatapoint(Instance instance)
         {
             // Setup
@@ -1495,6 +1541,17 @@ namespace RAWSimO.Core.Statistics
             _entryValues[FootPrintEntry.Setting] = instance.SettingConfig.Name;
             _entryValues[FootPrintEntry.Controller] = instance.ControllerConfig.Name;
             _entryValues[FootPrintEntry.Tag] = instance.Tag;
+
+            var tagParts = ParseTag(instance.Tag);
+            _entryValues[FootPrintEntry.W1] = double.Parse(tagParts[0], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.W2] = double.Parse(tagParts[1], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.W3] = double.Parse(tagParts[2], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.Za] = double.Parse(tagParts[3], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.Zb] = double.Parse(tagParts[4], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.Zc] = double.Parse(tagParts[5], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.Zb_Over_Za] = double.Parse(tagParts[4], CultureInfo.InvariantCulture) / double.Parse(tagParts[3], CultureInfo.InvariantCulture);
+            _entryValues[FootPrintEntry.Zc_Over_Za] = double.Parse(tagParts[5], CultureInfo.InvariantCulture) / double.Parse(tagParts[3], CultureInfo.InvariantCulture);
+
             _entryValues[FootPrintEntry.PP] = instance.ControllerConfig.PathPlanningConfig.GetMethodName();
             _entryValues[FootPrintEntry.TA] = instance.ControllerConfig.TaskAllocationConfig.GetMethodName();
             _entryValues[FootPrintEntry.SA] = instance.ControllerConfig.StationActivationConfig.GetMethodName();

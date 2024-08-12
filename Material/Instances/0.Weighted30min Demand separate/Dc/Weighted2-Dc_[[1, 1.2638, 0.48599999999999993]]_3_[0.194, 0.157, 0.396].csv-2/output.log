@@ -1,0 +1,85 @@
+Executing ... 
+ 09:49:42 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 141.83MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   518   |    0     | 12%  |   4767   |   0    |  71.11MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.0001231371359223302
+StatTimingPathPlanningOverall: 0.10146500000000007
+StatTimingPathPlanningCount: 824
+StatTimingTaskAllocationAverage: 0.0024806959595959598
+StatTimingTaskAllocationOverall: 0.4911778
+StatTimingTaskAllocationCount: 198
+StatTimingItemStorageAverage: 1.3343832020997298E-06
+StatTimingItemStorageOverall: 0.0010167999999999941
+StatTimingItemStorageCount: 762
+StatTimingPodStorageAverage: 0.0023462827956989233
+StatTimingPodStorageOverall: 0.21820429999999985
+StatTimingPodStorageCount: 93
+StatTimingReplenishmentBatchingAverage: 1.3350000000000001E-05
+StatTimingReplenishmentBatchingOverall: 2.6700000000000002E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.00010006538936959201
+StatTimingOrderBatchingOverall: 0.08095289999999994
+StatTimingOrderBatchingCount: 809
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 630
+StatOverallOrdersPlaced: 410
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 795
+StatOverallLinesHandled: 756
+StatOverallOrdersHandled: 518
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4767.275377303894
+StatOverallDistanceEstimated: 4616
+StatOverallAssignedTasks: 198
+StatMaxMemoryUsed: 143,01171875
+StatRealTimeUsed: 1.2147061
+StatAverageTurnoverTime: 453.6039823313814
+StatMedianTurnoverTime: 283.067316013635
+StatLowerQuartileTurnoverTime: 100.85083692979418
+StatUpperQuartileTurnoverTime: 692.0519318799589
+StatAverageThroughputTime: 92.92031856364888
+StatMedianThroughputTime: 28.407777777778165
+StatLowerQuartileThroughputTime: 17.05333333333334
+StatUpperQuartileThroughputTime: 72.58139248535053
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/13/2024 09:49:44
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Dc
+Seed: 3
+Additionally the following tag was passed: 1, 1.2638, 0.48599999999999993, 0.194, 0.157, 0.396
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dc_[[1, 1.2638, 0.48599999999999993]]_3_[0.194, 0.157, 0.396].csv-3
+Done!

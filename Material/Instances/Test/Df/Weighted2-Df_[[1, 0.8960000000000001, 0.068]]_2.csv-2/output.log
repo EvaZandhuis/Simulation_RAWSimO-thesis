@@ -1,0 +1,84 @@
+Executing ... 
+ 21:59:06 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  78.43MB  
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   525   |    0     | 11%  |   4731   |   0    |  74.57MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00012573632862644416
+StatTimingPathPlanningOverall: 0.0979486
+StatTimingPathPlanningCount: 779
+StatTimingTaskAllocationAverage: 0.0032149458128078842
+StatTimingTaskAllocationOverall: 0.6526340000000005
+StatTimingTaskAllocationCount: 203
+StatTimingItemStorageAverage: 1.392748091603052E-06
+StatTimingItemStorageOverall: 0.0010946999999999988
+StatTimingItemStorageCount: 786
+StatTimingPodStorageAverage: 0.003409223711340205
+StatTimingPodStorageOverall: 0.3306946999999999
+StatTimingPodStorageCount: 97
+StatTimingReplenishmentBatchingAverage: 7.049999999999999E-06
+StatTimingReplenishmentBatchingOverall: 1.4099999999999999E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.00013674511459589887
+StatTimingOrderBatchingOverall: 0.11336170000000016
+StatTimingOrderBatchingCount: 829
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 654
+StatOverallOrdersPlaced: 426
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 816
+StatOverallLinesHandled: 775
+StatOverallOrdersHandled: 525
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 4730.601673604599
+StatOverallDistanceEstimated: 4647
+StatOverallAssignedTasks: 203
+StatMaxMemoryUsed: 79,0703125
+StatRealTimeUsed: 1.5650079
+StatAverageTurnoverTime: 465.16852457191095
+StatMedianTurnoverTime: 313.7592352828533
+StatLowerQuartileTurnoverTime: 140.16888888888877
+StatUpperQuartileTurnoverTime: 660.1807431383834
+StatAverageThroughputTime: 88.42294471161034
+StatMedianThroughputTime: 31.621854249492685
+StatLowerQuartileThroughputTime: 19.476111111111038
+StatUpperQuartileThroughputTime: 81.33944444444467
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/07/2024 21:59:08
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\0.Weighted30min Demand separate\Df
+Seed: 1
+Additionally the following tag was passed: [[1, 0.8960000000000001, 0.17155555555555557]]
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Df_[[1, 0.8960000000000001, 0.17155555555555557]]_1.csv-1
+Done!

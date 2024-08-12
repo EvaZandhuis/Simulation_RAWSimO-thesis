@@ -1,0 +1,65 @@
+Executing ... 
+ 19:28:27 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 154.27MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | 00:00:00 | 0.00:30:00 | 100.00%  |   488   |    0     | 15%  |   5016   |   0    | 152.35MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:00 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 7.979665471923538E-05
+StatTimingPathPlanningOverall: 0.06678980000000001
+StatTimingPathPlanningCount: 837
+StatTimingTaskAllocationAverage: 0.0015883180555555556
+StatTimingTaskAllocationOverall: 0.3430767
+StatTimingTaskAllocationCount: 216
+StatTimingItemStorageAverage: 8.595336076817602E-07
+StatTimingItemStorageOverall: 0.0006266000000000032
+StatTimingItemStorageCount: 729
+StatTimingPodStorageAverage: 0.0013917359223300965
+StatTimingPodStorageOverall: 0.14334879999999994
+StatTimingPodStorageCount: 103
+StatTimingReplenishmentBatchingAverage: 7.45E-06
+StatTimingReplenishmentBatchingOverall: 1.49E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.073008739076156E-05
+StatTimingOrderBatchingOverall: 0.06466480000000001
+StatTimingOrderBatchingCount: 801
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 667
+StatOverallOrdersPlaced: 423
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 748
+StatOverallLinesHandled: 699
+StatOverallOrdersHandled: 488
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5015.609708198964
+StatOverallDistanceEstimated: 4866
+StatOverallAssignedTasks: 216
+StatMaxMemoryUsed: 154,265625
+StatRealTimeUsed: 0.8917043
+StatAverageTurnoverTime: 446.91487113011164
+StatMedianTurnoverTime: 318.39296536060647
+StatLowerQuartileTurnoverTime: 134.43963202727025
+StatUpperQuartileTurnoverTime: 627.2480591520175
+StatAverageThroughputTime: 88.6462395465826
+StatMedianThroughputTime: 24.674256861618858
+StatLowerQuartileThroughputTime: 16.107222222222617
+StatUpperQuartileThroughputTime: 75.25869411313602
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS

@@ -1,0 +1,99 @@
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/21/2024 16:18:03
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp
+Seed: 1
+Additionally the following tag was passed: 1, 0.01, 1.0, 0.079, 0.847, 1.0
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dp_[[1, 0.01, 1.0]]_1_[0.079, 0.847, 1.0].csv-1
+Done!
+Executing ... 
+ 16:18:04 | >>> Warming up ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    |  60.45MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | Cannot generate further orders - suspending generation for now
+ 00:00:01 | 00:00:00 | 0.00:30:00 | 100.00%  |   485   |    0     | 15%  |   5080   |   0    |  66.26MB  
+ 00:00:01 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 0.00011097713936430316
+StatTimingPathPlanningOverall: 0.09077929999999998
+StatTimingPathPlanningCount: 818
+StatTimingTaskAllocationAverage: 0.001977800925925927
+StatTimingTaskAllocationOverall: 0.4272050000000003
+StatTimingTaskAllocationCount: 216
+StatTimingItemStorageAverage: 3.1688202247190883E-06
+StatTimingItemStorageOverall: 0.0022561999999999908
+StatTimingItemStorageCount: 712
+StatTimingPodStorageAverage: 0.0015366262135922324
+StatTimingPodStorageOverall: 0.15827249999999993
+StatTimingPodStorageCount: 103
+StatTimingReplenishmentBatchingAverage: 0.0023658999999999998
+StatTimingReplenishmentBatchingOverall: 0.0047317999999999995
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 0.0001254494694960212
+StatTimingOrderBatchingOverall: 0.09458889999999998
+StatTimingOrderBatchingCount: 754
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 648
+StatOverallOrdersPlaced: 411
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 747
+StatOverallLinesHandled: 706
+StatOverallOrdersHandled: 485
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5079.60163793121
+StatOverallDistanceEstimated: 5000
+StatOverallAssignedTasks: 216
+StatMaxMemoryUsed: 68,73046875
+StatRealTimeUsed: 1.235216
+StatAverageTurnoverTime: 483.3075353516765
+StatMedianTurnoverTime: 377.9075035964612
+StatLowerQuartileTurnoverTime: 173.613888888889
+StatUpperQuartileTurnoverTime: 702.5591630702097
+StatAverageThroughputTime: 99.37754683784456
+StatMedianThroughputTime: 23.844725818683287
+StatLowerQuartileThroughputTime: 15.228795097476223
+StatUpperQuartileThroughputTime: 83.51231601363492
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
+<<< Welcome to the RAWSimO CLI >>>
+The time is: 06/21/2024 16:18:06
+Starting RAWSimO wrapper with the following arguments:
+Instance: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xinst
+Setting: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xsett
+ControlConfig: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp\Weighted2.xconf
+StatisticsDir: ..\..\..\..\Material\Instances\01.Weighted30min Demand Gall\Dp
+Seed: 2
+Additionally the following tag was passed: 1, 0.01, 1.0, 0.079, 0.847, 1.0
+Adding handler for unhandled exceptions ...
+Initializing ... 
+Instance recognized!
+Parsing setting config ...
+Parsing control config ...
+Parsing instance ...
+StatisticsFolder: Weighted2-Dp_[[1, 0.01, 1.0]]_1_[0.079, 0.847, 1.0].csv-2
+Done!

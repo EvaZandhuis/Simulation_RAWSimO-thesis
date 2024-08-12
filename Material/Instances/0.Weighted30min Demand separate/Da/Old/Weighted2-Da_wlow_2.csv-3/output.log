@@ -1,0 +1,58 @@
+Executing ... 
+ 16:48:03 | >>> Warming up ...
+ 00:00:00 | >>> Warmup finished - starting simulation ...
+ Realtime |   ETA    |  Sim.Time  | Progress | #Orders | #Bundles | Inv. | Distance | #Coll. |   Memory    
+ 00:00:00 |   n/a    | 0.00:00:00 |  0.00%   |    0    |    0     | 60%  |    0     |   0    | 103.95MB  
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | Cannot generate further orders - suspending generation for now
+ 00:00:00 | 00:00:00 | 0.00:30:00 | 100.00%  |   395   |    0     | 23%  |   5420   |   0    | 107.33MB  
+ 00:00:00 | >>> Simulation finished - writing results ...
+ 00:00:01 | >>> Results written
+Simulation finished.
+>>> Timings
+StatTimingPathPlanningAverage: 9.659570354457573E-05
+StatTimingPathPlanningOverall: 0.0899306
+StatTimingPathPlanningCount: 931
+StatTimingTaskAllocationAverage: 0.0014849411504424773
+StatTimingTaskAllocationOverall: 0.33559669999999986
+StatTimingTaskAllocationCount: 226
+StatTimingItemStorageAverage: 1.135517241379314E-06
+StatTimingItemStorageOverall: 0.0006586000000000021
+StatTimingItemStorageCount: 580
+StatTimingPodStorageAverage: 0.0013096954128440368
+StatTimingPodStorageOverall: 0.14275680000000002
+StatTimingPodStorageCount: 109
+StatTimingReplenishmentBatchingAverage: 8.2E-06
+StatTimingReplenishmentBatchingOverall: 1.64E-05
+StatTimingReplenishmentBatchingCount: 2
+StatTimingOrderBatchingAverage: 8.699208955223886E-05
+StatTimingOrderBatchingOverall: 0.058284700000000036
+StatTimingOrderBatchingCount: 670
+>>> Overall
+StatOverallBundlesPlaced: 0
+StatOverallItemsOrdered: 631
+StatOverallOrdersPlaced: 388
+StatOverallBundlesRejected: 0
+StatOverallOrdersRejected: 0
+StatOverallBundlesHandled: 0
+StatOverallItemsHandled: 608
+StatOverallLinesHandled: 573
+StatOverallOrdersHandled: 395
+StatOverallCollisions: 0
+StatOverallDistanceTraveled: 5419.5406645558705
+StatOverallDistanceEstimated: 5217
+StatOverallAssignedTasks: 226
+StatMaxMemoryUsed: 110,3671875
+StatRealTimeUsed: 0.9417454
+StatAverageTurnoverTime: 488.1454824265756
+StatMedianTurnoverTime: 364.78305915201634
+StatLowerQuartileTurnoverTime: 184.56787156919094
+StatUpperQuartileTurnoverTime: 699.9979725535283
+StatAverageThroughputTime: 107.62337685890375
+StatMedianThroughputTime: 22.030367972729437
+StatLowerQuartileThroughputTime: 12.799999999999955
+StatUpperQuartileThroughputTime: 88.60731601363545
+
+Marked tag finished after 1 tries!
+.Fin. - SUCCESS
